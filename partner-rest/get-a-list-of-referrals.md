@@ -7,19 +7,15 @@ ms.localizationpriority: medium
 
 # Get a list of referrals
 
-
 **Applies To**
 
-- Partner
-
+- Partner API
 
 This topic explains how to get a list of referrals.
-
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
 - Credentials as described in [Partner authentication](partner-authentication.md). This scenario supports authentication with App+User credentials.
-
 
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
@@ -45,7 +41,7 @@ Use the following filter parameters to get a list of referrals
 | engagementId            | string   | No       | An engagement ID.                                                                   |
 | status                  | string   | No       | A string that represents a [ReferralStatus](referral-resources.md#ReferralStatus)            |
 | pagesize                | string   | No       | Number of referrals that should be returned. 100 is the maximum.    
-| substatus               | string   | No       | A string that represents a [ReferralSubStatus](referral-resources.md#ReferralSubStatus)
+| substatus               | string   | No       | A string that represents a [ReferralSubstatus](referral-resources.md#ReferralSubstatus)
 
 ** Supported orderby parameters**
 

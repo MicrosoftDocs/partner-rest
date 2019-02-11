@@ -127,7 +127,7 @@ Contains the External ID's for the customer.
 
 ## <span id="Address"/><span id="address"/><span id="ADDRESS"/>Address
 
-An address to use for the customer. For more information about the supported formats and properties in different countries/regions, see [Get address formatting rules by market](get-market-specific-validation-data.md).
+An address to use for the customer.
 
 | Property     | Type   | Description                                                |
 |--------------|--------|------------------------------------------------------------|
