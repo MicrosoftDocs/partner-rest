@@ -19,7 +19,7 @@ This topic explains how to create a referral.There are 2 types of referrals:
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-- Credentials as described in [Partner Center authentication](partner-center-authentication.md). This scenario supports authentication with App+User credentials.
+- Credentials as described in [Partner authentication](partner-authentication.md). This scenario supports authentication with App+User credentials.
 
 
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
