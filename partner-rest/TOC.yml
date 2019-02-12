@@ -1,16 +1,20 @@
 - name: Overview
   href: index.md
-- name: Referrals
-  href: referrals.md
   items:
-    - name: Create a referral
-      href: create-a-referral.md
-    - name: Get a list of referrals
-      href: get-a-list-of-referrals.md
-    - name: Get a referral by ID
-      href: get-a-referral-by-id.md
-    - name: Update a referral
-      href: update-a-referral.md
+  - name: Scenarios
+    href: scenarios.md
+    items:
+    - name: Referrals
+      href: referrals.md
+      items:
+        - name: Create a referral
+          href: create-a-referral.md
+        - name: Get a list of referrals
+          href: get-a-list-of-referrals.md
+        - name: Get a referral by ID
+          href: get-a-referral-by-id.md
+        - name: Update a referral
+          href: update-a-referral.md
 - name: Partner REST API reference
   href: partner-rest-api-reference.md
   items:
