@@ -14,8 +14,8 @@ ms.localizationpriority: medium
 
 This topic explains how to create a referral.There are 2 types of referrals:  
 
-    1. Independent: When a referral is visible to one partner
-    2. Shared: When a referral is shared across two parties working together for ex: Microsoft and Partner in a co-selling deal
+1. Independent: When a referral is visible to one partner
+2. Shared: When a referral is shared across two parties working together for ex: Microsoft and Partner in a co-selling deal
 
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
