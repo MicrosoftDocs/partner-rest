@@ -36,9 +36,8 @@ failed.
 
 ## <span id="pc_error_payload"/><span id="PC_ERROR_PAYLOAD"/>Error responses
 
-Any response with a status code indicating an error (4xx or 5xx)
-includes an error message with additional details about the error
-condition(s) encountered.
+The error response is a single JSON object that contains a single property
+named **error**. This object includes all the details of the error. You can use the information returned here instead of or in addition to the HTTP status code. The following is an example of a full JSON error body.
 
 The following table and code sample describes the schema of an error
 response.
@@ -46,19 +45,22 @@ response.
 | Name        | Type   | Description                                                                                    |
 |-------------|--------|------------------------------------------------------------------------------------------------|
 | code        | string | Always returned. Indicates the kind of error that occurred. Non-null.                          |
-| description | string | Always returned. Describes the error in detail, and provides additional debugging information. Non-null, non-empty. Maximum length is 1024 characters. |
-| data        | array  | Only returned for some error types. A list of error objects.                                   |
-| source      | string | Always returned. The source of the error.                                                      |
+| message | string | Always returned. Describes the error in detail, and provides additional debugging information. Non-null, non-empty. Maximum length is 1024 characters. |
+| innerError        | object  | Inner error contains additional information about the error from the paticular API.                                   |
+| target      | string | The target where the error originated.                                                      |
+
+
 
 ```json
 {
-  "code": <string>,
-  "description": <string>,
-  "data": [
-
-  ],
-  "source": <string>
-## }
-WWW-Authenticate: OAuth realm=urn:cpsvc:cpid:{some cid}
-```
+  "error": {
+    "code": "unAuthorized",
+    "message": "Caller is not authorized to access the resource.",
+    "target": "referral",
+    "innerError": {
+      "code": "innerErrorCode",
+      "message": "Unauthorized referral access"
+    }
+  }
+}
 

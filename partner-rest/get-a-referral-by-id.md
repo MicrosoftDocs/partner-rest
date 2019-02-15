@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 **Applies To**
 
-- Partner 
+- Partner API
 
 
 This topic explains how to get a referral by ID.
@@ -69,7 +69,6 @@ Each response comes with an HTTP status code that indicates success or failure a
 
 ``` http
 {
-    
     "@odata.context": "https://api.partner.microsoft.com/v1.0/engagments/referrals/$metadata#Referrals/$entity",
     "id": "61c65491-2f2c-461a-84b4-3654499bc1d9",
     "engagementId": "b1c40bb4-6d36-4eca-baa3-e1460cf2a454",
