@@ -18,9 +18,13 @@
 - name: Partner API REST reference
   href: partner-rest-api-reference.md
   items:
+    - name: Partner API Authentication
+      href: partner-api-authentication.md
+    - name: Set up access for Partner API Authentication
+      href: setup-api-access-partner.md
     - name: Partner API urls
       href: partner-rest-urls.md
-    - name: Partner API haders
+    - name: Partner API headers
       href: headers.md
     - name: Partner REST API resources
       href: partner-rest-resources.md
