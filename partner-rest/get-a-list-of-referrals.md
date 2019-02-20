@@ -1,7 +1,7 @@
 ---
 title: Get a list of referrals
 description: How to get a list of referrals
-ms.date: 02/07/19
+ms.date: 02/07/2019
 ms.localizationpriority: medium
 ---
 

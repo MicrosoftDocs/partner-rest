@@ -14,7 +14,7 @@ This section describes the ways that partners use the Partner REST API to progra
 
 All of the following scenarios can be completed three different ways:
 
- - manually in the [Partner Center](http://go.microsoft.com/fwlink/p/?LinkId=620294) dashboard.
+ - manually in the [Partner Center](https://go.microsoft.com/fwlink/p/?LinkId=620294) dashboard.
  - programmatically by using the Partner managed API.
  - programmatically by using the Partner REST API.
 

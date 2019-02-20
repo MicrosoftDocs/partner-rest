@@ -1,7 +1,7 @@
 ---
 title: Referrals
 description: This section describes the ways that partners can use the Partner Center to programmatically manage referrals.
-ms.date: 02/07/19
+ms.date: 02/07/2019
 ms.localizationpriority: medium
 ---
 
