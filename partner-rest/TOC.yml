@@ -19,10 +19,10 @@
 			- name: Update a referral
 			  href: develop/update-a-referral.md
 	- name: REST API reference
-	  href: develop/partner-rest-api-reference.md
+	  href: develop/rest-api-reference.md
 	  items:
 		- name: Resources
-		  href: develop/partner-rest-resources.md
+		  href: develop/rest-resources.md
 		  items:
 			- name: Referral
 			  href: develop/referral-resources.md
