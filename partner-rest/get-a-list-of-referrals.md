@@ -21,35 +21,35 @@ This topic explains how to get a list of referrals.
 
 **Request syntax**
 
-| Method   | Request URI                                                                                                 |
-|----------|-------------------------------------------------------------------------------------------------------------|
-| **GET** | https://api.partner.microsoft.com/v1.0/engagements/referrals               |
+| Method  | Request URI                                                  |
+|---------|--------------------------------------------------------------|
+| **GET** | https://api.partner.microsoft.com/v1.0/engagements/referrals |
 
 ** Supported OData operations**
  
-| Name                     | Description | Example
-|:-------------------------|:------------|:---------|
-| [$filter]()              | Filters results (rows).|[`/referrals?$filter=engagementId eq '65edc0b5-3485-41b7-a17e-dfa9ef4706e2'`]
-| [$orderby]()             | Orders results.        |[`/referrals?$orderby=createdDateTime desc`]
+| Name     | Description            | Example                                                                    |
+|:---------|:-----------------------|:---------------------------------------------------------------------------|
+| $filter  | Filters results (rows) |`/referrals?$filter=engagementId eq '65edc0b5-3485-41b7-a17e-dfa9ef4706e2'` |
+| $orderby | Orders results         |`/referrals?$orderby=createdDateTime desc`                                  |
 
 ** Supported Filter parameters**
 
 Use the following filter parameters to get a list of referrals
 
-| Name                   | Type     | Required | Description                                                                         |
-|------------------------|----------|----------|-------------------------------------------------------------------------------------|
-| engagementId            | string   | No       | An engagement ID.                                                                   |
-| status                  | string   | No       | A string that represents a [ReferralStatus](referral-resources.md#ReferralStatus)            |
-| pagesize                | string   | No       | Number of referrals that should be returned. 100 is the maximum.    
-| substatus               | string   | No       | A string that represents a [ReferralSubstatus](referral-resources.md#ReferralSubstatus)
+| Name         | Type   | Required | Description                                                                             |
+|--------------|--------|----------|-----------------------------------------------------------------------------------------|
+| engagementId | string | No       | An engagement ID.                                                                       |
+| status       | string | No       | A string that represents a [ReferralStatus](referral-resources.md#ReferralStatus)       |
+| pagesize     | string | No       | Number of referrals that should be returned. 100 is the maximum.                        |
+| substatus    | string | No       | A string that represents a [ReferralSubstatus](referral-resources.md#ReferralSubstatus) |
 
 ** Supported orderby parameters**
 
 Use the following orderby parameters to get a list of referrals
 
-| Name                   | Type     | Required | Description                                                                         |
-|------------------------|----------|----------|-------------------------------------------------------------------------------------|
-|createdDateTime         |DateTime  | Yes      | Created Date Time of Referrals                                                                   |
+| Name           | Type     | Required | Description                        |
+|----------------|----------|----------|------------------------------------|
+|createdDateTime | DateTime | Yes      | Created date and time of Referrals |
 
 **Request headers**
 
