@@ -7,10 +7,6 @@ ms.localizationpriority: medium
 
 # Programmatically manage referrals
 
-**Applies To**
-
-- Partner
-
 This section describes the ways that partners can programmatically manage sales referrals.
 
 **Referrals**  

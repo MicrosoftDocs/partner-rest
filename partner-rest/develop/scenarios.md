@@ -11,7 +11,6 @@ This section describes the ways you can use the Partner REST API to programmatic
 
 ## <span id="Scenarios_supported_by_the_Partner_REST_API"/><span id="scenarios_supported_by_the_partner_rest_api"/><span id="SCENARIOS_SUPPORTED_BY_THE_PARTNER_REST_API"/>Scenarios supported by the Partner REST API
 
-
 All of the following scenarios can be completed three different ways:
 
  - manually in the [Partner Center](https://go.microsoft.com/fwlink/p/?LinkId=620294) dashboard.
