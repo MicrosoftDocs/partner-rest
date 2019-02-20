@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 |                                                     |                                                                |
 |-----------------------------------------------------|----------------------------------------------------------------|
-| [Partner REST URLs](partner-rest-urls.md)           | Defines the REST API endpoints                                 |
+| [Partner REST URLs](rest-urls.md)           | Defines the REST API endpoints                                 |
 | [Partner REST headers](headers.md)                  | Defines the request and response headers used by the REST API. |
-| [Partner REST resources](partner-rest-resources.md) | Defines the JSON objects needed to use the REST API.           |
+| [Partner REST resources](rest-resources.md) | Defines the JSON objects needed to use the REST API.           |
 | [Partner REST error codes](error-codes.md)          | Defines the error codes used by the Partner REST API.          |
