@@ -1,11 +1,11 @@
 ---
-title: Referrals
-description: This section describes the ways that partners can use the Partner Center to programmatically manage referrals.
+title: Programmatically manage referrals
+description: This section describes the ways that partners can use the Partner APIs to programmatically manage referrals.
 ms.date: 02/07/2019
 ms.localizationpriority: medium
 ---
 
-# Referrals
+# Programmatically manage referrals
 
 **Applies To**
 
