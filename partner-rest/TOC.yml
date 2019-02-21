@@ -9,15 +9,6 @@
     items:
     - name: Referrals
       href: develop/referrals.md
-      items:
-        - name: Create a referral
-          href: create-a-referral.md
-        - name: Get a list of referrals
-          href: get-a-list-of-referrals.md
-        - name: Get a referral by ID
-          href: get-a-referral-by-id.md
-        - name: Update a referral
-          href: update-a-referral.md
 - name: Partner API REST reference
   href: partner-rest-api-reference.md
   items:
@@ -38,7 +29,7 @@
         href: rest-resources.md
         items:
         - name: Referral
-          href: develop/referral-resources.md
+          href: referral-resources.md
           items:
             - name: Create a referral
               href: create-a-referral.md
