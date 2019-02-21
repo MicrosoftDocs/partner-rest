@@ -1,20 +1,19 @@
 ---
-title: Scenarios
-description: This section describes the ways that partners in the Cloud Solution Provider program can use the Partner Center API to programmatically manage customer accounts, partner accounts, orders, subscriptions, support, and billing.
+title: Scenarios supported by the Partner REST API
+description: This section describes the ways that partners can use the Partner API to programmatically manage referrals.
 ms.date: 02/11/2019
 ms.localizationpriority: medium
 ---
 
-# Scenarios
+# Scenarios supported by the Partner REST API
 
-This section describes the ways that partners use the Partner REST API to programmatically manage referrals.
+This section describes the ways you can use the Partner REST API to programmatically manage referrals.
 
 ## <span id="Scenarios_supported_by_the_Partner_REST_API"/><span id="scenarios_supported_by_the_partner_rest_api"/><span id="SCENARIOS_SUPPORTED_BY_THE_PARTNER_REST_API"/>Scenarios supported by the Partner REST API
 
-
 All of the following scenarios can be completed three different ways:
 
- - manually in the [Partner Center](http://go.microsoft.com/fwlink/p/?LinkId=620294) dashboard.
+ - manually in the [Partner Center](https://go.microsoft.com/fwlink/p/?LinkId=620294) dashboard.
  - programmatically by using the Partner managed API.
  - programmatically by using the Partner REST API.
 

@@ -1,7 +1,7 @@
 ---
 title: Update a referral
 description: How to to update a referral
-ms.date: 02/07/19
+ms.date: 02/07/2019
 ms.localizationpriority: medium
 ---
 
@@ -26,9 +26,9 @@ This topic explains how to update a referral.
 
 **Request syntax**
 
-| Method   | Request URI                                                                                                 |
-|----------|-------------------------------------------------------------------------------------------------------------|
-| **PUT** | https://api.partner.microsoft.com/v1.0/engagements/referrals/{Id}                                   |
+| Method  | Request URI                                                       |
+|---------|-------------------------------------------------------------------|
+| **PUT** | https://api.partner.microsoft.com/v1.0/engagements/referrals/{Id} |
 
  
 **Request headers**
@@ -39,33 +39,33 @@ This topic explains how to update a referral.
 
 This table describes the [Referral](referral-resources.md) properties in the request body.
 
-| Property              | Type                                              | Description                                                                                                       |
-|-----------------------|---------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| Id                    | string                                            | The ID for this Referral.                                                                                         |
-| EngagementId          | string                                            | The EngagementID for this Referral. Multiple referrals can be associated to a single EngagementID                 |
-| Name                  | string                                            | The name of the Referral.                 |
-| ExternalReferenceId   | string                                            | An external identifier for the referral. Example: Store your own Dynamics 365 lead/opportunity ID                                                                         |
-| CreatedDateTime       | string in UTC date time format                    | The date the referral was created.                                                                                |
-| UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
-| ExpirationDateTime    | string in UTC date time format                    | The date the referral will expire.                                                                                |
-| Status                | [ReferralStatus](referral-resources.md#ReferralStatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status. |
-| Substatus             | [ReferralSubstatus](referral-resources.md#ReferralSubstatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral sub status. |
-| StatusReason          | string                                            | A descriptive message about the status. Example: Why was the referral lost? |
-| ReferralType          | [ReferralType](referral-resources.md#ReferralType)          | Represents the referral type.                                                                                     |
-| Qualification         | [ReferralQualification](referral-resources.md#ReferralQualification)| Represents the quality of the referral.                                                                           |
-| CustomerProfile       | [CustomerProfile](referral-resources.md#CustomerProfile)    | Customer contact information.                                                                                     |
-| Consent               | [Consent](referral-resources.md#Consent)                    | Consent flags around sharing information with other organizations and allowing them to contact users.         |
-| Details               | [ReferralDetails](referral-resources.md#ReferralDetails)    | Customer details, notes, deal value, currency closing date.                                                                |
-| Team                  | [Member](referral-resources.md#Member)                      | Represents users in the organizations that are involved in the partner engagement.                                |
-| InviteContext         | [InviteContext](referral-resources.md#InviteContext)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
+| Property            | Type                                                                 | Description                                                                                                          |
+|---------------------|----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| Id                  | string                                                               | The ID for this Referral.                                                                                            |
+| EngagementId        | string                                                               | The EngagementID for this Referral. Multiple referrals can be associated to a single EngagementID                    |
+| Name                | string                                                               | The name of the Referral.                                                                                            |
+| ExternalReferenceId | string                                                               | An external identifier for the referral. Example: Store your own Dynamics 365 lead/opportunity ID                    |
+| CreatedDateTime     | string in UTC date time format                                       | The date the referral was created.                                                                                   |
+| UpdatedDateTime     | string in UTC date time format                                       | The date the referral was last updated.                                                                              |
+| ExpirationDateTime  | string in UTC date time format                                       | The date the referral will expire.                                                                                   |
+| Status              | [ReferralStatus](referral-resources.md#ReferralStatus)               | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status.          |
+| Substatus           | [ReferralSubstatus](referral-resources.md#ReferralSubstatus)         | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral sub status.      |
+| StatusReason        | string                                                               | A descriptive message about the status. For example, explain why the referral was lost.                              |
+| ReferralType        | [ReferralType](referral-resources.md#ReferralType)                   | Represents the referral type.                                                                                        |
+| Qualification       | [ReferralQualification](referral-resources.md#ReferralQualification) | Represents the quality of the referral.                                                                              |
+| CustomerProfile     | [CustomerProfile](referral-resources.md#CustomerProfile)             | Customer contact information.                                                                                        |
+| Consent             | [Consent](referral-resources.md#Consent)                             | Consent flags around sharing information with other organizations and allowing them to contact users.                |
+| Details             | [ReferralDetails](referral-resources.md#ReferralDetails)             | Customer details, notes, deal value, currency closing date.                                                          |
+| Team                | [Member](referral-resources.md#Member)                               | Represents users in the organizations that are involved in the partner engagement.                                   |
+| InviteContext       | [InviteContext](referral-resources.md#InviteContext)                 | Represents additional information a user can provide when inviting another organization into the partner engagement. |
 
 **Status & Substatus transition states**
 
-| Status                | Allowed Status Transition     | Allowed Substatus                     |
-|-----------------------|-------------------------------|---------------------------------------|
-| New                   | New, Active, Closed           | Pending, Received                     |
-| Active                | Active, Closed                | Accepted                              |
-| Closed                | Closed                        | Won, Lost, Declined, Expired          |
+| Status | Allowed Status Transition | Allowed Substatus            |
+|--------|---------------------------|------------------------------|
+| New    | New, Active, Closed       | Pending, Received            |
+| Active | Active, Closed            | Accepted                     |
+| Closed | Closed                    | Won, Lost, Declined, Expired |
 
 **Request example**
 

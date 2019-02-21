@@ -1,11 +1,14 @@
-- name: Partner API REST
+- name: Partner documentation
   href: index.md
-  items:
-  - name: Scenarios
-    href: scenarios.md
+  items: 
+  - name: REST API
+    href: develop/index.md
+    items:
+    - name: Scenarios
+    href: develop/scenarios.md
     items:
     - name: Referrals
-      href: referrals.md
+      href: develop/referrals.md
       items:
         - name: Create a referral
           href: create-a-referral.md
@@ -31,3 +34,19 @@
           href: referral-resources.md
     - name: Partner API error codes
       href: error-codes.md  
+      - name: Create a referral
+        href: develop/create-a-referral.md
+      - name: Get a list of referrals
+        href: develop/get-a-list-of-referrals.md
+      - name: Get a referral by ID
+        href: develop/get-a-referral-by-id.md
+      - name: Update a referral
+        href: develop/update-a-referral.md
+  - name: REST API reference
+    href: develop/rest-api-reference.md
+    items:
+    - name: Resources
+      href: develop/rest-resources.md
+      items:
+      - name: Referral
+        href: develop/referral-resources.md
