@@ -35,7 +35,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/partner/develop/breadcrumb/toc.json",
+      "breadcrumb_path": "/partner/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "feedback_system": "None",
       "titleSuffix": "Partner",
