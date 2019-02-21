@@ -70,7 +70,7 @@ After your account is set up, you must enable API access before you can use the 
 
 ## <span id="writeTestCode"/><span id="writetestcode"/><span id="WRITETESTCODE"/>Write and test code in the integration sandbox
 
-To write code and test code in Partner Center, you'll need to set up authentication with Azure AD, as described in [Partner Center authentication](partner-center-authentication.md). You'll need the following pieces of information:
+To write code and test code in Partner Center, you'll need to set up authentication with Azure AD, as described in [Partner API authentication](api-authentication.md). You'll need the following pieces of information:
 
 <table>
   <tr>
@@ -98,7 +98,7 @@ To write code and test code in Partner Center, you'll need to set up authenticat
 
 1.  When you are ready to use your tested code in your primary Partner account, you must get an Azure AD security token based on your Partner Center app/key/domain instead of the integration sandbox app/key/domain.
 
-    Repeat the same steps for [Partner API authentication](partner-api-authentication.md) that you used to get an Azure AD security token in the integration sandbox, but use your primary Partner Center credentials instead.
+    Repeat the same steps for [Partner API authentication](api-authentication.md) that you used to get an Azure AD security token in the integration sandbox, but use your primary Partner Center credentials instead.
 
 2.  After you replace the integration security token with the one for your primary Partner account, the rest of your code should work correctly.
   
