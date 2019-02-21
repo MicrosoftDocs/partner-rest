@@ -38,14 +38,14 @@
         href: rest-resources.md
         items:
         - name: Referral
-          href: referral-resources.md
+          href: develop/referral-resources.md
           items:
             - name: Create a referral
-              href: develop/create-a-referral.md
+              href: create-a-referral.md
             - name: Get a list of referrals
-              href: develop/get-a-list-of-referrals.md
+              href: get-a-list-of-referrals.md
             - name: Get a referral by ID
-              href: develop/get-a-referral-by-id.md
+              href: get-a-referral-by-id.md
             - name: Update a referral
-              href: develop/update-a-referral.md
+              href: update-a-referral.md
       
