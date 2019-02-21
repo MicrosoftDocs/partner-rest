@@ -47,6 +47,23 @@
     items:
     - name: Resources
       href: develop/rest-resources.md
+    - name: Partner API error codes
+      href: develop/error-codes.md
+    - name: REST API reference
+      href: develop/rest-api-reference.md
       items:
-      - name: Referral
-        href: develop/referral-resources.md
+      - name: Resources
+        href: rest-resources.md
+        items:
+        - name: Referral
+          href: develop/referral-resources.md
+          items:
+            - name: Create a referral
+              href: create-a-referral.md
+            - name: Get a list of referrals
+              href: get-a-list-of-referrals.md
+            - name: Get a referral by ID
+              href: get-a-referral-by-id.md
+            - name: Update a referral
+              href: update-a-referral.md
+      
