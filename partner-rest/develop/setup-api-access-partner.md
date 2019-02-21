@@ -1,22 +1,15 @@
 ---
-title: Set up API access in Partner Center
-description: This topic describes the accounts you need to develop against the Partner Center SDK, how to create an integration sandbox account, and how to test in the integration sandbox.
-ms.assetid: 182A6831-6F00-4762-9A86-327BF87EA6AC
-ms.date: 10/19/2018
+title: Set up Partner API access
+description: This topic describes the accounts you need to develop against the Partner REST API, how to create an integration sandbox account, and how to test in the integration sandbox.
+ms.date: 02/21/2019
 ms.localizationpriority: medium
 ---
 
-# Set up API access in Partner Center
-
-
-**Applies To**
-
-- Partner API
+# Set up Partner API access
 
 This topic describes the accounts you need to develop against the Partner REST API.
 
 ## <span id="supportedAccountTypes"/><span id="supportedaccounttypes"/><span id="SUPPORTEDACCOUNTTYPES"/>Account definitions
-
 
 To help you integrate and test your API integration, Partner Center supports two kinds of accounts:
 
@@ -37,7 +30,6 @@ To help you integrate and test your API integration, Partner Center supports two
     </td>
   </tr>
 </table>
-
  
 ## <span id="Set__up_your_accounts"/><span id="set__up_your_accounts"/><span id="SET__UP_YOUR_ACCOUNTS"/>Set up your accounts
 

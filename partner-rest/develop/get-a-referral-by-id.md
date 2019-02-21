@@ -18,7 +18,7 @@ This topic explains how to get a referral by ID.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-- Credentials as described in [Partner  authentication](..\partner-api-authentication.md). This scenario supports authentication with App+User credentials.
+- Credentials as described in [Partner  authentication](api-authentication.md). This scenario supports authentication with App+User credentials.
 
 
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
