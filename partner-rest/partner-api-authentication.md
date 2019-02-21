@@ -6,7 +6,7 @@ ms.date: 01/04/2019
 ms.localizationpriority: medium
 ---
 
-# Partner Center Authentication
+# Partner API authentication
 
 **Applies To**
 
@@ -24,12 +24,4 @@ Partner API utilizes Azure Active Directory for authentication. When interacting
 ## App + User Authentication
 ### Partner Consent
 
-In the Azure management portal, **Enterprise applications**. Search for "Application created in the step above". Select the "Application created above". Click on **Permisisons** , then click on **Grant Admin Conset for Partner Account**. 
-
----
-
-## Frequently Asked Questions
-
-### Can the trusted location conditional access policy be used to bypass the requirement for multi-factor authentication?
-
-No, this will not work because of how the requirement for multi-factor authentication will be enforced.
+In the Azure management portal, **Enterprise applications**. Search for "Application created in the step above". Select the "Application created above". Click on **Permisisons** , then click on **Grant Admin Conset for Partner Account**.

@@ -20,8 +20,6 @@
   items:
     - name: Partner API Authentication
       href: partner-api-authentication.md
-    - name: Set up access for Partner API Authentication
-      href: setup-api-access-partner.md
     - name: Partner API urls
       href: partner-rest-urls.md
     - name: Partner API headers
