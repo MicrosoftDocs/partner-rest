@@ -30,7 +30,7 @@ This topic explains how to create a referral.There are 2 types of referrals:
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **POST** | https://api.partner.microsoft.com/v1.0/engagements/referrals                                   |
+| **POST** | https://api.partner.microsoft.com/v1.0/engagements/referrals                                  |
 
  
 **Request headers**
@@ -70,7 +70,7 @@ This table describes the [Referral](referral-resources.md) properties in the req
 **Request example**
 
 ```http
-POST https://api.partnercenter.microsoft.com/referrals/v1.0/engagements/referrals HTTP/1.1
+POST https://api.partner.microsoft.com/v1.0/engagements/referrals HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json

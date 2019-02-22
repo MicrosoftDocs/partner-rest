@@ -76,11 +76,25 @@ prepared to handle any one of these errors.
 | **serviceNotAvailable**   | The service is not available. Try the request again after a delay. There may be a Retry-After header. 
 | **unauthenticated**       | The caller is not authenticated.
 
+#### Message property
+The `message` property at the root contains an error message intended for the
+developer to read. Error messages are not localized and shouldn't be displayed
+directly to the user. When handling errors, your code should not key off of
+`message` values because they can change at any time, and they often contain
+dynamic information specific to the failed request. You should only code
+against error codes returned in `code` properties.
+
+#### InnerError object
+
 The `innererror` object might recursively contain more `innererror` objects
 with additional, more specific error codes. When handling an error, apps
 should loop through all the error codes available and use the most detailed
-one that they understand. Some of the more detailed codes are listed at the
-bottom of this page.
+one that they understand. 
+
+There are some additional errors that your app might encounter within the nested
+`innererror` objects. Apps are not required to handle these, but can if they
+choose. The service might add new error codes or stop returning old ones at any
+time, so it is important that all apps be able to handle the [basic error codes]
 
 ```json
 {
@@ -94,5 +108,6 @@ bottom of this page.
     }
   }
 }
+```
 
 
