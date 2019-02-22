@@ -9,7 +9,7 @@
       items:
       - name: Setup API access
         href: develop/setup-api-access.md
-      -name: Partner API authentication
+      - name: Partner API authentication
         href: develop/api-authentication.md
       - name: REST URLs
         href: develop/rest-urls.md
