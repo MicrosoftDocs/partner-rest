@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 
 # Partner API authentication
 
-Partner API utilizes Azure Active Directory for authentication. When interacting with the Partner API you must correctly configure an Azure AD application and then request an access token. Access tokens obtained using app + user authentication can be used with the Partner API. However, there are two important items that need to be considered
+Partner API utilizes Azure Active Directory for authentication. When interacting with the Partner API you must correctly configure an Azure AD application and then request an access token. Access tokens obtained using app + user authentication can be used with the Partner API. However, there are two important items that need to be considered. 1. Set up and 2. Partner Consent
 
 ## Initial setup
 
