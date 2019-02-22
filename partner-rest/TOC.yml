@@ -11,7 +11,6 @@
         href: develop/setup-api-access.md
       - name: Partner API authentication
         href: develop/api-authentication.md
-    items:
     - name: Scenarios
       href: develop/scenarios.md
       items:
