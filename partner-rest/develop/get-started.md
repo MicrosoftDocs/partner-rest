@@ -1,13 +1,13 @@
 ---
 title: Get started
-description: The Partner REST API is for Microsoft partners to use to manage customer, subscription, and order data.
-ms.date: 02/21/2019
+description: To access the Microsoft Partner REST API, first setup your account for access and provide proper API authentication.
+ms.date: 02/22/2019
 ms.localizationpriority: medium
 ---
 
 # Get started
 
-The Partner REST API is for Microsoft partners to use to manage customer, subscription, and order data.
+In order to access the Microsoft Partner REST API, you must first setup your account for access and provide proper API authentication.
 
  - [Setup API access](setup-api-access.md)
  - [Partner API authentication](api-authentication.md)

@@ -1,14 +1,16 @@
 ---
 layout: LandingPage
 hide_bc: true
-title: Microsoft Partner API overviews and scenario documentation
-description: Resources for Microsoft partners developing apps
+title: Microsoft Partner API overviews and scenarios
+description: Overviews and scenarios for Microsoft partners developing apps
 ms.date: 02/11/2019
 ms.topic: landing-page
 searchScope: []
 ---
 
-# Microsoft Partner API overviews and scenario documentation
+# Microsoft Partner API overviews and scenarios
+
+## <span id="In_this_section"/><span id="in_this_section"/><span id="IN_THIS_SECTION"/>In this section
 
 <table>
   <tr>
