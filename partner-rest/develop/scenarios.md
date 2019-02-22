@@ -1,13 +1,13 @@
 ---
 title: Scenarios supported by the Partner REST API
-description: This section describes the ways that partners can use the Partner API to programmatically manage referrals.
-ms.date: 02/11/2019
+description: This section describes the programmatic scenarios available through the Microsoft Partner REST API.
+ms.date: 02/22/2019
 ms.localizationpriority: medium
 ---
 
 # Scenarios supported by the Partner REST API
 
-This section describes the ways you can use the Partner REST API to programmatically manage referrals.
+This section describes the programmatic scenarios available through the Microsoft Partner REST API.
 
 ## <span id="Scenarios_supported_by_the_Partner_REST_API"/><span id="scenarios_supported_by_the_partner_rest_api"/><span id="SCENARIOS_SUPPORTED_BY_THE_PARTNER_REST_API"/>Scenarios supported by the Partner REST API
 

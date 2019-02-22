@@ -70,7 +70,7 @@ This table describes the [Referral](referral-resources.md) properties in the req
 **Request example**
 
 ```http
-PUT https://api.partnercenter.microsoft.com/referrals/v1.0/engagements/referrals/49d90c72-3326-4f61-aacc-2cb57970448c HTTP/1.1
+PUT https://api.partner.microsoft.com/v1.0/engagements/referrals/49d90c72-3326-4f61-aacc-2cb57970448c HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json

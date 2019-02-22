@@ -1,24 +1,32 @@
 ---
 layout: LandingPage
 hide_bc: true
-title: Microsoft Partner REST APIs
-description: Resources for Microsoft partners developing apps
+title: Microsoft Partner API overviews and scenarios
+description: Overviews and scenarios for Microsoft partners developing apps
 ms.date: 02/11/2019
 ms.topic: landing-page
 searchScope: []
 ---
 
-# Microsoft Partner REST APIs
+# Microsoft Partner API overviews and scenarios
+
+## <span id="In_this_section"/><span id="in_this_section"/><span id="IN_THIS_SECTION"/>In this section
 
 <table>
   <tr>
-    <td><a href="referrals.md">Referrals</a></td>
+    <td><a href="get-started.md">Get started</a></td>
     <td>
       <ul>
-        <li><a href="create-a-referral.md">Create a referral</a></li>
-        <li><a href="get-a-list-of-referrals.md">Get a list of referrals</a></li>
-        <li><a href="get-a-referral-by-id.md">Get a referral by ID</a></li>
-        <li><a href="update-a-referral.md">Update a referral</a></li>
+        <li><a href="setup-api-access.md">Setup API access</a></li>
+        <li><a href="api-authentication.md">Partner API authentication</a></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td><a href="scenarios.md">Scenarios</a></td>
+    <td>
+      <ul>
+        <li><a href="referrals.md">Referrals</a></li>
       </ul>
     </td>
   </tr>

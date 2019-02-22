@@ -7,11 +7,7 @@ ms.localizationpriority: medium
 
 # Partner REST resources
 
-
-This section provides definitions for the JSON elements needed to create
-requests and parse responses using the Partner REST API. For more
-information about how to use these elements, including sample code, see
-the [Scenarios](scenarios.md) section.
+This section provides definitions of the JSON elements needed to create requests and parse responses using the Partner REST API. For more information about how to use these elements, including sample code, see the [Overviews and scenarios](index.md) section.
 
 ## <span id="In_this_section"/><span id="in_this_section"/><span id="IN_THIS_SECTION"/>In this section
 

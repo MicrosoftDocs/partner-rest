@@ -9,9 +9,9 @@ ms.localizationpriority: medium
 
 ## <span id="In_this_section"/><span id="in_this_section"/><span id="IN_THIS_SECTION"/>In this section
 
-|                                                     |                                                                |
-|-----------------------------------------------------|----------------------------------------------------------------|
-| [Partner REST URLs](rest-urls.md)           | Defines the REST API endpoints                                 |
-| [Partner REST headers](headers.md)                  | Defines the request and response headers used by the REST API. |
-| [Partner REST resources](rest-resources.md) | Defines the JSON objects needed to use the REST API.           |
-| [Partner REST error codes](error-codes.md)          | Defines the error codes used by the Partner REST API.          |
+|                                     |                                                                |
+|-------------------------------------|----------------------------------------------------------------|
+| [REST endpoint URLs](rest-urls.md)  | Defines the REST API endpoints                                 |
+| [REST headers](headers.md)          | Defines the request and response headers used by the REST API. |
+| [REST error codes](error-codes.md)  | Defines the error codes used by the Partner REST API.          |
+| [REST resources](rest-resources.md) | Defines the JSON objects needed to use the REST API.           |
