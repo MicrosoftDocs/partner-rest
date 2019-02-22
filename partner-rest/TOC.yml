@@ -1,7 +1,7 @@
 - name: Partner developer documentation
   href: index.md
   items:
-  - name: Partner REST API scenarios
+  - name: Overviews and scenarios
     href: develop/index.md
     items:
     - name: Get started
@@ -28,11 +28,11 @@
   - name: REST API reference
     href: develop/rest-api-reference.md
     items:
-    - name: Partner API urls
+    - name: REST endpoint URLs
       href: develop/rest-urls.md
-    - name: Partner API headers
+    - name: REST headers
       href: develop/headers.md
-    - name: Partner API error codes
+    - name: REST error codes
       href: develop/error-codes.md  
     - name: REST Resources
       href: develop/rest-resources.md

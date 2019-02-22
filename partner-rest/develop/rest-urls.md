@@ -1,11 +1,11 @@
 ---
-title: Partner API URLs
-description: Partner Center is available in different countries and regions around the world. Some versions of Partner Center might require different end points for your apps to work correctly.
-ms.date: 02/11/2019
+title: Partner API REST URLs
+description: REST endpoints for accessing the  Microsoft Partner API.
+ms.date: 02/22/2019
 ms.localizationpriority: medium
 ---
 
-# Partner REST URLs
+# Partner API REST URLs
 
 The following table describes the base URLs to use with the different versions of Partner API:
 
@@ -23,7 +23,7 @@ The following table describes the base URLs to use with the different versions o
   <tbody>
     <tr>
       <td>
-        <p>Partner Center</p>
+        <p>Partner API</p>
       </td>
       <td><em><a href="https://api.partner.microsoft.com/v1.0/">https://api.partner.microsoft.com/</a></em></td>
     </tr>

@@ -1,14 +1,14 @@
 ---
 layout: LandingPage
 hide_bc: true
-title: Microsoft Partner API overview and conceptual documentation
+title: Microsoft Partner API overviews and scenario documentation
 description: Resources for Microsoft partners developing apps
 ms.date: 02/11/2019
 ms.topic: landing-page
 searchScope: []
 ---
 
-# Microsoft Partner API overview and conceptual documentation
+# Microsoft Partner API overviews and scenario documentation
 
 <table>
   <tr>
