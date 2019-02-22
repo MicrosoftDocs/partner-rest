@@ -11,10 +11,6 @@
         href: develop/setup-api-access.md
       - name: Partner API authentication
         href: develop/api-authentication.md
-      - name: REST URLs
-        href: develop/rest-urls.md
-      - name: REST API headers
-        href: develop/headers.md
     items:
     - name: Scenarios
       href: develop/scenarios.md

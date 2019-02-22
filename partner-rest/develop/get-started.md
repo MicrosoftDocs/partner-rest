@@ -11,5 +11,3 @@ The Partner REST API is for Microsoft partners to use to manage customer, subscr
 
  - [Setup API access](setup-api-access.md)
  - [Partner API authentication](api-authentication.md)
- - [REST URLs](rest-urls.md)
- - [REST API headers](headers.md)
