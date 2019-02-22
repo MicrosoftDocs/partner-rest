@@ -18,7 +18,7 @@ This topic explains how to update a referral.
 
 ## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
 
-- Credentials as described in [Partner authentication](authentication.md). This scenario supports authentication with App+User credentials.
+- Credentials as described in [Partner API authentication](api-authentication.md). This scenario supports authentication with App+User credentials.
 
 
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
