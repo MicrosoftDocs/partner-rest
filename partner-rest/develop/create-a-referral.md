@@ -20,14 +20,14 @@ This topic explains how to create a referral. There are 2 types of referrals:
 
 - Credentials as described in [Partner API authentication](api-authentication.md). This scenario supports authentication with App+User credentials.
 
+
 ## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
 
 **Request syntax**
 
-| Method   | Request URI                                                  |  
-|----------|--------------------------------------------------------------|  
-| **POST** | https://api.partner.microsoft.com/v1.0/engagements/referrals |  
-  
+| Method  | Request URI                                                  |
+|---------|--------------------------------------------------------------|
+| **POST** | https://api.partner.microsoft.com/v1.0/engagements/referrals |
 
 **Request headers**
 
