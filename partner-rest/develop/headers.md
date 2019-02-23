@@ -18,7 +18,7 @@ REST API.
 |------------------------------|------------|----------------------------------------------------------------------------------------|
 | Authorization           | string     | Required. The authorization token in the form Bearer &lt;token&gt;.                    |
 | Accept                  | string     | Specifies the request and response type, "application/json".                           |
-| client-request-id         | GUID       | A unique identifier for the call, useful in logs and network traces for troubleshooting errors. The value should be reset for every call. All operations should include this header. |
+| client-request-id         | GUID       | Required. A unique identifier for the call, useful in logs and network traces for troubleshooting errors. The value should be reset for every call. All operations should include this header. |
 | If-Match:                    | string     | Used for concurrency control. Some API calls require passing the ETag via the If-Match header. The ETag is usually on the resource and therefore, requires GET-ting the latest. |
 
 
