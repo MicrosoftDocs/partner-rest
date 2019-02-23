@@ -27,7 +27,8 @@ This topic explains how to create a referral. There are 2 types of referrals:
 | Method   | Request URI                                                  |  
 |----------|--------------------------------------------------------------|  
 | **POST** | https://api.partner.microsoft.com/v1.0/engagements/referrals |  
- 
+  
+
 **Request headers**
 
 - See [Partner API REST headers](headers.md) for more information.
