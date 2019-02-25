@@ -40,18 +40,15 @@ This table describes the [Referral](referral-resources.md) properties in the req
 | Property            | Type                                                                 | Description                                                                                                          |
 |---------------------|----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
 | Name                | string                                                               | The name of the Referral.                                                                                            |
-| ExternalReferenceId | string                                                               | An external identifier for the referral. For example, your own Dynamics 365 lead or opportunity ID                   |
-| CreatedDateTime     | string in UTC date time format                                       | The date the referral was created.                                                                                   |
-| UpdatedDateTime     | string in UTC date time format                                       | The date the referral was last updated.                                                                              |
-| ExpirationDateTime  | string in UTC date time format                                       | The date the referral will expire.                                                                                   |
+| ExternalReferenceId | string                                                               | An external identifier for the referral. For example, your own Dynamics 365 lead or opportunity ID.                   |
 | Status              | [ReferralStatus](referral-resources.md#ReferralStatus)               | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status.          |
 | Substatus           | [ReferralSubstatus](referral-resources.md#ReferralSubstatus)         | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral substatus.       |
-| StatusReason        | string                                                               | A descriptive message about the status. For example, explain why the referral was lost.                              |
-| ReferralType        | [ReferralType](referral-resources.md#ReferralType)                   | Represents the referral type.                                                                                        |
+| StatusReason        | string                                                               | A descriptive message about the status. For example, explain why the referral was lost.                            |
+| ReferralType        | [ReferralType](referral-resources.md#ReferralType)                   | Represents the referral type. **Required.**                                                                                        |
 | Qualification       | [ReferralQualification](referral-resources.md#ReferralQualification) | Represents the quality of the referral.                                                                              |
-| CustomerProfile     | [CustomerProfile](referral-resources.md#CustomerProfile)             | Customer contact information.                                                                                        |
-| Consent             | [Consent](referral-resources.md#Consent)                             | Consent flags around sharing information with other organizations and allowing them to contact users.                |
-| Details             | [ReferralDetails](referral-resources.md#ReferralDetails)             | Customer details, notes, deal value, currency closing date.                                                          |
+| CustomerProfile     | [CustomerProfile](referral-resources.md#CustomerProfile)             | Customer contact information.  **Required.**                                                                                      |
+| Consent             | [Consent](referral-resources.md#Consent)                             | Consent flags around sharing information with other organizations and allowing them to contact users.**Required.**               |
+| Details             | [ReferralDetails](referral-resources.md#ReferralDetails)             | Customer details, notes, deal value, currency closing date. **Required.**                                                           |
 | Team                | [Member](referral-resources.md#Member)                               | Represents users in the organizations that are involved in the partner engagement.                                   |
 | InviteContext       | [InviteContext](referral-resources.md#InviteContext)                 | Represents additional information a user can provide when inviting another organization into the partner engagement. |
 
@@ -72,14 +69,12 @@ Host: api.partner.microsoft.com
 Content-Type: application/json
  
  {
-    "createdDateTime": "2018-11-06T18:40:42.6178337Z",
-    "updatedDateTime": "2018-11-06T18:40:42.6178337Z",
-    "expirationDateTime": "2018-11-14T00:00:00Z",
-    "status": "Closed",
-    "substatus": "Won",
+    "name": "Test Cosell Invite_20",
+    "status": "New",
+    "substatus": "Pending",
     "statusReason": "Customer engagement was a success!",
     "qualification": "SalesQualified",
-    "type": "Independent",
+    "type": "Shared",
     "customerProfile": {
         "name": "Contoso Customer Inc",
         "address": {
@@ -184,14 +179,17 @@ Each response comes with an HTTP status code that indicates success or failure a
 {
     "id": "4111fffc-f9ee-4d53-bba6-569135228642",
     "engagementId": "37ef26aa-1d15-4533-9f93-a69bd33ab1e5",
-    "createdDateTime": "2018-11-06T18:40:42.6178337Z",
-    "updatedDateTime": "2018-11-06T18:43:38.9948636Z",
-    "expirationDateTime": "2018-11-14T00:00:00Z",
-    "status": "Closed",
-    "substatus": "Won",
+    "name": "Test Cosell Invite_20",
+    "externalReferenceId": null,
+    "createdDateTime": "2019-02-23T02:05:23.2931817Z",
+    "updatedDateTime": "2019-02-23T02:05:23.2931817Z",
+    "expirationDateTime": null,
+    "status": "Active",
+    "substatus": "Accepted",
     "statusReason": "Customer engagement was a success!",
     "qualification": "SalesQualified",
-    "type": "Independent",
+    "type": "Shared",
+    "eTag": "\"00006d10-0000-0000-0000-5c70aa630000\"",
     "customerProfile": {
         "name": "Contoso Customer Inc",
         "address": {
@@ -278,7 +276,6 @@ Each response comes with an HTTP status code that indicates success or failure a
             "organizationId": "msft"
         }
     },
-    "eTag": "\"2500ec5a-0000-0000-0000-5bf4967d0000\"",
     "links": {
         "relatedReferrals": {
             "uri": "https://api.partner.microsoft.com/v1.0/engagments/referrals?$filter=engagementId eq '37ef26aa-1d15-4533-9f93-a69bd33ab1e5'",
