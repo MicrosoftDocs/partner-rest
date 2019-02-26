@@ -1,0 +1,39 @@
+- name: Partner developer documentation
+  href: index.md
+  items:
+  - name: Overviews and scenarios
+    href: develop/index.md
+    items:
+    - name: Get started
+      href: develop/get-started.md
+      items:
+      - name: Partner API authentication
+        href: develop/api-authentication.md
+    - name: Scenarios
+      href: develop/scenarios.md
+      items:
+      - name: Referrals
+        href: develop/referrals.md
+        items:
+        - name: Create a referral
+          href: develop/create-a-referral.md
+        - name: Get a list of referrals
+          href: develop/get-a-list-of-referrals.md
+        - name: Get a referral by ID
+          href: develop/get-a-referral-by-id.md
+        - name: Update a referral
+          href: develop/update-a-referral.md
+  - name: REST API reference
+    href: develop/rest-api-reference.md
+    items:
+    - name: REST endpoint URLs
+      href: develop/rest-urls.md
+    - name: REST headers
+      href: develop/headers.md
+    - name: REST error codes
+      href: develop/error-codes.md  
+    - name: REST Resources
+      href: develop/rest-resources.md
+      items:
+      - name: Referral
+        href: develop/referral-resources.md

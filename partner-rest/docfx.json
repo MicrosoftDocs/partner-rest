@@ -35,9 +35,15 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/partner-rest/breadcrumb/toc.json",
+      "breadcrumb_path": "/partner/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "feedback_system": "None",
+      "titleSuffix": "Partner",
+      "ms.author": "mhopkins",
+      "author": "Xansky",
+      "ms.topic": "article",
+      "ms.prod": "partner-center",
+      "ms.technology": "partner-center-sdk"
     },
     "fileMetadata": {},
     "template": [],
