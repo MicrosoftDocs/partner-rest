@@ -12,40 +12,6 @@ searchScope: []
 
 The Microsoft Partner API is the successor to the [Microsoft Partner Center API](https://docs.microsoft.com/en-us/partner-center/develop/). The new API allows you to programmatically access the capabilities of Partner Center.
 
-<!--
-<table>
-  <colgroup>
-    <col width="50%" />
-    <col width="50%" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <td>
-        <a href="develop/index.md">Microsoft Partner API overview and conceptual documentation</a></td>
-      <td>
-        <ul>
-          <li><a href="develop/get-started.md">Get started</a></li> 
-          <li><a href="develop/scenarios.md">Scenarios</a></li> 
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="develop/rest-api-reference.md">REST API reference</a>
-      </td>
-      <td>
-        <ul>
-          <li><a href="develop/rest-urls.md">Partner API REST URLs</a></li>
-          <li><a href="develop/headers.md">Partner API headers</a></li>
-          <li><a href="develop/error-codes.md">Partner API error codes</a></li>
-          <li><a href="develop/rest-resources.md">Partner API REST resources</a></li>
-        </ul>
-       </td>
-    </tr>
-  </tbody>
-</table>
--->
-
 <ul id="products1" class="cardsC cols cols3 panelContent">
     <li>
         <a href="develop/get-started.md">
@@ -86,7 +52,7 @@ The Microsoft Partner API is the successor to the [Microsoft Partner Center API]
         </a>
     </li>
     <li>
-        <a href="REST reference">
+        <a href="develop/rest-api-reference.md">
             <div class="cardSize">
                 <div class="cardPadding">
                     <div class="card">
