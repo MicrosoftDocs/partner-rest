@@ -10,7 +10,7 @@ searchScope: []
 
 # Microsoft Partner API documentation and resources
 
-The Microsoft Partner API is the successor to the [Microsoft Partner Center API](https://docs.microsoft.com/en-us/partner-center/develop/). The new API allows you to programmatically access the capabilities of Partner Center.
+The Microsoft Partner API is the successor to the [Microsoft Partner Center API](https://docs.microsoft.com/en-us/partner-center/develop/). This API allows you to programmatically access the capabilities of Partner Center.
 
 <ul id="products1" class="cardsC cols cols3 panelContent">
     <li>
