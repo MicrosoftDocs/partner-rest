@@ -25,7 +25,7 @@ The following table describes the base URLs to use with the different versions o
       <td>
         <p>Partner API</p>
       </td>
-      <td><em><a href="https://api.partner.microsoft.com/v1.0/">https://api.partner.microsoft.com/</a></em></td>
+      <td><em>https://api.partner.microsoft.com/</em></td>
     </tr>
   </tbody>
 </table>
