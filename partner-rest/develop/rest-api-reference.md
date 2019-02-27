@@ -7,6 +7,8 @@ ms.localizationpriority: medium
 
 # Partner REST API reference
 
+This section provides information needed to call Partner REST APIs, including endpoint URLs, headers, error codes and REST resources.
+
 ## <span id="In_this_section"/><span id="in_this_section"/><span id="IN_THIS_SECTION"/>In this section
 
 |                                     |                                                                |
