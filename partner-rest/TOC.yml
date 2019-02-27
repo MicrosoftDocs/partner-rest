@@ -7,8 +7,6 @@
     - name: Get started
       href: develop/get-started.md
       items:
-      - name: Setup API access
-        href: develop/setup-api-access.md
       - name: Partner API authentication
         href: develop/api-authentication.md
     - name: Scenarios
