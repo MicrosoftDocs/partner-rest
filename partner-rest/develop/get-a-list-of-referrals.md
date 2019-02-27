@@ -25,14 +25,14 @@ This topic explains how to get a list of referrals.
 |---------|--------------------------------------------------------------|
 | **GET** | https://api.partner.microsoft.com/v1.0/engagements/referrals |
 
-** Supported OData operations**
+**Supported OData operations**
  
 | Name     | Description            | Example                                                                    |
 |:---------|:-----------------------|:---------------------------------------------------------------------------|
 | $filter  | Filters results (rows) |`/referrals?$filter=engagementId eq '65edc0b5-3485-41b7-a17e-dfa9ef4706e2'` |
 | $orderby | Orders results         |`/referrals?$orderby=createdDateTime desc`                                  |
 
-** Supported Filter parameters**
+**Supported Filter parameters**
 
 Use the following filter parameters to get a list of referrals
 
@@ -43,7 +43,7 @@ Use the following filter parameters to get a list of referrals
 | pagesize     | string | No       | Number of referrals that should be returned. 100 is the maximum.                        |
 | substatus    | string | No       | A string that represents a [ReferralSubstatus](referral-resources.md#ReferralSubstatus) |
 
-** Supported orderby parameters**
+**Supported orderby parameters**
 
 Use the following orderby parameters to get a list of referrals
 
