@@ -15,7 +15,6 @@ searchScope: []
     <td><a href="get-started.md">Get started</a></td>
     <td>
       <ul>
-        <li><a href="setup-api-access.md">Setup API access</a></li>
         <li><a href="api-authentication.md">Partner API authentication</a></li>
       </ul>
     </td>

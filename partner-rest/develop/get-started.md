@@ -9,5 +9,4 @@ ms.localizationpriority: medium
 
 In order to access the Microsoft Partner REST API, you must first setup your account for access and provide proper API authentication.
 
- - [Setup API access](setup-api-access.md)
  - [Partner API authentication](api-authentication.md)
