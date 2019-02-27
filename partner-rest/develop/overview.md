@@ -1,6 +1,4 @@
 ---
-layout: LandingPage
-hide_bc: true
 title: Microsoft Partner API overviews and scenarios
 description: Overviews and scenarios for Microsoft partners developing apps
 ms.date: 02/11/2019

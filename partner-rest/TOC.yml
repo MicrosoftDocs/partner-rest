@@ -2,7 +2,7 @@
   href: index.md
   items:
   - name: Overviews and scenarios
-    href: develop/index.md
+    href: develop/overview.md
     items:
     - name: Get started
       href: develop/get-started.md

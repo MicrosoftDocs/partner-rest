@@ -1,6 +1,5 @@
 ---
 layout: LandingPage
-hide_bc: true
 title: Microsoft Partner API
 description: Resources and documentation for Microsoft partners
 ms.date: 02/26/2019
