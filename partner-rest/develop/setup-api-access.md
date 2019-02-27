@@ -30,11 +30,10 @@ To help you integrate and test your API integration, Partner Center supports two
     </td>
   </tr>
 </table>
- 
- 
+
+
 ## <span id="Set__up_your_accounts"/><span id="set__up_your_accounts"/><span id="SET__UP_YOUR_ACCOUNTS"/>Set up your accounts
 
-<span id="createIntegrationSandbox"/><span id="createintegrationsandbox"/><span id="CREATEINTEGRATIONSANDBOX"/>
 **Create an integration sandbox**
 
 1.  Sign in into Partner Dashboard with a global admin account. (This is your primary Partner account.)
@@ -49,8 +48,6 @@ To help you integrate and test your API integration, Partner Center supports two
 5.  After you see the confirmation message, sign out of Partner Dashboard, then sign back in with your new integration sandbox admin account, in the form *username*@*domain* and with the password you just specified.
 
 6.  After you sign back in with your new integration sandbox admin account, above **Current Tasks**, click **Set Up Account** to complete the sandbox account setup.
-
-<span id="enableAPIAccess"/><span id="enableapiaccess"/><span id="ENABLEAPIACCESS"/>
 
 After your account is set up, you must enable API access before you can use the Partner Center SDK with the integration sandbox. You need to enable access to the API separately for both your primary Partner account and your integration sandbox account.
 
