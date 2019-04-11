@@ -40,7 +40,6 @@ Use the following filter parameters to get a list of referrals
 |--------------|--------|----------|-----------------------------------------------------------------------------------------|
 | engagementId | string | No       | An engagement ID.                                                                       |
 | status       | string | No       | A string that represents a [ReferralStatus](referral-resources.md#ReferralStatus)       |
-| pagesize     | string | No       | Number of referrals that should be returned. 100 is the maximum.                        |
 | substatus    | string | No       | A string that represents a [ReferralSubstatus](referral-resources.md#ReferralSubstatus) |
 
 **Supported orderby parameters**
@@ -278,10 +277,8 @@ If there are more than 100 items in a collection, to get the next page results u
 **Request example**
 
 ```http
-GET https://api.partnercenter.microsoft.com/referrals/v2/referrals HTTP/1.1
+GET https://api.partner.microsoft.com/v1.0/engagments/referrals HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json
-MS-ContinuationToken: 8GWNiKD4N/PCmdR5cpsz8Sxc9GYLmFJnanfGLSaQB2e5Rrxtp4OGy37p4nsnWM0Mp7PW4ZzNriCnUSNS8DohFta2M6j09OpKmVx7js/uEiMUE1AryHHgr+fdW8QU8xdeIDG5bSe72VbqEDUTUYLZgTcBeZWBcZLt30mHSW4A5tmJl4VWywKlgEdH6PpfjBQB0Z0EnW14isS7+zDAHOc4Jq+9j8/nDkSE7zEz/Ot+BTHGB2ky+ILLhQ39QQq+elGEcjLtFmrNWyYDUFR5HBe7c+IppL+Kk2lwAekVPuOeq3CfksYkCQgxiPgb8s/oOheCJBeu7rl7KhPnIkHUN2XzagLfBzJLAsPobgoiVzTHtqc9n47kuktHqmAhSv37V4RlxoADmUSzpUs6xT6sfwWBFAEeSlzvBVekvDe1S10sChID4xpaJxcBxMfXQT739E82iVHlWbdDJhAWrKlq1mlIO0ERCxYpr3N32mhNImo/Qs0=
-
 ```
