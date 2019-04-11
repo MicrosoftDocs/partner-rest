@@ -23,10 +23,8 @@
           href: develop/get-a-referral-by-id.md
         - name: Update a referral
           href: develop/update-a-referral.md
-        - name: Manage referrals
-          items:
-          -name: Referrals connectors
-            href: develop/referrals-connectors.md 
+        -name: Referrals connectors
+          href: develop/referrals-connectors.md 
   - name: REST API reference
     href: develop/rest-api-reference.md
     items:
