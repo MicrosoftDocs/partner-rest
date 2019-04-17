@@ -38,6 +38,7 @@ Represents the referral.
 | Team                  | [Member](referral-resources.md#Member)                      | Represents users in the organizations that are involved.                                |
 | InviteContext         | [InviteContext](referral-resources.md#InviteContext)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
 | ETag                  | string                                            | ETags are used and required for concurrency checking when updating resources. |
+| Target         | [ReferralTarget](referral-resources.md#Target)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
 
 
 ## <span id="ReferralStatus"/><span id="referralstatus"/><span id="REFERRALSTATUS"/>ReferralStatus
@@ -230,6 +231,27 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | None            |                                                                  |
 | Category        |  Leverages pre-defined solution names.                            |
 | Name            |  Ability to reference solutions from the Microsoft catalog. |
+
+
+## <span id="Target"/><span id="target"/><span id="TARGET"/>Target
+
+Describes the Referral Target.
+
+| Property                  | Type                                                  | Description                                                   |
+|---------------------------|-------------------------------------------------------|---------------------------------------------------------------|
+| Id                        | string                                                | The ID of the referral target. 
+| Type                      | [ReferralTargetType](referral-resources.md#TargetType) | Referral target type
+
+
+## <span id="TargetType"/><span id="targettype"/><span id="TARGETTYPE"/>TargetType
+
+An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the solution type.
+
+| Property        | Description                                                     |
+|-----------------|-----------------------------------------------------------------|
+| None            |                                                                  |
+| BusinessProfileLocation         |  Profile location from the partner business profile.                            |
+| SolutionProfile            |  Solution profile of the partner. |
 
 
 ## <span id="Tag"/><span id="tag"/><span id="TAG"/>Tag
