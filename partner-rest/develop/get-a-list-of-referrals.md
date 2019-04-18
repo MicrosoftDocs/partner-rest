@@ -1,7 +1,7 @@
 ---
 title: Get a list of referrals
 description: How to get a list of referrals using the Partner API.
-ms.date: 04/12/2019
+ms.date: 04/18/2019
 ms.localizationpriority: medium
 ---
 

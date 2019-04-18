@@ -1,7 +1,7 @@
 ---
 title: Partner API authentication
 description: Configure your authentication settings to use the Partner API, which uses Azure AD for authentication.
-ms.date: 04/12/2019
+ms.date: 04/18/2019
 ms.localizationpriority: medium
 ---
 
