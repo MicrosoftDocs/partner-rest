@@ -27,18 +27,18 @@ Represents the referral.
 | CreatedDateTime       | string in UTC date time format                    | The date the referral was created.                                                                                |
 | UpdatedDateTime       | string in UTC date time format                    | The date the referral was last updated.                                                                           |
 | ExpirationDateTime    | string in UTC date time format                    | The date the referral will expire.                                                                                |
-| Status                | [ReferralStatus](referral-resources.md#ReferralStatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status. |
-| Substatus          | [ReferralSubstatus](referral-resources.md#ReferralSubstatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral sub status. |
+| Status                | [ReferralStatus](referral-resources.md#referralstatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status. |
+| Substatus          | [ReferralSubstatus](referral-resources.md#referralsubstatus)      | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral sub status. |
 | StatusReason          | string                                            | A descriptive message about the status. Example: Why was the referral lost? |
-| ReferralType          | [ReferralType](referral-resources.md#ReferralType)          | Represents the referral type.                                                                                     |
-| Qualification         | [ReferralQualification](referral-resources.md#ReferralQualification)| Represents the quality of the referral.                                                                           |
-| CustomerProfile       | [CustomerProfile](referral-resources.md#CustomerProfile)    | Information about the customer.                                                                                     |
-| Consent               | [Consent](referral-resources.md#Consent)                    | Consent flags around sharing information with other organizations and allowing them to contact users.         |
-| Details               | [ReferralDetails](referral-resources.md#ReferralDetails)    | Customer details, notes, deal value, currency closing date.                                                                |
-| Team                  | [Member](referral-resources.md#Member)                      | Represents users in the organizations that are involved.                                |
-| InviteContext         | [InviteContext](referral-resources.md#InviteContext)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
+| ReferralType          | [ReferralType](referral-resources.md#referraltype)          | Represents the referral type.                                                                                     |
+| Qualification         | [ReferralQualification](referral-resources.md#referralqualification)| Represents the quality of the referral.                                                                           |
+| CustomerProfile       | [CustomerProfile](referral-resources.md#customerprofile)    | Information about the customer.                                                                                     |
+| Consent               | [Consent](referral-resources.md#consent)                    | Consent flags around sharing information with other organizations and allowing them to contact users.         |
+| Details               | [ReferralDetails](referral-resources.md#referraldetails)    | Customer details, notes, deal value, currency closing date.                                                                |
+| Team                  | [Member](referral-resources.md#member)                      | Represents users in the organizations that are involved.                                |
+| InviteContext         | [InviteContext](referral-resources.md#invitecontext)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
 | ETag                  | string                                            | ETags are used and required for concurrency checking when updating resources. |
-| Target         | [ReferralTarget](referral-resources.md#Target)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
+| Target         | [ReferralTarget](referral-resources.md#target)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
 
 
 ## ReferralStatus
@@ -109,8 +109,8 @@ Contains the customer contact information.
 | Name     | string                                                 | The customer organization name.                        |
 | Address  | [Address](referral-resources.md#address)                         | The address of the customer.                           |
 | Size     | string                                                 | The number of employees at the customers organization. |
-| Team     | [Member](referral-resources.md#Member)                           | The contacts for the customer organization.            |
-| Ids      | [CustomerProfileType](referral-resources.md#CustomerProfileType) | External ID's for the customer.                        |
+| Team     | [Member](referral-resources.md#member)                           | The contacts for the customer organization.            |
+| Ids      | [CustomerProfileType](referral-resources.md#customerprofiletype) | External ID's for the customer.                        |
 
 
 ## CustomerProfileType
@@ -148,7 +148,7 @@ Describes contact information for a specific individual.
 | LastName    | string | The contact's last name.     |
 | PhoneNumber | string | The contact's phone number.  |
 | Email       | string | The contact's email address. |
-| ContactPreference       | [ContactPreference](referral-resources.md#ContactPreference) | The contact's preference for receiving email notifications. |
+| ContactPreference       | [ContactPreference](referral-resources.md#contactpreference) | The contact's preference for receiving email notifications. |
 
 ## ContactPreference
 
@@ -177,7 +177,7 @@ Additional information that can be shared when inviting another organizations.
 | Property              | Type                                                       | Description                                                                   |
 |-----------------------|------------------------------------------------------------|-------------------------------------------------------------------------------|
 | Notes                 | string                                                     | Additional notes for the receiving organization.                |
-| InvitedBy | [InvitedBy](referral-resources.md#InvitedBy)                                     | The organization ID that sent the referral.                                   |
+| InvitedBy | [InvitedBy](referral-resources.md#invitedby)                                     | The organization ID that sent the referral.                                   |
 
 ## InvitedBy
 
@@ -198,7 +198,7 @@ Represents the referral details.
 | DealValue             | decimal                                                    | Value of the referral.                                    |
 | Currency              | string                                                    | The [ISO 4217 currency symbol](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.regioninfo.isocurrencysymbol?view=netframework-4.7.2)                                   |
 | ClosingDateTime       | string in UTC date time format                         | Date the customer is looking to close by.                           |
-| Requirements          | [ReferralRequirements](referral-resources.md#ReferralRequirements)   | Industry, products, service type, and solutions the customer is interested in.|
+| Requirements          | [ReferralRequirements](referral-resources.md#referralrequirements)   | Industry, products, service type, and solutions the customer is interested in.|
 
 
 ## ReferralRequirements
@@ -210,7 +210,7 @@ Contains the customer requirements.
 | Industries      | [Tag](referral-resources.md#tag)                                       | The industries the customer is interested in.        |
 | Products        | [Tag](referral-resources.md#tag)                                       | The products the customer is interested in.          |
 | Services        | [Tag](referral-resources.md#tag)                                       | The services the customer is interested in.          |
-| Solutions       | [SolutionTag](referral-resources.md#SolutionTag)                       | The solutions the customer is interested in.                             |
+| Solutions       | [SolutionTag](referral-resources.md#solutiontag)                       | The solutions the customer is interested in.                             |
 
 ## SolutionTag
 
@@ -220,7 +220,7 @@ Contains the solution details.
 |-----------------|----------------------------------------------|------------------------------------------------------|
 | Id              | string                                       | The ID of the solution.        |
 | Name            | string                                       | The name of the solution.          |
-| SolutionType    | [SolutionType](referral-resources.md#SolutionType)     | The type of solution.          |
+| SolutionType    | [SolutionType](referral-resources.md#solutiontype)     | The type of solution.          |
 
 ## SolutionType
 
@@ -240,7 +240,7 @@ Describes the Referral Target.
 | Property                  | Type                                                  | Description                                                   |
 |---------------------------|-------------------------------------------------------|---------------------------------------------------------------|
 | Id                        | string                                                | The ID of the referral target. 
-| Type                      | [ReferralTargetType](referral-resources.md#TargetType) | Referral target type
+| Type                      | [ReferralTargetType](referral-resources.md#targettype) | Referral target type
 
 
 ## TargetType

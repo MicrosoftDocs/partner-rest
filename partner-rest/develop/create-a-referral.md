@@ -41,17 +41,17 @@ This table describes the [Referral](referral-resources.md) properties in the req
 |---------------------|----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
 | Name                | string                                                               | The name of the Referral.                                                                                            |
 | ExternalReferenceId | string                                                               | An external identifier for the referral. For example, your own Dynamics 365 lead or opportunity ID.                   |
-| Status              | [ReferralStatus](referral-resources.md#ReferralStatus)               | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status.          |
-| Substatus           | [ReferralSubstatus](referral-resources.md#ReferralSubstatus)         | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral substatus.       |
+| Status              | [ReferralStatus](referral-resources.md#referralstatus)               | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status.          |
+| Substatus           | [ReferralSubstatus](referral-resources.md#referralsubstatus)         | An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral substatus.       |
 | StatusReason        | string                                                               | A descriptive message about the status. For example, explain why the referral was lost.                            |
-| ReferralType        | [ReferralType](referral-resources.md#ReferralType)                   | Represents the referral type. **Required.**                                                                                        |
-| Qualification       | [ReferralQualification](referral-resources.md#ReferralQualification) | Represents the quality of the referral.                                                                              |
-| CustomerProfile     | [CustomerProfile](referral-resources.md#CustomerProfile)             | Customer contact information.  **Required.**                                                                                      |
-| Consent             | [Consent](referral-resources.md#Consent)                             | Consent flags around sharing information with other organizations and allowing them to contact users.**Required.**               |
-| Details             | [ReferralDetails](referral-resources.md#ReferralDetails)             | Customer details, notes, deal value, currency closing date. **Required.**                                                           |
-| Team                | [Member](referral-resources.md#Member)                               | Represents users in the organizations that are involved in the partner engagement.                                   |
-| InviteContext       | [InviteContext](referral-resources.md#InviteContext)                 | Represents additional information a user can provide when inviting another organization into the partner engagement. |
-| Target         | [ReferralTarget](referral-resources.md#Target)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
+| ReferralType        | [ReferralType](referral-resources.md#referraltype)                   | Represents the referral type. **Required.**                                                                                        |
+| Qualification       | [ReferralQualification](referral-resources.md#referralqualification) | Represents the quality of the referral.                                                                              |
+| CustomerProfile     | [CustomerProfile](referral-resources.md#customerprofile)             | Customer contact information.  **Required.**                                                                                      |
+| Consent             | [Consent](referral-resources.md#consent)                             | Consent flags around sharing information with other organizations and allowing them to contact users.**Required.**               |
+| Details             | [ReferralDetails](referral-resources.md#referraldetails)             | Customer details, notes, deal value, currency closing date. **Required.**                                                           |
+| Team                | [Member](referral-resources.md#member)                               | Represents users in the organizations that are involved in the partner engagement.                                   |
+| InviteContext       | [InviteContext](referral-resources.md#invitecontext)                 | Represents additional information a user can provide when inviting another organization into the partner engagement. |
+| Target         | [ReferralTarget](referral-resources.md#target)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
 
 **Status & Substatus transition states**
 

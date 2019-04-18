@@ -39,8 +39,8 @@ Use the following filter parameters to get a list of referrals
 | Name         | Type   | Required | Description                                                                             |
 |--------------|--------|----------|-----------------------------------------------------------------------------------------|
 | engagementId | string | No       | An engagement ID.                                                                       |
-| status       | string | No       | A string that represents a [ReferralStatus](referral-resources.md#ReferralStatus)       |
-| substatus    | string | No       | A string that represents a [ReferralSubstatus](referral-resources.md#ReferralSubstatus) |
+| status       | string | No       | A string that represents a [ReferralStatus](referral-resources.md#referralstatus)       |
+| substatus    | string | No       | A string that represents a [ReferralSubstatus](referral-resources.md#referralsubstatus) |
 | UpdatedDateTime     | string | No       | UpdatedDatetime of the referral |
 | Email     | string | No       | Team contact email of the referal |
 
