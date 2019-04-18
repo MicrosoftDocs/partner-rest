@@ -1,7 +1,7 @@
 ---
 title: Get a list of referrals
-description: How to get a list of referrals
-ms.date: 02/07/2019
+description: How to get a list of referrals using the Partner API.
+ms.date: 04/12/2019
 ms.localizationpriority: medium
 ---
 
@@ -13,11 +13,11 @@ ms.localizationpriority: medium
 
 This topic explains how to get a list of referrals.
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner API authentication](api-authentication.md). This scenario supports authentication with App+User credentials.
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+## REST Request
 
 **Request syntax**
 
@@ -40,8 +40,9 @@ Use the following filter parameters to get a list of referrals
 |--------------|--------|----------|-----------------------------------------------------------------------------------------|
 | engagementId | string | No       | An engagement ID.                                                                       |
 | status       | string | No       | A string that represents a [ReferralStatus](referral-resources.md#ReferralStatus)       |
-| pagesize     | string | No       | Number of referrals that should be returned. 100 is the maximum.                        |
 | substatus    | string | No       | A string that represents a [ReferralSubstatus](referral-resources.md#ReferralSubstatus) |
+| UpdatedDateTime     | string | No       | UpdatedDatetime of the referral |
+| Email     | string | No       | Team contact email of the referal |
 
 **Supported orderby parameters**
 
@@ -70,13 +71,13 @@ Content-Type: application/json
 ```
 
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
+## REST Response
 
-If successful, the response body contains a collection of [Referral](referral-resources.md) resources in the response body.
+If the request is successful, the response body contains a collection of [referral resources](referral-resources.md) in the response body.
 
 **Response success and error codes**
 
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
+Each response comes with an [HTTP status code](error-codes.md) that indicates success or failure and additional debugging information. Use a network trace tool to read this code, the error type, and additional parameters.
 
 **Response example**
 
@@ -147,12 +148,12 @@ Each response comes with an HTTP status code that indicates success or failure a
             "links": {
                 "relatedReferrals": 
                     {
-                       "uri": "https://api.partner.microsoft.com/v1.0/engagments/referrals?$filter=engagementId eq '65edc0b5-3485-41b7-a17e-dfa9ef4706e2'",
+                       "uri": "https://api.partner.microsoft.com/v1.0/engagements/referrals?$filter=engagementId eq '65edc0b5-3485-41b7-a17e-dfa9ef4706e2'",
                         "method": "GET"
                     },
                 "self":
                     {
-                       "uri": "https://api.partner.microsoft.com/v1.0/engagments/referrals/c5fbb3b6-be74-4795-9fb5-4324c73fed37",
+                       "uri": "https://api.partner.microsoft.com/v1.0/engagements/referrals/c5fbb3b6-be74-4795-9fb5-4324c73fed37",
                         "method": "GET"
                     }
             },
@@ -257,12 +258,12 @@ Each response comes with an HTTP status code that indicates success or failure a
             "links": {
                 "relatedReferrals": 
                     {
-                       "uri": "https://api.partner.microsoft.com/v1.0/engagments/referrals?$filter=engagementId eq 'b1c40bb4-6d36-4eca-baa3-e1460cf2a454'",
+                       "uri": "https://api.partner.microsoft.com/v1.0/engagements/referrals?$filter=engagementId eq 'b1c40bb4-6d36-4eca-baa3-e1460cf2a454'",
                         "method": "GET"
                     },
                 "self":
                     {
-                       "uri": "https://api.partner.microsoft.com/v1.0/engagments/referrals/61c65491-2f2c-461a-84b4-3654499bc1d9",
+                       "uri": "https://api.partner.microsoft.com/v1.0/engagements/referrals/61c65491-2f2c-461a-84b4-3654499bc1d9",
                         "method": "GET"
                     }
             }
@@ -273,15 +274,13 @@ Each response comes with an HTTP status code that indicates success or failure a
 }
 ```
 
-If there are more than 100 items in a collection, to get the next page results use "@odata.nextLink". 
+If there are more than 100 items in a collection, use `@odata.nextLink` to get the next page of results.
 
 **Request example**
 
 ```http
-GET https://api.partnercenter.microsoft.com/referrals/v2/referrals HTTP/1.1
+GET https://api.partner.microsoft.com/v1.0/engagements/referrals HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json
-MS-ContinuationToken: 8GWNiKD4N/PCmdR5cpsz8Sxc9GYLmFJnanfGLSaQB2e5Rrxtp4OGy37p4nsnWM0Mp7PW4ZzNriCnUSNS8DohFta2M6j09OpKmVx7js/uEiMUE1AryHHgr+fdW8QU8xdeIDG5bSe72VbqEDUTUYLZgTcBeZWBcZLt30mHSW4A5tmJl4VWywKlgEdH6PpfjBQB0Z0EnW14isS7+zDAHOc4Jq+9j8/nDkSE7zEz/Ot+BTHGB2ky+ILLhQ39QQq+elGEcjLtFmrNWyYDUFR5HBe7c+IppL+Kk2lwAekVPuOeq3CfksYkCQgxiPgb8s/oOheCJBeu7rl7KhPnIkHUN2XzagLfBzJLAsPobgoiVzTHtqc9n47kuktHqmAhSv37V4RlxoADmUSzpUs6xT6sfwWBFAEeSlzvBVekvDe1S10sChID4xpaJxcBxMfXQT739E82iVHlWbdDJhAWrKlq1mlIO0ERCxYpr3N32mhNImo/Qs0=
-
 ```
