@@ -1,7 +1,7 @@
 ---
 title: Referral resources
 description: Resources that represents a sales lead direct from a customer, Microsoft, or another partner.
-ms.date: 02/07/2019
+ms.date: 04/18/2019
 ms.localizationpriority: medium
 ---
 
@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 Resources that represent a sales lead direct from a customer, Microsoft, or another partner.   
 
 
-## <span id="Referral"/><span id="referral"/><span id="REFERRAL"/>Referral
+## Referral
 
 Represents the referral.
 
@@ -41,7 +41,7 @@ Represents the referral.
 | Target         | [ReferralTarget](referral-resources.md#Target)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
 
 
-## <span id="ReferralStatus"/><span id="referralstatus"/><span id="REFERRALSTATUS"/>ReferralStatus
+## ReferralStatus
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status.
 
@@ -53,7 +53,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | Closed          | Represents a closed referral.                                                              |
 
 
-## <span id="ReferralSubstatus"/><span id="referralSubstatus"/><span id="REFERRALSubstatus"/>ReferralSubstatus
+## ReferralSubstatus
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status.
 
@@ -77,7 +77,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | Closed                | Closed                        | Won, Lost, Declined, Expired          |
 
 
-## <span id="ReferralType"/><span id="referraltype"/><span id="REFERRALTYPE"/>ReferralType
+## ReferralType
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral type.
 
@@ -87,7 +87,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | Independent           | Represents a referral in which two parties will collaborate to close.           |
 
 
-## <span id="ReferralQualification"/><span id="referralqualification"/><span id="REFERRALQUALIFICATION"/>ReferralQualification
+## ReferralQualification
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status.
 
@@ -99,7 +99,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | SalesQualified       | Represents a referral from a Microsoft sales agent.                                         |
 
 
-## <span id="CustomerProfile"/><span id="customerprofile"/><span id="CUSTOMERPROFILE"/>CustomerProfile
+## CustomerProfile
 
 Contains the customer contact information.
 
@@ -113,7 +113,7 @@ Contains the customer contact information.
 | Ids      | [CustomerProfileType](referral-resources.md#CustomerProfileType) | External ID's for the customer.                        |
 
 
-## <span id="CustomerProfileType"/><span id="customerprofiletype"/><span id="CUSTOMERPROFILETYPE"/>CustomerProfileType
+## CustomerProfileType
 
 Contains the External ID's for the customer. 
 
@@ -123,7 +123,7 @@ Contains the External ID's for the customer.
 | External | string | A customer ID unique to your organization.                                            |
 
 
-## <span id="Address"/><span id="address"/><span id="ADDRESS"/>Address
+## Address
 
 An address to use for the customer.
 
@@ -138,7 +138,7 @@ An address to use for the customer.
 | Region       | string | The region.                                                |
 
 
-## <span id="Member"/><span id="member"/><span id="MEMBER"/>Member
+## Member
 
 Describes contact information for a specific individual.
 
@@ -150,7 +150,7 @@ Describes contact information for a specific individual.
 | Email       | string | The contact's email address. |
 | ContactPreference       | [ContactPreference](referral-resources.md#ContactPreference) | The contact's preference for receiving email notifications. |
 
-## <span id="ContactPreference"/><span id="contactpreference"/><span id="CONTACTPREFERENCE"/>ContactPreference
+## ContactPreference
 
 Describes contact preferences for receiving email notifications.
 
@@ -160,7 +160,7 @@ Describes contact preferences for receiving email notifications.
 | DisableNotifications    | bool | Will disable email notifications for the user.     |
 
 
-## <span id="Consent"/><span id="consent"/><span id="CONSENT"/>Consent
+## Consent
 
 Consent flags around sharing information with other organizations and allowing them to contact users.
 
@@ -170,7 +170,7 @@ Consent flags around sharing information with other organizations and allowing t
 | ConsentToContact                                 | boolean   | Indicates consent to contact users.  |
 
 
-## <span id="InviteContext"/><span id="invitecontext"/><span id="INVITECONTEXT"/>InviteContext
+## InviteContext
 
 Additional information that can be shared when inviting another organizations. 
 
@@ -179,7 +179,7 @@ Additional information that can be shared when inviting another organizations.
 | Notes                 | string                                                     | Additional notes for the receiving organization.                |
 | InvitedBy | [InvitedBy](referral-resources.md#InvitedBy)                                     | The organization ID that sent the referral.                                   |
 
-## <span id="InvitedBy"/><span id="invitedby"/><span id="INVITEDBY"/>InvitedBy
+## InvitedBy
 
 Additional information that can be shared when inviting another organizations. 
 
@@ -188,7 +188,7 @@ Additional information that can be shared when inviting another organizations.
 | OrganizationId        | string                                                     | The organization ID that sent the referral.                |
 | OrganizationName      | string                                                     | The organization name that sent the referral.                                   |
 
-## <span id="ReferralDetails"/><span id="referraldetails"/><span id="REFERRALDETAILS"/>ReferralDetails
+## ReferralDetails
 
 Represents the referral details.
 
@@ -201,7 +201,7 @@ Represents the referral details.
 | Requirements          | [ReferralRequirements](referral-resources.md#ReferralRequirements)   | Industry, products, service type, and solutions the customer is interested in.|
 
 
-## <span id="ReferralRequirements"/><span id="referralrequirements"/><span id="REFERRALREQUIREMENTS"/>ReferralRequirements
+## ReferralRequirements
 
 Contains the customer requirements.
 
@@ -212,7 +212,7 @@ Contains the customer requirements.
 | Services        | [Tag](referral-resources.md#tag)                                       | The services the customer is interested in.          |
 | Solutions       | [SolutionTag](referral-resources.md#SolutionTag)                       | The solutions the customer is interested in.                             |
 
-## <span id="SolutionTag"/><span id="solutiontag"/><span id="SOLUTIONTAG"/>SolutionTag
+## SolutionTag
 
 Contains the solution details.
 
@@ -222,7 +222,7 @@ Contains the solution details.
 | Name            | string                                       | The name of the solution.          |
 | SolutionType    | [SolutionType](referral-resources.md#SolutionType)     | The type of solution.          |
 
-## <span id="SolutionType"/><span id="solutiontype"/><span id="SOLUTIONTYPE"/>SolutionType
+## SolutionType
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the solution type.
 
@@ -233,7 +233,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | Name            |  Ability to reference solutions from the Microsoft catalog. |
 
 
-## <span id="Target"/><span id="target"/><span id="TARGET"/>Target
+## Target
 
 Describes the Referral Target.
 
@@ -243,7 +243,7 @@ Describes the Referral Target.
 | Type                      | [ReferralTargetType](referral-resources.md#TargetType) | Referral target type
 
 
-## <span id="TargetType"/><span id="targettype"/><span id="TARGETTYPE"/>TargetType
+## TargetType
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the solution type.
 
@@ -254,7 +254,7 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | SolutionProfile            |  Solution profile of the partner. |
 
 
-## <span id="Tag"/><span id="tag"/><span id="TAG"/>Tag
+## Tag
 
 Describes the tag.
 

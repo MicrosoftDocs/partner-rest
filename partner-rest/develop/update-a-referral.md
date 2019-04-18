@@ -1,7 +1,7 @@
 ---
 title: Update a referral
 description: How to to update a referral
-ms.date: 02/07/2019
+ms.date: 04/18/2019
 ms.localizationpriority: medium
 ---
 
@@ -16,12 +16,12 @@ ms.localizationpriority: medium
 This topic explains how to update a referral.
 
 
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner API authentication](api-authentication.md). This scenario supports authentication with App+User credentials.
 
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
+## REST Request
 
 
 **Request syntax**
@@ -179,7 +179,7 @@ Content-Type: application/json
 }
 ```
 
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
+## REST Response
 
 If successful, this method returns the populated [Referral](referral-resources.md) resource in the response body.
 
