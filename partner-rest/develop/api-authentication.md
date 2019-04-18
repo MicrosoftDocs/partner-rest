@@ -1,21 +1,35 @@
 ---
 title: Partner API authentication
-description: Partner API uses Azure AD for authentication, and to use the Partner APIs you must configure your authentication settings correctly.
-ms.date: 02/21/2019
+description: Configure your authentication settings to use the Partner API, which uses Azure AD for authentication.
+ms.date: 04/18/2019
 ms.localizationpriority: medium
 ---
 
 # Partner API authentication
 
-Partner API utilizes Azure Active Directory for authentication. When interacting with the Partner API you must correctly configure an Azure AD application and then request an access token. Access tokens obtained using app + user authentication can be used with the Partner API. However, there are two important items that need to be considered. 1. Set up and 2. Partner Consent
+The Partner API utilizes Azure Active Directory (Azure AD) for authentication. When you interact with the Partner API, you must correctly configure an Azure AD application and then request an access token. You can use access tokens obtained using app + user authentication with the Partner API. 
 
-## Initial setup
+## Setting up an application
 
-1. Sign in to Azure AD from the Azure management portal. In **permissions to other applications**, set permissions for **Windows Azure Active Directory** to **Delegated Permissions**, and select both **Access the directory as the signed-in user** and **Sign in and read user profile**.
+> [!TIP]
+> This method is recommended because there is no need to update your username or password in order to keep getting leads. When you use the Azure AD option, you provide the app ID, application key, and directory ID from your Azure AD application.
 
-2. In the Azure management portal, **Add application**. Search for "Microsoft Partner", which is the Microsoft Partner application. Set the **Delegated Permissions** to **Access Partner Center**. 
+To configure Azure AD for Microsoft Dynamics CRM:
 
-## App + User Authentication
-### Partner Consent
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+2. Select the Azure AD service.
+2. Select **App registrations**, then select **New application registration**.
+3. Create your new application. For **Application type**, select **Native**. Provide a name and URL, then select **Create**.
+4. After creating your application, select **Settings**.
+5. Access **Required permissions** through the API. Select **Add**, then select **Select an API** 
+6. Search for the *Microsoft Partner* application API. Set the **Delegated Permissions** to **Partner Center**. 
+8. For the application you registered, select **Properties** and then select **copy the Application Id**.
+9. Select **Settings** and then **Keys**. Create a new key with the **Duration** set to **Never expires**, then select **Save**. 
+10. On the **Keys** menu, select **Copy the key value**. Save a copy of this value. 
 
-In the Azure management portal, **Enterprise applications**. Search for "Application created in the step above". Select the "Application created above". Click on **Permisisons** , then click on **Grant Admin Conset for Partner Account**.
+> [!WARNING]
+> Be sure to save a copy of the key value for the key you created. You will need to use this key value later to obtain a token.
+
+## Partner Consent
+
+In the Azure management portal, select **Enterprise applications**. Search for the application you created in the previous section, and select that application. Select **Permissions** , then select **Grant Admin Consent for Partner Account**.
