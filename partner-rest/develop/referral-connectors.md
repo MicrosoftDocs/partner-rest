@@ -14,7 +14,7 @@ You can use referral connectors to determine connections between partner referra
 * [Dynamics 365](https://dynamics.microsoft.com/) subscription
   * Sales module enabled
   * Account with administrator access to this subscription
-*[Microsoft Flow](https://flow.microsoft.com) subscription
+* [Microsoft Flow](https://flow.microsoft.com) subscription
   * Account with administrator access to this subscription
 * An Azure Active Directory (AAD) application ID, secret key and tenant ID. These values are used to access the Partner API. If you don't have these already, see [Partner authentication](api-authentication.md) for setup instructions.
 * A [Partner Center webhook event](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events) subscription to [Referral Created](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events#referral-created-event) and [Referral Updated](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events#referral-updated-event) events.
