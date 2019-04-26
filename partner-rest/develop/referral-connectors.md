@@ -1,7 +1,7 @@
 ---
 title: Referral connectors.
 description: How to synchronize partner referrals with Dynamics 365 CRM leads.
-ms.date: 04/24/2019
+ms.date: 04/26/2019
 ms.localizationpriority: medium
 ---
 
@@ -16,7 +16,7 @@ You can use referral connectors to determine connections between partner referra
   * Account with administrator access to this subscription
 * [Microsoft Flow](https://flow.microsoft.com) subscription
   * Account with administrator access to this subscription
-* An Azure Active Directory (AAD) application ID, secret key and tenant ID. These values are used to access the Partner API. If you don't have these already, see [Partner authentication](api-authentication.md) for setup instructions.
+* An Azure Active Directory (Azure AD) application ID, secret key and tenant ID. These values are used to access the Partner API. If you don't have these already, see [Partner authentication](api-authentication.md) for setup instructions.
 * A [Partner Center webhook event](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events) subscription to [Referral Created](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events#referral-created-event) and [Referral Updated](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events#referral-updated-event) events.
 
 ## Synchronization process
@@ -65,9 +65,9 @@ Configure the parameters of your flow resource:
 1. In [Microsoft Flow](https://flow.microsoft.com), choose **My Flows** in the navigation menu.
 2. Choose the flow resource you created or updated in the previous section.
 3. On the flow page, choose **Edit flow**.
-4. Choose the **AppID** variable and enter the ID of the AAD application.
-5. Choose the **Key** variable and enter the secret key of the AAD application.
-6. Select **Tenant** variable and enter the tenant ID of AAD application.
+4. Choose the **AppID** variable and enter the ID of the Azure AD application.
+5. Choose the **Key** variable and enter the secret key of the Azure AD application.
+6. Select **Tenant** variable and enter the tenant ID of Azure AD application.
 7. Choose **Save**.
 
 ### Register flow with Partner Center
