@@ -35,7 +35,7 @@ You can test that your referral connector flows are synchronized using a flow sy
 
 ### Download flow synchronization package
 
-Download the [flow synchronization package](#) from the GitHub repository.
+Download the [flow synchronization package](./downloads/PartnerReferralsToDynamicsCRMLead.zip) from the GitHub repository.
 
 ### Import flow synchronization package
 
@@ -57,6 +57,7 @@ Import the package into Microsoft Flow:
 10. Choose **Create new** to create a new Dynamics 365 connection, or select an existing connection.
 11. Verify that the **Import package** page now shows your selected flow setup type and Dynamics 365 connection. Then choose **Import**.
 12. Verify that your flow resource is now created or updated.
+13. Setup a [logic app](https://azure.microsoft.com/en-us/services/logic-apps) to [authenticate the call back](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhooks#how-to-authenticate-the-callback).
 
 ### Configure flow parameters
 
@@ -69,6 +70,8 @@ Configure the parameters of your flow resource:
 5. Choose the **Key** variable and enter the secret key of the Azure AD application.
 6. Select **Tenant** variable and enter the tenant ID of Azure AD application.
 7. Choose **Save**.
+8. Select **webhook certificate validation** and enter the logic app url.
+9. Save the flow.
 
 ### Register flow with Partner Center
 
