@@ -35,7 +35,7 @@ You can test that your referral connector flows are synchronized using a flow sy
 
 ### Download flow synchronization package
 
-Download the [flow synchronization package](./downloads/PartnerReferralsToDynamicsCRMLead.zip) from the GitHub repository.
+Download the [flow synchronization package](../downloads/PartnerReferralsToDynamicsCRMLead.zip) from the GitHub repository.
 
 ### Import flow synchronization package
 
