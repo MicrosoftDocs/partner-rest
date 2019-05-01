@@ -72,6 +72,8 @@ Each response comes with an HTTP status code that indicates success or failure a
     "@odata.context": "https://api.partner.microsoft.com/v1.0/engagments/referrals/$metadata#Referrals/$entity",
     "id": "61c65491-2f2c-461a-84b4-3654499bc1d9",
     "engagementId": "b1c40bb4-6d36-4eca-baa3-e1460cf2a454",
+    "organizationId": "7d23e5ca-19dc-4eaa-aac8-5e6b559f0d1d",
+    "organizationName": "Contoso Company",
     "createdDateTime": "2018-10-29T21:24:52.040469Z",
     "updatedDateTime": "2018-10-29T21:24:52.040469Z",
     "expirationDateTime": "2018-11-06T00:00:00Z",
