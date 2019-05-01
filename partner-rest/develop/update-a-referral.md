@@ -87,6 +87,12 @@ Content-Type: application/json
     "statusReason": "Customer engagement was a success!",
     "qualification": "SalesQualified",
     "type": "Independent",
+    "target": [
+        {
+            "type": "BusinessProfileLocation",
+            "id": "01e2abcd-52b0-4af3-a3ae-1fd1530b3563"
+        }
+    ],
     "customerProfile": {
         "name": "Contoso Customer Inc",
         "address": {
@@ -192,6 +198,8 @@ Each response comes with an HTTP status code that indicates success or failure a
 ``` http
 {
     "id": "4111fffc-f9ee-4d53-bba6-569135228642",
+    "organizationId": "7d23e5ca-19dc-4eaa-aac8-5e6b559f0d1d",
+    "organizationName": "Contoso Company",
     "engagementId": "37ef26aa-1d15-4533-9f93-a69bd33ab1e5",
     "createdDateTime": "2018-11-06T18:40:42.6178337Z",
     "updatedDateTime": "2018-11-06T18:43:38.9948636Z",
@@ -201,6 +209,12 @@ Each response comes with an HTTP status code that indicates success or failure a
     "statusReason": "Customer engagement was a success!",
     "qualification": "SalesQualified",
     "type": "Independent",
+    "target": [
+        {
+            "type": "BusinessProfileLocation",
+            "id": "01e2abcd-52b0-4af3-a3ae-1fd1530b3563"
+        }
+    ],
     "customerProfile": {
         "name": "Contoso Customer Inc",
         "address": {

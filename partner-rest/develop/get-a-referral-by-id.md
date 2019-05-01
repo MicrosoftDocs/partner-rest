@@ -82,6 +82,12 @@ Each response comes with an HTTP status code that indicates success or failure a
     "statusReason": null,
     "qualification": "SalesQualified",
     "type": "Independent",
+    "target": [
+        {
+            "type": "BusinessProfileLocation",
+            "id": "01e2abcd-52b0-4af3-a3ae-1fd1530b3563"
+        }
+    ],
     "customerProfile": {
         "name": "Contoso Customer Inc",
         "address": {
