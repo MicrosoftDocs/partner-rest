@@ -87,7 +87,9 @@ Each response comes with an [HTTP status code](error-codes.md) that indicates su
     "@odata.count": 100,
     "value": [
         {
-            "id": "c5fbb3b6-be74-4795-9fb5-4324c73fed37",
+            "id": "c5fbb3b6-be74-4795-9fb5-4324c73fed37",  
+            "organizationId": "7d23e5ca-19dc-4eaa-aac8-5e6b559f0d1d",
+            "organizationName": "Contoso Company",
             "engagementId": "65edc0b5-3485-41b7-a17e-dfa9ef4706e2",
             "externalReferenceId": "",
             "createdDateTime": "2018-10-30T21:03:42.4579542Z",
@@ -97,6 +99,12 @@ Each response comes with an [HTTP status code](error-codes.md) that indicates su
             "substatus": "Pending",
             "qualification": "Direct",
             "type": "Independent",
+            "target": [
+                    {
+                        "type": "BusinessProfileLocation",
+                        "id": "01e2abcd-52b0-4af3-a3ae-1fd1530b3563"
+                    }
+            ],
             "customerProfile": {
                 "name": "Fabrikam Customer Inc",
                 "address": {
@@ -160,6 +168,8 @@ Each response comes with an [HTTP status code](error-codes.md) that indicates su
         },
         {
             "id": "61c65491-2f2c-461a-84b4-3654499bc1d9",
+            "organizationId": "7d23e5ca-19dc-4eaa-aac8-5e6b559f0d1d",
+            "organizationName": "Contoso Company",
             "engagementId": "b1c40bb4-6d36-4eca-baa3-e1460cf2a454",
             "createdDateTime": "2018-10-29T21:24:52.040469Z",
             "updatedDateTime": "2018-10-29T21:24:52.040469Z",
@@ -168,6 +178,12 @@ Each response comes with an [HTTP status code](error-codes.md) that indicates su
             "substatus": "Pending",
             "qualification": "SalesQualified",
             "type": "Independent",
+            "target": [
+                    {
+                        "type": "BusinessProfileLocation",
+                        "id": "01e2abcd-52b0-4af3-a3ae-1fd1530b3563"
+                    }
+            ],
             "customerProfile": {
                 "name": "Contoso Customer Inc",
                 "address": {

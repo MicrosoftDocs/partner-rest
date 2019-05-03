@@ -76,6 +76,12 @@ Content-Type: application/json
     "statusReason": "Customer engagement was a success!",
     "qualification": "SalesQualified",
     "type": "Shared",
+    "target": [
+        {
+            "type": "SolutionProfile",
+            "id": "SOL-34104-EBB"
+        }
+    ],
     "customerProfile": {
         "name": "Contoso Customer Inc",
         "address": {
@@ -180,6 +186,8 @@ Each response comes with an HTTP status code that indicates success or failure a
 {
     "id": "4111fffc-f9ee-4d53-bba6-569135228642",
     "engagementId": "37ef26aa-1d15-4533-9f93-a69bd33ab1e5",
+    "organizationId": "7d23e5ca-19dc-4eaa-aac8-5e6b559f0d1d",
+    "organizationName": "Contoso Company",
     "name": "Test Cosell Invite_20",
     "externalReferenceId": null,
     "createdDateTime": "2019-02-23T02:05:23.2931817Z",
@@ -191,6 +199,12 @@ Each response comes with an HTTP status code that indicates success or failure a
     "qualification": "SalesQualified",
     "type": "Shared",
     "eTag": "\"00006d10-0000-0000-0000-5c70aa630000\"",
+    "target": [
+        {
+            "type": "SolutionProfile",
+            "id": "SOL-34104-EBB"
+        }
+    ],
     "customerProfile": {
         "name": "Contoso Customer Inc",
         "address": {
