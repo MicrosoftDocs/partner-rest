@@ -40,7 +40,7 @@ A connector does the following to synchronize a partner referral with a CRM lead
 
 ## Download flow synchronization package
 
-Download the [flow synchronization package](../downloads/PartnerReferralsToDynamicsCRMLead.zip) from the GitHub repository.
+Download the [flow synchronization package](https://github.com/microsoft/Partner-Center-Referrals/blob/master/flowconnectors/MicrosoftDynamicsCRM/PartnerReferralsToDynamicsCRMLead.zip?raw=true) from the GitHub repository.
 
 ### Import flow synchronization package
 
