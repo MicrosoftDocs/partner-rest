@@ -19,7 +19,13 @@ This method is recommended to set up **application and user access** to the API.
 4. Create your new application. For **Application type**, select **Native**. Provide a name and URL, then select **Create**.
 5. After creating your application, select **Settings**.
 6. Access **Required permissions** through the API. Select **Add**, then select **Select an API**
-7. Search for the *Microsoft Partner* application API. Set the **Delegated Permissions** to **Partner Center**.
+7. Search for the *Microsoft Partner* (*Microsoft Dev Center*) API. 
+
+    ![Search API](../images/SearchGatewayApi.png)
+
+8. Set the **Delegated Permissions** to **Partner Center**.
+
+    ![Search API](../images/SelectUserPermission.png)
 
 ## Application-only access
 
@@ -34,10 +40,17 @@ This method is recommended for **application-only access** setup to the APIs.
 4. Create your new application. For **Application type**, choose **Web app/API**. Enter a an application **name** and **URL**. Then choose **Create**.
 5. After your application is created, choose **Settings**.
 6. Access **Required permissions** through the API. Choose **Add**, then select **Select an API**
-7. Search for the *Microsoft Partner* (*Microsoft Dev Center*) API. Set the **Delegated Permissions** to **Partner Center**.
-8. For the application you registered, select **Properties** and then select **copy the Application ID**.
-9. Choose **Settings**, then choose **Keys**. Create a new key with the **Duration** set to **Never expires**, then select **Save**.
-10. On the **Keys** menu, choose **Copy the key value**. Save a copy of this value.
+7. Search for the *Microsoft Partner* (*Microsoft Dev Center*) API. 
+
+    ![Search API](../images/SearchGatewayApi.png)
+
+8. Set the **Delegated Permissions** to **Partner Center**.
+
+    ![Search API](../images/SelectUserPermission.png)
+
+9. For the application you registered, select **Properties** and then select **copy the Application ID**.
+10. Choose **Settings**, then choose **Keys**. Create a new key with the **Duration** set to **Never expires**, then select **Save**.
+11. On the **Keys** menu, choose **Copy the key value**. Save a copy of this value.
 
 > [!WARNING]
 > Be sure to save a copy of the key value for the key you created. You will need to use this key value later to obtain a token.
