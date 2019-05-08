@@ -48,7 +48,7 @@ This method is recommended for **application-only access** setup to the APIs.
 
 8. For the application you registered, select **Properties** and then select **copy the Application ID**.
 9. Choose **Settings**, then choose **Certificates & Secrets**. Select **New Client Secret** with the **Expiration** set to **Never expires**, then select **Save**.
-11. On the **Keys** menu, choose **Copy the key value**. Save a copy of this value.
+10. On the **Keys** menu, choose **Copy the key value**. Save a copy of this value.
 
 > [!WARNING]
 > Be sure to save a copy of the key value for the key you created. You will need to use this key value later to obtain a token.
