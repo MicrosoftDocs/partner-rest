@@ -134,7 +134,7 @@ An address to use for the customer.
 | City         | string | The city.                                                  |
 | State        | string | The state.                                                 |
 | PostalCode   | string | The zip code or postal code                                |
-| Country      | string | The country/region in ISO country code format.             |
+| Country      | string | The country/region in ISO country code format[CountryCodes](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.regioninfo.threeletterisoregionname?view=netframework-4.7.2).             |
 | Region       | string | The region.                                                |
 
 

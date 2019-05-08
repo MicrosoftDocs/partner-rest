@@ -35,7 +35,7 @@ You can test that your referral connector flows are synchronized using a flow sy
 
 ### Download flow synchronization package
 
-Download the [flow synchronization package](../downloads/PartnerReferralsToDynamicsCRMLead.zip) from the GitHub repository.
+Download the [flow synchronization package](../../downloads/PartnerReferralsToDynamicsCRMLead.zip) from the GitHub repository.
 
 ### Import flow synchronization package
 
@@ -44,18 +44,29 @@ Import the package into Microsoft Flow:
 1. Sign in to [Microsoft Flow](https://flow.microsoft.com) using the appropriate credentials.
 2. Choose **My Flows** in the navigation menu.
 3. Choose **Import**.
-4. On the **Import package** page, select the flow synchronization package that you downloaded. Then choose **Upload**.
-5. After the package upload is complete, find the package you uploaded in the **Review Package Content** section under **Choose your import options**.
+4. On the **Import package** page, select the flow synchronization package that you downloaded. Then choose **Upload**. 
+
+    ![Import Package](../images/importPackage.png)
+
+5. After the package upload is complete, find the package you uploaded in the **Review Package Content** .
+
+    ![Import Details](../images/importPackageDetails.png)
+
 6. Choose the **Action** button (pencil icon) for your uploaded package. This opens the **Import setup** blade.
 7. Choose your **Setup** type.
 
     * To create a new flow, select **Create as new**, and enter a new **Resource name**.
     * To update an existing flow with the same name, select **Update**.
 
+    ![Import Details](../images/CreateNewConnection.png)
+
 8. On the **Import package** page, find your Dynamics 365 connection in the **Review Package Content** section under **Related Resources**.
 9. Choose the **Action** button (pencil icon) for your Dynamics 365 connection. This opens the **Import setup** blade for this related resource.
 10. Choose **Create new** to create a new Dynamics 365 connection, or select an existing connection.
 11. Verify that the **Import package** page now shows your selected flow setup type and Dynamics 365 connection. Then choose **Import**.
+
+    ![Import Status](../images/importStatus.png)
+
 12. Verify that your flow resource is now created or updated.
 13. Setup a [logic app](https://azure.microsoft.com/en-us/services/logic-apps) to [authenticate the call back](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhooks#how-to-authenticate-the-callback).
 
@@ -66,12 +77,14 @@ Configure the parameters of your flow resource:
 1. In [Microsoft Flow](https://flow.microsoft.com), choose **My Flows** in the navigation menu.
 2. Choose the flow resource you created or updated in the previous section.
 3. On the flow page, choose **Edit flow**.
-4. Choose the **AppID** variable and enter the ID of the Azure AD application.
-5. Choose the **Key** variable and enter the secret key of the Azure AD application.
-6. Select **Tenant** variable and enter the tenant ID of Azure AD application.
+4. Choose the **AAD-Application (client) ID** variable and enter the ID of the Azure AD application.
+5. Choose the **AAD-Application (client) Secret** variable and enter the secret key of the Azure AD application.
+6. Select **AAD-Directory (tenant) ID** variable and enter the tenant ID of Azure AD application.
 7. Choose **Save**.
 8. Select **webhook certificate validation** and enter the logic app url.
 9. Save the flow.
+
+    ![Import Status](../images/SetFlowVariables.png)
 
 ### Register flow with Partner Center
 
