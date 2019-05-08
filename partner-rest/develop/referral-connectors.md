@@ -19,7 +19,13 @@ You can use referral connectors to determine connections between partner referra
 * An Azure Active Directory (Azure AD) application ID, secret key and tenant ID. These values are used to access the Partner API. If you don't have these already, see [Partner authentication](api-authentication.md) for setup instructions.
 * A [Partner Center webhook event](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events) subscription to [Referral Created](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events#referral-created-event) and [Referral Updated](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events#referral-updated-event) events.
 
-## Synchronization process
+## End to end flow
+
+Following is the process to enable importing referrals to CRM.
+
+   ![Import Status](../images/referralwebhook.png)
+
+## Flow document process
 
 A connector does the following to synchronize a partner referral with a CRM lead from Dynamics 365:
 
@@ -28,14 +34,13 @@ A connector does the following to synchronize a partner referral with a CRM lead
 3. Connects to Dynamics 365.
 4. Creates a new lead or updates an existing lead with the latest information on the referral.
 5. Updates the referral with the latest updates from the CRM lead.
+6. Steps in the flow. 
 
-## Flow synchronization testing
+    ![Import Package](../images/ReferralFlowSteps.png)
 
-You can test that your referral connector flows are synchronized using a flow synchronization package.
+## Download flow synchronization package
 
-### Download flow synchronization package
-
-Download the [flow synchronization package](../../downloads/PartnerReferralsToDynamicsCRMLead.zip) from the GitHub repository.
+Download the [flow synchronization package](../downloads/PartnerReferralsToDynamicsCRMLead.zip) from the GitHub repository.
 
 ### Import flow synchronization package
 
@@ -106,3 +111,6 @@ Register the flow resource with the Partner Center to trigger the flow and recei
     "signatureTokenToMsSignatureHeader": true
 }
 ```
+
+
+

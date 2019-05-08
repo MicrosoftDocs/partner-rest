@@ -35,6 +35,9 @@ This topic explains how to update a referral.
 
 - See [Partner API REST headers](headers.md) for more information.
 
+> [!IMPORTANT]
+> Be sure to set the If-Match header.
+
 **Request body**
 
 This table describes the [Referral](referral-resources.md) properties in the request body.
@@ -184,6 +187,9 @@ Content-Type: application/json
 
 }
 ```
+
+> [!IMPORTANT]
+> Remove "links": { } object from the PUT resource.
 
 ## REST Response
 
