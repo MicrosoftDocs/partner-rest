@@ -1,18 +1,17 @@
 ---
 title: Referral resources
 description: Resources that represents a sales lead direct from a customer, Microsoft, or another partner.
-ms.date: 04/18/2019
+ms.date: 05/09/2019
 ms.localizationpriority: medium
 ---
 
 # Referral resources
 
-**Applies To**
+Applies to:
 
 - Partner Center
 
-Resources that represent a sales lead direct from a customer, Microsoft, or another partner.   
-
+Resources that represent a sales lead direct from a customer, Microsoft, or another partner.
 
 ## Referral
 
@@ -40,7 +39,6 @@ Represents the referral.
 | ETag                  | string                                            | ETags are used and required for concurrency checking when updating resources. |
 | Target         | [ReferralTarget](referral-resources.md#target)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
 
-
 ## ReferralStatus
 
 An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that indicate the referral status.
@@ -51,7 +49,6 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | New             | Represents a new referral.                                                                 |
 | Active          | Represents an active referral.                                                             |
 | Closed          | Represents a closed referral.                                                              |
-
 
 ## ReferralSubstatus
 
@@ -68,14 +65,13 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | Declined        | Represents a closed referral that has been declined.                                       |
 | Expired         | Represents a closed referral that has expired.                                             |
 
-**Status & Substatus transition states**
+### Status & Substatus transition states
 
 | Status                | Allowed Status Transition     | Allowed Substatus                |
 |-----------------------|-------------------------------|---------------------------------------|
 | New                   | New, Active, Closed           | Pending, Received                     |
 | Active                | Active, Closed                | Accepted                              |
 | Closed                | Closed                        | Won, Lost, Declined, Expired          |
-
 
 ## ReferralType
 
@@ -85,7 +81,6 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 |-----------------------|---------------------------------------------------------------------------------|
 | Shared                | Represents a referral in which all parties involved will collaborate to close.  |
 | Independent           | Represents a referral in which two parties will collaborate to close.           |
-
 
 ## ReferralQualification
 
@@ -97,7 +92,6 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | Direct               | Represents a referral that has been created directly by a customer.                         |
 | MarketingQualified   | Represents a referral that has been generated via Microsoft marketing automation systems.   |
 | SalesQualified       | Represents a referral from a Microsoft sales agent.                                         |
-
 
 ## CustomerProfile
 
@@ -112,16 +106,14 @@ Contains the customer contact information.
 | Team     | [Member](referral-resources.md#member)                           | The contacts for the customer organization.            |
 | Ids      | [CustomerProfileType](referral-resources.md#customerprofiletype) | External ID's for the customer.                        |
 
-
 ## CustomerProfileType
 
-Contains the External ID's for the customer. 
+Contains the External ID's for the customer.
 
 | Property | Type   | Description                                                                           |
 |----------|--------|---------------------------------------------------------------------------------------|
 | Duns     | string | The [Dun & Bradstreet number](https://www.dnb.com/duns-number.html) for the customer. |
 | External | string | A customer ID unique to your organization.                                            |
-
 
 ## Address
 
@@ -134,9 +126,8 @@ An address to use for the customer.
 | City         | string | The city.                                                  |
 | State        | string | The state.                                                 |
 | PostalCode   | string | The zip code or postal code                                |
-| Country      | string | The country/region in ISO country code format[CountryCodes](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.regioninfo.threeletterisoregionname?view=netframework-4.7.2).             |
+| Country      | string | The country/region in [ISO country code format](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.regioninfo.threeletterisoregionname?view=netframework-4.7.2).             |
 | Region       | string | The region.                                                |
-
 
 ## Member
 
@@ -159,7 +150,6 @@ Describes contact preferences for receiving email notifications.
 | Locale   | string | The locale of the email notification. [AllCultures](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.culturetypes?view=netframework-4.7.2#System_Globalization_CultureTypes_AllCultures), [NeutralCultures](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.culturetypes?view=netframework-4.7.2#System_Globalization_CultureTypes_NeutralCultures), and [SpecificCultures](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.culturetypes?view=netframework-4.7.2#System_Globalization_CultureTypes_SpecificCultures) are supported  |
 | DisableNotifications    | bool | Will disable email notifications for the user.     |
 
-
 ## Consent
 
 Consent flags around sharing information with other organizations and allowing them to contact users.
@@ -169,10 +159,9 @@ Consent flags around sharing information with other organizations and allowing t
 | ConsentToToShareInfoWithOthers                   | boolean   | Indicates consent to share personally identifiable information (PII) with others.             |
 | ConsentToContact                                 | boolean   | Indicates consent to contact users.  |
 
-
 ## InviteContext
 
-Additional information that can be shared when inviting another organizations. 
+Additional information that can be shared when inviting another organizations.
 
 | Property              | Type                                                       | Description                                                                   |
 |-----------------------|------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -181,7 +170,7 @@ Additional information that can be shared when inviting another organizations.
 
 ## InvitedBy
 
-Additional information that can be shared when inviting another organizations. 
+Additional information that can be shared when inviting another organizations.
 
 | Property              | Type                                                       | Description                                                                   |
 |-----------------------|------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -199,7 +188,6 @@ Represents the referral details.
 | Currency              | string                                                    | The [ISO 4217 currency symbol](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.regioninfo.isocurrencysymbol?view=netframework-4.7.2)                                   |
 | ClosingDateTime       | string in UTC date time format                         | Date the customer is looking to close by.                           |
 | Requirements          | [ReferralRequirements](referral-resources.md#referralrequirements)   | Industry, products, service type, and solutions the customer is interested in.|
-
 
 ## ReferralRequirements
 
@@ -232,16 +220,14 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | Category        |  Leverages pre-defined solution names.                            |
 | Name            |  Ability to reference solutions from the Microsoft catalog. |
 
-
 ## Target
 
 Describes the Referral Target.
 
 | Property                  | Type                                                  | Description                                                   |
 |---------------------------|-------------------------------------------------------|---------------------------------------------------------------|
-| Id                        | string                                                | The ID of the referral target. 
-| Type                      | [ReferralTargetType](referral-resources.md#targettype) | Referral target type
-
+| Id                        | string                                                | The ID of the referral target. |
+| Type                      | [ReferralTargetType](referral-resources.md#targettype) | Referral target type |
 
 ## TargetType
 
@@ -253,7 +239,6 @@ An [Enum](https://docs.microsoft.com/dotnet/api/system.enum) with values that in
 | BusinessProfileLocation         |  Profile location from the partner business profile.                            |
 | SolutionProfile            |  Solution profile of the partner. |
 
-
 ## Tag
 
 Describes the tag.
@@ -261,7 +246,6 @@ Describes the tag.
 | Property                  | Type                                                  | Description                                                   |
 |---------------------------|-------------------------------------------------------|---------------------------------------------------------------|
 | Id                        | string                                                | The ID for this tag.                                          |
-
 
 ### Products
 
@@ -303,7 +287,6 @@ Describes the tag.
 |ManagedServices|
 |ProjectServices|
 
-
 ### Industries
 
 | Value        |
@@ -322,7 +305,6 @@ Describes the tag.
 |Services|
 |Travel & Transportation|
 |Wholesale & Distribution|
-
 
 ### Solutions
 
@@ -376,7 +358,6 @@ Describes the tag.
     |SQLServerUpgrade|
     |ThreatProtection|
     |WebDevelopment|
-
 
 ### Customer Size
 

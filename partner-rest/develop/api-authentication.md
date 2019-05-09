@@ -1,7 +1,7 @@
 ---
 title: Partner API authentication
 description: Configure your authentication settings to use the Partner API, which uses Azure AD for authentication.
-ms.date: 04/26/2019
+ms.date: 05/09/2019
 ms.localizationpriority: medium
 ---
 
@@ -11,14 +11,14 @@ The Partner API utilizes Azure Active Directory (Azure AD) for authentication. W
 
 ## Application and user access
 
-This method is recommended to set up **application and user access** to the API. 
+This method is recommended to set up **application and user access** to the API.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 2. Select the **Azure Active Directory** service.
 3. Select **App registrations**, then select **New application registration**.
 4. Create your new application. For **Application type**, select **Native**. Provide a name and URL, then select **Create**.
 5. Select **API permissions** for the application. Select **Add a permission**, then select **APIs my organization uses**
-6. Search for the *Microsoft Partner* (*Microsoft Dev Center*) 4990cffe-04e8-4e8b-808a-1175604b879f API. 
+6. Search for the *Microsoft Partner* (*Microsoft Dev Center*) API (`4990cffe-04e8-4e8b-808a-1175604b879f`).
 
     ![Search API](../images/SearchGatewayApi.png)
 
@@ -38,7 +38,7 @@ This method is recommended for **application-only access** setup to the APIs.
 3. Choose **App registrations**, then select **New application registration**.
 4. Create your new application. For **Application type**, choose **Web app/API**. Enter a an application **name** and **URL**. Then choose **Create**.
 5. Select **API permissions** for the application. Select **Add a permission**, then select **APIs my organization uses**
-6. Search for the *Microsoft Partner* (*Microsoft Dev Center*) 4990cffe-04e8-4e8b-808a-1175604b879f API. 
+6. Search for the *Microsoft Partner* (*Microsoft Dev Center*) API (`4990cffe-04e8-4e8b-808a-1175604b879f`).
 
     ![Search API](../images/SearchGatewayApi.png)
 
