@@ -105,12 +105,11 @@ Contains the customer contact information.
 
 | Property | Type                                                   | Description                                            |
 |----------|--------------------------------------------------------|--------------------------------------------------------|
-| Id       | string                                                 | The Id for this CustomerProfile.                       |
 | Name     | string                                                 | The customer organization name.                        |
 | Address  | [Address](referral-resources.md#address)                         | The address of the customer.                           |
 | Size     | string                                                 | The number of employees at the customers organization. |
 | Team     | [Member](referral-resources.md#member)                           | The contacts for the customer organization.            |
-| Ids      | [CustomerProfileType](referral-resources.md#customerprofiletype) | External ID's for the customer.                        |
+| Ids      | [CustomerProfileType](referral-resources.md#customerprofiletype) | An [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array) of values that indicate External ID's for the customer.                        |
 
 
 ## CustomerProfileType

@@ -20,6 +20,39 @@ This topic explains how to create a referral. There are 2 types of referrals:
 
 - Credentials as described in [Partner API authentication](api-authentication.md). This scenario supports authentication with App+User credentials.
 
+## Create a shared referral
+
+Creating a referral of shared [ReferralType](referral-resources.md#referraltype) is two step process.
+
+### Step 1:
+1. Create a referral with [ReferralType](referral-resources.md#referraltype) set to shared.
+2. Copy the **engagementId** from the return response.
+
+[ReferralTarget](referral-resources.md#target) sample for referral
+```
+"target": [
+        {
+            "type": "SolutionProfile",
+            "id": "SOL-ABC-DEF"
+        }
+    ]
+```
+
+### Step 2:
+1. Create another referral for Microsoft.
+2. Include the **enagementId** from your referral so they are tied together.
+
+[ReferralTarget](referral-resources.md#target) sample for Microsoft referral
+```
+"target": [
+        {
+            "type": "BusinessProfileLocation",
+            "id": "msft"
+        }
+    ]
+``` 
+
+  ![Import Status](../images/SharedReferral.png)
 
 ## REST Request
 
