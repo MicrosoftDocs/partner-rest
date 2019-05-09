@@ -1,7 +1,7 @@
 ---
 title: Referral connectors.
 description: How to synchronize partner referrals with Dynamics 365 CRM leads.
-ms.date: 04/26/2019
+ms.date: 05/09/2019
 ms.localizationpriority: medium
 ---
 
@@ -21,9 +21,9 @@ You can use referral connectors to determine connections between partner referra
 
 ## End to end flow
 
-Following is the process to enable importing referrals to CRM.
+The following flow chart shows the process of importing referrals into the CRM.
 
-   ![Import Status](../images/referralwebhook.png)
+![Flow chart showing referrals being imported into the CRM](../images/referralwebhook.png)
 
 ## Flow document process
 
@@ -34,9 +34,10 @@ A connector does the following to synchronize a partner referral with a CRM lead
 3. Connects to Dynamics 365.
 4. Creates a new lead or updates an existing lead with the latest information on the referral.
 5. Updates the referral with the latest updates from the CRM lead.
-6. Steps in the flow. 
 
-    ![Import Package](../images/ReferralFlowSteps.png)
+The following flow chart shows each step in this synchronization process:
+
+![Flow chart showing the flow document process described in this section](../images/ReferralFlowSteps.png)
 
 ## Download flow synchronization package
 
@@ -49,13 +50,13 @@ Import the package into Microsoft Flow:
 1. Sign in to [Microsoft Flow](https://flow.microsoft.com) using the appropriate credentials.
 2. Choose **My Flows** in the navigation menu.
 3. Choose **Import**.
-4. On the **Import package** page, select the flow synchronization package that you downloaded. Then choose **Upload**. 
+4. On the **Import package** page, select the flow synchronization package that you downloaded. Then choose **Upload**.
 
-    ![Import Package](../images/importPackage.png)
+    ![Import package screen for package files](../images/importPackage.png)
 
 5. After the package upload is complete, find the package you uploaded in the **Review Package Content** .
 
-    ![Import Details](../images/importPackageDetails.png)
+    ![Details of import package screen](../images/importPackageDetails.png)
 
 6. Choose the **Action** button (pencil icon) for your uploaded package. This opens the **Import setup** blade.
 7. Choose your **Setup** type.
@@ -63,14 +64,14 @@ Import the package into Microsoft Flow:
     * To create a new flow, select **Create as new**, and enter a new **Resource name**.
     * To update an existing flow with the same name, select **Update**.
 
-    ![Import Details](../images/CreateNewConnection.png)
+    ![Create or update new pacakge screen](../images/CreateNewConnection.png)
 
 8. On the **Import package** page, find your Dynamics 365 connection in the **Review Package Content** section under **Related Resources**.
 9. Choose the **Action** button (pencil icon) for your Dynamics 365 connection. This opens the **Import setup** blade for this related resource.
 10. Choose **Create new** to create a new Dynamics 365 connection, or select an existing connection.
 11. Verify that the **Import package** page now shows your selected flow setup type and Dynamics 365 connection. Then choose **Import**.
 
-    ![Import Status](../images/importStatus.png)
+    ![Import package status screen](../images/importStatus.png)
 
 12. Verify that your flow resource is now created or updated.
 13. Setup a [logic app](https://azure.microsoft.com/en-us/services/logic-apps) to [authenticate the call back](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhooks#how-to-authenticate-the-callback).
@@ -89,7 +90,7 @@ Configure the parameters of your flow resource:
 8. Select **webhook certificate validation** and enter the logic app url.
 9. Save the flow.
 
-    ![Import Status](../images/SetFlowVariables.png)
+    ![Flow variables settings screen](../images/SetFlowVariables.png)
 
 ### Register flow with Partner Center
 
@@ -111,6 +112,3 @@ Register the flow resource with the Partner Center to trigger the flow and recei
     "signatureTokenToMsSignatureHeader": true
 }
 ```
-
-
-

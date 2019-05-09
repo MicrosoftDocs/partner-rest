@@ -1,44 +1,38 @@
 ---
 title: Update a referral
 description: How to to update a referral
-ms.date: 04/18/2019
+ms.date: 05/09/2019
 ms.localizationpriority: medium
 ---
 
 # Update a referral
 
-
-**Applies To**
+Applies to:
 
 - Partner API
 
-
 This topic explains how to update a referral.
-
 
 ## Prerequisites
 
 - Credentials as described in [Partner API authentication](api-authentication.md). This scenario supports authentication with App+User credentials.
 
-
 ## REST Request
 
-
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                       |
 |---------|-------------------------------------------------------------------|
-| **PUT** | https://api.partner.microsoft.com/v1.0/engagements/referrals/{Id} |
+| **PUT** | <https://api.partner.microsoft.com/v1.0/engagements/referrals/{Id}> |
 
- 
-**Request headers**
+### Request headers
 
-- See [Partner API REST headers](headers.md) for more information.
+- For more information, see [Partner API REST headers](headers.md).
 
 > [!IMPORTANT]
-> Be sure to set the If-Match header.
+> Be sure to set the **If-Match** header.
 
-**Request body**
+### Request body
 
 This table describes the [Referral](referral-resources.md) properties in the request body.
 
@@ -63,7 +57,7 @@ This table describes the [Referral](referral-resources.md) properties in the req
 | InviteContext       | [InviteContext](referral-resources.md#invitecontext)                 | Represents additional information a user can provide when inviting another organization into the partner engagement. |
 | Target         | [ReferralTarget](referral-resources.md#target)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
 
-**Status & Substatus transition states**
+### Status and substatus transition states
 
 | Status | Allowed Status Transition | Allowed Substatus            |
 |--------|---------------------------|------------------------------|
@@ -71,14 +65,14 @@ This table describes the [Referral](referral-resources.md) properties in the req
 | Active | Active, Closed            | Accepted                     |
 | Closed | Closed                    | Won, Lost, Declined, Expired |
 
-**Request example**
+### Request example
 
 ```http
 PUT https://api.partner.microsoft.com/v1.0/engagements/referrals/49d90c72-3326-4f61-aacc-2cb57970448c HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json
- 
+
  {
     "id": "49d90c72-3326-4f61-aacc-2cb57970448c",
     "engagementId": "37ef26aa-1d15-4533-9f93-a69bd33ab1e5",
@@ -189,17 +183,17 @@ Content-Type: application/json
 ```
 
 > [!IMPORTANT]
-> Remove "links": { } object from the PUT resource.
+> Remove the `"links": { }` object from the PUT resource.
 
 ## REST Response
 
-If successful, this method returns the populated [Referral](referral-resources.md) resource in the response body.
+If successful, this method returns the populated [referral](referral-resources.md) resource in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ``` http
 {
