@@ -84,11 +84,12 @@ Configure the parameters of your flow resource:
 2. Choose the flow resource you created or updated in the previous section.
 3. On the flow page, choose **Edit flow**.
 4. Choose the **AAD-Application (client) ID** variable and enter the ID of the Azure AD application.
-5. Choose the **AAD-Application (client) Secret** variable and enter the secret key of the Azure AD application.
-6. Select **AAD-Directory (tenant) ID** variable and enter the tenant ID of Azure AD application.
-7. Choose **Save**.
-8. Select **webhook certificate validation** and enter the logic app url.
-9. Save the flow.
+5. Choose the **UserId** variable and enter the user id.
+6. Choose the **UserPassword** variable and enter the user password.
+7. Select **AAD-Directory (tenant) ID** variable and enter the tenant ID of Azure AD application.
+8. Choose **Save**.
+9. Select **webhook certificate validation** and enter the logic app url.
+10. Save the flow.
 
     ![Flow variables settings screen](../images/SetFlowVariables.png)
 
