@@ -12,6 +12,14 @@ You can use an Microsoft Flow as HTTPS endpoint to receive Partner Referrals. Re
 ## End to end flow
 
 The following flow chart shows the process of importing referrals into the CRM.
+* Partner sets up a webhook to receive referral notifications.
+* Partner registers the webhook with Partner Center and subscribes to *referral-created* and *referral-updated* events.
+* Referral client creates or updates a referral.
+* Partner Center Webhook system checks for Partner's registration and sends a notification.
+* Webhook receives the notification.
+* Microsoft flow gets a token to make a call to referral API.
+* Microsoft Flow endpoint **Gets** referral. 
+* Microsoft Flow endpoint **Creates** the Lead in Microsoft Dynamics CRM. 
 
 ![Flow chart showing referrals being imported into the CRM](../images/referralwebhook.png)
 
