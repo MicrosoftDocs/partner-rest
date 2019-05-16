@@ -7,17 +7,7 @@ ms.localizationpriority: medium
 
 # Referral Connectors
 
-You can use referral connectors to determine connections between partner referrals and customer relationship management (CRM) leads from Microsoft Dynamics 365.
-
-## Prerequisites
-
-* [Dynamics 365](https://dynamics.microsoft.com/) subscription
-  * Sales module enabled
-  * Account with administrator access to this subscription
-* [Microsoft Flow](https://flow.microsoft.com) subscription
-  * Account with administrator access to this subscription
-* An Azure Active Directory (Azure AD) application ID, secret key and tenant ID. These values are used to access the Partner API. If you don't have these already, see [Partner authentication](api-authentication.md) for setup instructions.
-* A [Partner Center webhook event](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events) subscription to [Referral Created](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events#referral-created-event) and [Referral Updated](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events#referral-updated-event) events.
+You can use an Microsoft Flow as HTTPS endpoint to receive Partner Referrals. Referrals recieved by Flow document can be written to a Customer Relationship Management (CRM) system. This article describes how to configure referrals connector using the [Microsoft Flow](https://flow.microsoft.com/en-us/) automation service.
 
 ## End to end flow
 
@@ -38,6 +28,23 @@ A connector does the following to synchronize a partner referral with a CRM lead
 The following flow chart shows each step in this synchronization process:
 
 ![Flow chart showing the flow document process described in this section](../images/ReferralFlowSteps.png)
+
+# Sample referrals connector
+
+## Sample
+* Following steps provide a referrals connector sample for synchronizing referrals to Microsoft Dynamics CRM. 
+* Different [Flow Connectors](https://flow.microsoft.com/en-us/connectors/) can be replaced in the sample to write to different CRMs.
+
+## Prerequisites
+
+* [Dynamics 365](https://dynamics.microsoft.com/) subscription
+  * Sales module enabled
+  * Account with administrator access to this subscription
+* [Microsoft Flow](https://flow.microsoft.com) subscription
+  * Account with administrator access to this subscription
+* [Logic apps](https://docs.microsoft.com/en-us/azure/logic-apps/quickstart-create-first-logic-app-workflow) subscription.
+* An Azure Active Directory (Azure AD) application ID, user id, password and tenant ID. These values are used to access the Partner API. If you don't have these already, see [Partner authentication](api-authentication.md) for setup instructions.
+* A [Partner Center webhook event](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events) subscription to [Referral Created](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events#referral-created-event) and [Referral Updated](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events#referral-updated-event) events.
 
 ## Download flow synchronization package
 
@@ -101,7 +108,7 @@ Register the flow resource with the Partner Center to trigger the flow and recei
 2. Choose the flow you created or updated.
 3. On the flow page, choose **Edit flow**.
 4. Copy and save the flow's **HTTP POST URL**. You will need to use this URL to trigger the flow.
-5. [Register to receive webhook events](https://api.partnercenter.microsoft.com/webhooks/v1/registration) when referrals are created or updated. Use the following body format:
+5. [Register to receive webhook events](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhooks#register-to-receive-events) when referrals are created or updated. Use the following body format:
 
 ```json
 {
