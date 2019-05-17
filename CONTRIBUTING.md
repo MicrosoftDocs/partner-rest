@@ -1,41 +1,47 @@
-# Contributing to UWP Conceptual Documentation
+# Contributing to Partner Center REST API Reference Documentation
 
-Thank you for your interest in the Microsoft Partner documentation! We appreciate your feedback, edits, and additions to our docs.
+This page covers the basic steps for contributing to the Partner Center REST API Reference documentation.
 
-## Writing content
+There's also an [introductory video](https://channel9.msdn.com/Blogs/WinHEC/Contributing-to-MSDN-and-TechNet-Documentation) that shows you how to propose changes.
 
-Our documentation is written in Markdown, a lightweight text style syntax. If you're not familiar with Markdown, you can [learn the basics on GitHub](https://guides.github.com/features/mastering-markdown/). When unsure, you can always copy the formatting style from other pages in our docs.
+## Sign a CLA
 
-## Public contributions
+If you want to contribute more than a couple lines and you're not a Microsoft employee, you need to [sign a Microsoft Contribution Licensing Agreement (CLA)](https://cla.microsoft.com/).
 
-If you are **not** a Microsoft employee, you can contribute through the [public content repository](https://github.com/MicrosoftDocs/partner-rest). Public contributions are appropriate for changes and clarifications to existing pages.
+If you are a Microsoft employee, be sure to [link your GitHub account and alias](https://opensource.microsoft.com/link).
 
-### Editing a file
+If you've already contributed to Microsoft repositories in the past, congratulations! You've already completed this step.
 
-If you're already in the public content repository, start by navigating to the file you want to change. From there, select the pencil icon above the displayed content to begin editing.
+## Proposing a change
 
-Alternately, if you're viewing a page in docs.microsoft.com, you can select the **Edit** button on the upper-right portion of the page. This will redirect you to the associated source file in the repository.
+If you'd like to suggest a change to the docs, follow these steps:
 
-When you begin editing, GitHub automatically forks the official repo into your personal GitHub account, where you can make your changes. When you're done, submit a pull request back to the **docs** branch.
+1. If you're viewing a Docs.microsoft.com page, click the **Edit** button in the upper right of the page.  You will be redirected to the corresponding Markdown source file in the [GitHub repository](https://github.com/microsoftdocs/partner-rest).  If you're already in the [GitHub repo](https://github.com/microsoftdocs/partner-rest), you can just navigate to the source file you would like to change.
+2. If you don't already have a GitHub account, click **Sign Up** in the upper right and create a new account.
+3. From the GitHub page you would like to change, click the pencil icon.
+4. Modify the file and use the preview tab to ensure the changes look good.
+5. When you're done, commit your changes and open a pull request.
 
-### Pull requests
+After you create the pull request, a member of the Partner Center Documentation team will review your changes.
 
-After you submit your pull request, it is evaluated against a content quality checklist to ensure it meets our basic standards. If it passes, it is assigned to a member of the documentation team for further review. If it fails, you'll be told what changes to make.
+If your request is accepted, updates are published to <https://docs.microsoft.com/en-us/partner-center/develop/>.
 
-The assigned reviewer(s) may approve or reject the PR, or work with you to make further changes.
+If you're a Microsoft employee and you need to collaborate in a private environment, please contact the CX_PartnerCenter alias.
 
-### Making substantial changes
+## Making more substantial changes
 
-To make more extensive changes to an existing article, add or change images, or contribute a new article, create a local clone of the GitHub repo.
+To make substantial changes to an existing article, add or change images, or contribute a new article, we recommend forking the official repo into your GitHub account, and then creating a local clone.
 
-### Pull requests
+For more info, see [Fork a Repo](https://help.github.com/articles/fork-a-repo/).
 
-When creating a pull request, make sure you're merging your personal branch into the branch from which it was created.
+## Using issues to provide feedback on Partner Center REST API Reference documentation
 
-After you submit your pull request, it is evaluated against a content quality checklist to ensure it meets our basic standards. If it passes, it is assigned to a member of the documentation team for further review. If it fails, you'll be told what changes to make.
+If you would like to provide feedback rather than suggesting a change to documentation, [create an issue](https://github.com/microsoftdocs/partner-rest/issues).
 
-The assigned reviewer(s) may approve or reject the PR, or work with you to make further changes. Reviewers will not merge the PR until you have approved it yourself.
+Be sure to include the topic title and the URL for the page.
 
-## Using issues to provide feedback on documentation
+## Resources
 
-If you want to provide feedback on the docs instead of making edits yourself, you can [create an issue in the public repo](https://github.com/MicrosoftDocs/partner-rest/issues). Select the **Issues** tab and select the **New issue** button. Be sure to include the topic title and the URL for the page. Your issue will be assigned to members of the UWP documentation team for review.
+You can use your favorite text editor to edit Markdown.  We recommend [Visual Studio Code](https://code.visualstudio.com/), a free lightweight open source editor from Microsoft.
+
+You can learn the basics of Markdown in just a few minutes.  To get started, check out [Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
