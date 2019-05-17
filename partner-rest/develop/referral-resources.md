@@ -1,7 +1,7 @@
 ---
 title: Referral resources
-description: Resources that represents a sales lead direct from a customer, Microsoft, or another partner.
-ms.date: 05/09/2019
+description: Referral resources represent a sales lead direct from a customer, Microsoft, or another partner.
+ms.date: 05/17/2019
 ms.localizationpriority: medium
 ---
 
@@ -11,7 +11,7 @@ Applies to:
 
 - Partner Center
 
-Resources that represent a sales lead direct from a customer, Microsoft, or another partner.
+These resources represent a sales lead direct from a customer, Microsoft, or another partner.
 
 ## Referral
 
@@ -103,11 +103,11 @@ Contains the customer contact information.
 | Address  | [Address](referral-resources.md#address)                         | The address of the customer.                           |
 | Size     | string                                                 | The number of employees at the customers organization. |
 | Team     | [Member](referral-resources.md#member)                           | The contacts for the customer organization.            |
-| Ids      | [CustomerProfileType](referral-resources.md#customerprofiletype) | An [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array) of values that indicate External ID's for the customer.                        |
+| Ids      | [CustomerProfileType](referral-resources.md#customerprofiletype) | An [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array) of values that indicate External IDs for the customer.                        |
 
 ## CustomerProfileType
 
-Contains the External ID's for the customer.
+Contains the External IDs for the customer.
 
 | Property | Type   | Description                                                                           |
 |----------|--------|---------------------------------------------------------------------------------------|
@@ -160,7 +160,7 @@ Consent flags around sharing information with other organizations and allowing t
 
 ## InviteContext
 
-Additional information that can be shared when inviting another organizations.
+Additional information that can be shared when inviting another organization.
 
 | Property              | Type                                                       | Description                                                                   |
 |-----------------------|------------------------------------------------------------|-------------------------------------------------------------------------------|
@@ -169,7 +169,7 @@ Additional information that can be shared when inviting another organizations.
 
 ## InvitedBy
 
-Additional information that can be shared when inviting another organizations.
+Additional information that can be shared when inviting another organization.
 
 | Property              | Type                                                       | Description                                                                   |
 |-----------------------|------------------------------------------------------------|-------------------------------------------------------------------------------|

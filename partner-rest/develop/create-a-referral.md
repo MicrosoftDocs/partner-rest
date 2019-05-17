@@ -1,72 +1,38 @@
 ---
 title: Create a referral
-description: How to create a referral
-ms.date: 04/18/2019
+description: Create independent or shared referrals in the Partner API.
+ms.date: 05/17/2019
 ms.localizationpriority: medium
 ---
 
 # Create a referral
 
-**Applies To**
+Applies to:
 
 - Partner API
 
-This topic explains how to create a referral. There are 2 types of referrals:  
+This topic explains how to create a referral. There are two types of [ReferralType](referral-resources.md#referraltype):
 
-1. Independent: When a referral is visible to one partner.
-2. Shared: When a referral is shared across two parties working together. For example, when Microsoft and a partner work together in a co-selling deal.
+1. Independent: Where a referral is visible to one partner.
+2. Shared: Where a referral is visible to two parties that are working together. For example, if Microsoft and a partner are working together in a co-selling deal, a referral can be shared between both parties. For more information, see the section [Creating a shared referral](#create-a-shared-referral).
 
 ## Prerequisites
 
 - Credentials as described in [Partner API authentication](api-authentication.md). This scenario supports authentication with App+User credentials.
 
-## Create a shared referral
-
-Creating a referral of shared [ReferralType](referral-resources.md#referraltype) is two step process.
-
-### Step 1:
-1. Create a referral with [ReferralType](referral-resources.md#referraltype) set to shared.
-2. Copy the **engagementId** from the return response.
-
-[ReferralTarget](referral-resources.md#target) sample for referral
-```
-"target": [
-        {
-            "type": "SolutionProfile",
-            "id": "SOL-ABC-DEF"
-        }
-    ]
-```
-
-### Step 2:
-1. Create another referral for Microsoft.
-2. Include the **enagementId** from your referral so they are tied together.
-
-[ReferralTarget](referral-resources.md#target) sample for Microsoft referral
-```
-"target": [
-        {
-            "type": "BusinessProfileLocation",
-            "id": "msft"
-        }
-    ]
-``` 
-
-  ![Import Status](../images/SharedReferral.png)
-
 ## REST Request
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                  |
 |---------|--------------------------------------------------------------|
-| **POST** | https://api.partner.microsoft.com/v1.0/engagements/referrals |
+| **POST** | <https://api.partner.microsoft.com/v1.0/engagements/referrals> |
 
-**Request headers**
+### Request headers
 
 - See [Partner API REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 This table describes the [Referral](referral-resources.md) properties in the request body for a brand new referral.
 
@@ -86,7 +52,7 @@ This table describes the [Referral](referral-resources.md) properties in the req
 | InviteContext       | [InviteContext](referral-resources.md#invitecontext)                 | Represents additional information a user can provide when inviting another organization into the partner engagement. |
 | Target         | [ReferralTarget](referral-resources.md#target)        | Represents additional information a user can provide when inviting another organization into the partner engagement.  |
 
-**Status & Substatus transition states**
+#### Status & Substatus transition states
 
 | Status | Allowed status transition | Allowed substatus            |
 |--------|---------------------------|------------------------------|
@@ -94,14 +60,14 @@ This table describes the [Referral](referral-resources.md) properties in the req
 | Active | Active, Closed            | Accepted                     |
 | Closed | Closed                    | Won, Lost, Declined, Expired |
 
-**Request example**
+### Request example
 
 ```http
 POST https://api.partner.microsoft.com/v1.0/engagements/referrals HTTP/1.1
 Authorization: Bearer <token>
 Host: api.partner.microsoft.com
 Content-Type: application/json
- 
+
  {
     "name": "Test Cosell Invite_20",
     "status": "New",
@@ -209,11 +175,11 @@ Content-Type: application/json
 
 If successful, this method returns the populated [Referral](referral-resources.md) resource in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ``` http
 {
@@ -335,4 +301,47 @@ Each response comes with an HTTP status code that indicates success or failure a
         }
     }
 }
+```
+
+## Create a shared referral
+
+There are two steps to create a referral of the **Shared** [referral type](referral-resources.md#referraltype).
+
+1. [Create your shared referral](#create-your-referral)
+2. [Create a connected referral for the second party](#create-a-connected-referral)
+
+The following flow chart illustrates these two steps in creating a shared referral.
+
+![Flow chart showing a shared referral with 2 referrals connected through the Microsoft Partner API](../images/SharedReferral.png)
+
+### Create your referral
+
+1. Create a referral with [ReferralType](referral-resources.md#referraltype) set to shared.
+2. Copy the **engagementId** from the return response.
+
+[ReferralTarget](referral-resources.md#target) sample for referral
+
+```json
+"target": [
+        {
+            "type": "SolutionProfile",
+            "id": "SOL-ABC-DEF"
+        }
+    ]
+```
+
+### Create a connected referral
+
+1. Create another referral for Microsoft.
+2. Include the **enagementId** from your referral so they are tied together.
+
+[ReferralTarget](referral-resources.md#target) sample for Microsoft referral
+
+```json
+"target": [
+        {
+            "type": "BusinessProfileLocation",
+            "id": "msft"
+        }
+    ]
 ```
