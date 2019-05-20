@@ -1,70 +1,66 @@
 ---
 title: Referral connectors.
-description: How to synchronize partner referrals with Dynamics 365 CRM leads.
-ms.date: 05/09/2019
+description: Synchronize partner referrals with Dynamics 365 CRM leads using Microsoft Flow.
+ms.date: 05/20/2019
 ms.localizationpriority: medium
 ---
 
-# Referral Connectors
+# Referral connectors
 
-You can use an Microsoft Flow as HTTPS endpoint to receive Partner Referrals. Referrals recieved by Flow document can be written to a Customer Relationship Management (CRM) system. This article describes how to configure referrals connector using the [Microsoft Flow](https://flow.microsoft.com/en-us/) automation service.
-
-## End to end flow
-
-The following flow chart shows the process of importing referrals into the CRM.
-* Partner sets up a webhook to receive referral notifications.
-* Partner registers the webhook with Partner Center and subscribes to *referral-created* and *referral-updated* events.
-* Referral client creates or updates a referral.
-* Partner Center Webhook system checks for Partner's registration and sends a notification.
-* Webhook receives the notification.
-* Microsoft flow gets a token to make a call to referral API.
-* Microsoft Flow endpoint **Gets** referral. 
-* Microsoft Flow endpoint **Creates** the Lead in Microsoft Dynamics CRM. 
-
-![Flow chart showing referrals being imported into the CRM](../images/referralwebhook.png)
-
-## Flow document process
-
-A connector does the following to synchronize a partner referral with a CRM lead from Dynamics 365:
-
-1. Obtains a token to connect to [https://api.partner.microsoft.com/v1.0/engagements/referrals](https://api.partner.microsoft.com/v1.0/engagements/referrals).
-2. Obtains the referral which triggered the connector using [https://api.partner.microsoft.com/v1.0/engagements/referrals/{id}](https://api.partner.microsoft.com/v1.0/engagements/referrals/{id}).
-3. Connects to Dynamics 365.
-4. Creates a new lead or updates an existing lead with the latest information on the referral.
-5. Updates the referral with the latest updates from the CRM lead.
-
-The following flow chart shows each step in this synchronization process:
-
-![Flow chart showing the flow document process described in this section](../images/ReferralFlowSteps.png)
-
-# Sample referrals connector
-
-## Sample
-* Following steps provide a referrals connector sample for synchronizing referrals to Microsoft Dynamics CRM. 
-* Different [Flow Connectors](https://flow.microsoft.com/en-us/connectors/) can be replaced in the sample to write to different CRMs.
+You can use referral connectors to synchronize partner referrals with customer relationship management (CRM) leads. You can create a referral connector using [Microsoft Flow](https://flow.microsoft.com) as the HTTPS endpoint to receive partner referrals. You can then write the referral leads received by the flow to a CRM system.
 
 ## Prerequisites
 
-* [Dynamics 365](https://dynamics.microsoft.com/) subscription
+* Microsoft Flow subscription
+  * Account with administrator access to this subscription
+* [Azure Logic Apps](https://azure.microsoft.com/services/logic-apps) subscription. For setup instructions, see the [Azure Logic Apps quickstart guide](https://docs.microsoft.com/en-us/azure/logic-apps/quickstart-create-first-logic-app-workflow).
+* Azure Active Directory (Azure AD) application ID, user id, password and tenant ID (used to access the Partner API). For setup instructions, see [Partner authentication](api-authentication.md).
+* [Partner Center webhook event](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events) subscription to [Referral Created](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events#referral-created-event) and [Referral Updated](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events#referral-updated-event) events.
+* [Microsoft Dynamics 365](https://dynamics.microsoft.com) subscription
   * Sales module enabled
   * Account with administrator access to this subscription
-* [Microsoft Flow](https://flow.microsoft.com) subscription
-  * Account with administrator access to this subscription
-* [Logic apps](https://docs.microsoft.com/en-us/azure/logic-apps/quickstart-create-first-logic-app-workflow) subscription.
-* An Azure Active Directory (Azure AD) application ID, user id, password and tenant ID. These values are used to access the Partner API. If you don't have these already, see [Partner authentication](api-authentication.md) for setup instructions.
-* A [Partner Center webhook event](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events) subscription to [Referral Created](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events#referral-created-event) and [Referral Updated](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events#referral-updated-event) events.
 
-## Download flow synchronization package
+## Flow overview
 
-Download the [flow synchronization package](https://github.com/microsoft/Partner-Center-Referrals/blob/master/flowconnectors/MicrosoftDynamicsCRM/PartnerReferralsToDynamicsCRMLead.zip?raw=true) from the GitHub repository.
+Referrals are imported into the CRM using the following flow:
+
+1. The partner sets up a webhook to receive referral notifications.
+2. The partner registers the webhook with Partner Center. The partner also subscribes to webhook events for when referrals are created or updated.
+3. The referral client creates or updates a referral.
+4. The Partner Center webhook system checks for the partner's registration and sends a notification to the webhook.
+5. The webhook receives the notification.
+6. The flow document in Microsoft flow uses a token to make a call to the Partner Center referral API.
+7. The flow endpoint gets the referral.
+8. The flow endpoint creates the CRM lead.
+
+![Flow chart showing the steps in this section for importing partner referrals into the CRM.](../images/referralwebhook.png)
+
+## Flow document process
+
+The flow document for a referral connector synchronizes a partner referral with a CRM lead from Dynamics 365.
+
+1. The connector obtains a token to connect to `https://api.partner.microsoft.com/v1.0/engagements/referrals`.
+2. The connector obtains the referral that triggered the connector using `https://api.partner.microsoft.com/v1.0/engagements/referrals/{id}`.
+3. The connector connects to Dynamics 365.
+4. The connector creates a new lead or updates an existing lead with the latest information on the referral.
+5. The connector updates the referral with the latest updates from the CRM lead.
+
+![Flow chart showing the steps in this section for the flow document process.](../images/ReferralFlowSteps.png)
+
+## Sample referral connector
+
+The following *sample referral connector* shows how to synchronize Partner Center referrals to CRM leads in Dynamics 365.
+
+> [!IMPORTANT]
+> You can write to different CRMs by replacing the [flow connectors](https://flow.microsoft.com/en-us/connectors/) in the sample code.
 
 ### Import flow synchronization package
 
-Import the package into Microsoft Flow:
+Download and import the *sample code package* into Microsoft Flow and connect to Dynamics 365:
 
-1. Sign in to [Microsoft Flow](https://flow.microsoft.com) using the appropriate credentials.
-2. Choose **My Flows** in the navigation menu.
-3. Choose **Import**.
+1. Download the [flow synchronization package](https://github.com/microsoft/Partner-Center-Referrals/blob/master/flowconnectors/MicrosoftDynamicsCRM/PartnerReferralsToDynamicsCRMLead.zip?raw=true) from the [GitHub repo](https://github.com/microsoft/Partner-Center-Referrals).
+2. Sign in to [Microsoft Flow](https://flow.microsoft.com) using the appropriate credentials.
+3. Choose **My Flows** in the navigation menu. Then choose **Import**.
 4. On the **Import package** page, select the flow synchronization package that you downloaded. Then choose **Upload**.
 
     ![Import package screen for package files](../images/importPackage.png)
@@ -89,7 +85,7 @@ Import the package into Microsoft Flow:
     ![Import package status screen](../images/importStatus.png)
 
 12. Verify that your flow resource is now created or updated.
-13. Setup a [logic app](https://azure.microsoft.com/en-us/services/logic-apps) to [authenticate the call back](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhooks#how-to-authenticate-the-callback).
+13. Set up an Azure Logic App to [authenticate the callback event from the Partner Center](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhooks#how-to-authenticate-the-callback).
 
 ### Configure flow parameters
 
@@ -98,19 +94,19 @@ Configure the parameters of your flow resource:
 1. In [Microsoft Flow](https://flow.microsoft.com), choose **My Flows** in the navigation menu.
 2. Choose the flow resource you created or updated in the previous section.
 3. On the flow page, choose **Edit flow**.
-4. Choose the **AAD-Application (client) ID** variable and enter the ID of the Azure AD application.
-5. Choose the **UserId** variable and enter the user id.
-6. Choose the **UserPassword** variable and enter the user password.
-7. Select **AAD-Directory (tenant) ID** variable and enter the tenant ID of Azure AD application.
+4. Choose the **AAD-Application (client) ID** variable and enter the ID of your Azure AD application.
+5. Choose the **UserId** variable and enter your user ID.
+6. Choose the **UserPassword** variable and enter your user password.
+7. Select the **AAD-Directory (tenant) ID** variable. Enter the tenant ID of your Azure AD application.
 8. Choose **Save**.
-9. Select **webhook certificate validation** and enter the logic app url.
-10. Save the flow.
+9. Select **webhook certificate validation** and enter the URL of your Azure Logic App.
+10. Save your flow.
 
     ![Flow variables settings screen](../images/SetFlowVariables.png)
 
 ### Register flow with Partner Center
 
-Register the flow resource with the Partner Center to trigger the flow and receive webhook events:
+Register your flow resource with the Partner Center to trigger the flow and receive webhook events:
 
 1. In [Microsoft Flow](https://flow.microsoft.com), choose **My Flows** in the navigation menu.
 2. Choose the flow you created or updated.
