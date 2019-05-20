@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 
 # Referral connectors
 
-You can use referral connectors to synchronize partner referrals with customer relationship management (CRM) leads. You can create a referral connector using [Microsoft Flow](https://flow.microsoft.com) as the HTTPS endpoint to receive partner referrals. You can then write the referral leads received by the flow to a CRM system.
+You can use referral connectors to synchronize partner referrals with customer relationship management (CRM) leads. You can create a referral connector using [Microsoft Flow](https://flow.microsoft.com) as the HTTPS endpoint to receive partner referrals. You can then write the referral received by the flow to a CRM system as a lead.
 
 ## Prerequisites
 
@@ -24,26 +24,26 @@ You can use referral connectors to synchronize partner referrals with customer r
 
 Referrals are imported into the CRM using the following flow:
 
-1. The partner sets up a webhook to receive referral notifications.
-2. The partner registers the webhook with Partner Center. The partner also subscribes to webhook events for when referrals are created or updated.
-3. The referral client creates or updates a referral.
-4. The Partner Center webhook system checks for the partner's registration and sends a notification to the webhook.
-5. The webhook receives the notification.
-6. The flow document in Microsoft flow uses a token to make a call to the Partner Center referral API.
-7. The flow endpoint gets the referral.
-8. The flow endpoint creates the CRM lead.
+1. Partner sets up a webhook to receive referral notifications.
+2. Partner registers the webhook with Partner Center. The partner also subscribes to webhook events for when referrals are created or updated.
+3. Referral client creates or updates a referral.
+4. Partner Center webhook system checks for the partner's registration and sends a notification to the webhook.
+5. Webhook receives the notification.
+6. Flow document in Microsoft flow uses a token to make a call to the Partner Center referral API.
+7. Flow endpoint gets the referral.
+8. Flow endpoint creates the CRM lead.
 
 ![Flow chart showing the steps in this section for importing partner referrals into the CRM.](../images/referralwebhook.png)
 
 ## Flow document process
 
-The flow document for a referral connector synchronizes a partner referral with a CRM lead from Dynamics 365.
+Flow document for a referral connector synchronizes a partner referral with a CRM lead from Dynamics 365.
 
-1. The connector obtains a token to connect to `https://api.partner.microsoft.com/v1.0/engagements/referrals`.
-2. The connector obtains the referral that triggered the connector using `https://api.partner.microsoft.com/v1.0/engagements/referrals/{id}`.
-3. The connector connects to Dynamics 365.
-4. The connector creates a new lead or updates an existing lead with the latest information on the referral.
-5. The connector updates the referral with the latest updates from the CRM lead.
+1. Connector gets a token to connect to `https://api.partner.microsoft.com/v1.0/engagements/referrals`.
+2. Connector obtains referral that triggered the connector using `https://api.partner.microsoft.com/v1.0/engagements/referrals/{id}`.
+3. Connector connects to Dynamics 365.
+4. Connector creates a new lead or updates an existing lead with the latest information on the referral.
+5. Connector updates referral with the latest updates from the CRM lead.
 
 ![Flow chart showing the steps in this section for the flow document process.](../images/ReferralFlowSteps.png)
 
