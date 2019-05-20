@@ -37,7 +37,7 @@ Referrals are imported into the CRM using the following flow:
 
 ## Flow document process
 
-Flow document for a referral connector synchronizes a partner referral with a CRM lead from Dynamics 365.
+The flow document for a referral connector synchronizes a partner referral with a CRM lead from Dynamics 365.
 
 1. Connector gets a token to connect to `https://api.partner.microsoft.com/v1.0/engagements/referrals`.
 2. Connector obtains referral that triggered the connector using `https://api.partner.microsoft.com/v1.0/engagements/referrals/{id}`.
