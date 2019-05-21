@@ -1,36 +1,31 @@
 ---
 title: Get a referral by ID
-description: How to get a referral by ID
-ms.date: 02/07/2019
+description: Obtain a referral by its ID.
+ms.date: 05/21/2019
 ms.localizationpriority: medium
 ---
 
 # Get a referral by ID
 
-
-**Applies To**
+Applies to:
 
 - Partner API
 
-
 This topic explains how to get a referral by ID.
 
-
-## <span id="Prerequisites"/><span id="prerequisites"/><span id="PREREQUISITES"/>Prerequisites
+## Prerequisites
 
 - Credentials as described in [Partner API authentication](api-authentication.md). This scenario supports authentication with App+User credentials.
 
+## REST request
 
-## <span id="REST_Request"/><span id="rest_request"/><span id="REST_REQUEST"/>REST Request
-
-**Request syntax**
+### Request syntax
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **GET** | https://api.partner.microsoft.com/v1.0/engagements/referrals/{Id}                                     |
+| **GET** | <https://api.partner.microsoft.com/v1.0/engagements/referrals/{Id}>                                     |
 
- 
-**URI parameter**
+### URI parameter
 
 Use the following ID in the URL
 
@@ -38,15 +33,15 @@ Use the following ID in the URL
 |------------------------|----------|----------|-----------------------------------------------------------------|
 |Id                      | string   | Yes       | A referral ID       |
 
-**Request headers**
+### Request headers
 
 - See [Partner REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 This table describes the [Referral](referral-resources.md) properties in the request body.
-    
-**Request example**
+
+### Request example
 
 ```http
 GET https://api.partner.microsoft.com/v1.0/engagements/referrals/0d43414c-fb9f-4ca0-9b8d-29deb70364cf HTTP/1.1
@@ -56,16 +51,15 @@ Content-Type: application/json
 
 ```
 
-
-## <span id="Response"/><span id="response"/><span id="RESPONSE"/>REST Response
+## REST response
 
 If successful, this method returns the populated [Referral](referral-resources.md) resource in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
-**Response example**
+### Response example
 
 ``` http
 {

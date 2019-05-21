@@ -1,6 +1,6 @@
 ---
 title: Update a referral
-description: How to to update a referral
+description: Update a referral using the Partner API.
 ms.date: 05/17/2019
 ms.localizationpriority: medium
 ---

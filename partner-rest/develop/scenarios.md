@@ -1,39 +1,23 @@
 ---
 title: Scenarios supported by the Partner REST API
-description: This section describes the programmatic scenarios available through the Microsoft Partner REST API.
-ms.date: 02/22/2019
+description: Programmatic scenarios available through the Microsoft Partner REST API.
+ms.date: 05/21/2019
 ms.localizationpriority: medium
 ---
 
 # Scenarios supported by the Partner REST API
 
-This section describes the programmatic scenarios available through the Microsoft Partner REST API.
+The Microsoft Partner REST API supports the following programmatic scenarios:
 
-## <span id="Scenarios_supported_by_the_Partner_REST_API"/><span id="scenarios_supported_by_the_partner_rest_api"/><span id="SCENARIOS_SUPPORTED_BY_THE_PARTNER_REST_API"/>Scenarios supported by the Partner REST API
+* [Create a referral](create-a-referral.md)
+* [Update a referral](update-a-referral.md)
+* [Get a list of referrals](get-a-list-of-referrals.md)
+* [Get a referral by ID](get-a-referral-by-id.md)
 
-All of the following scenarios can be completed three different ways:
+## Completing the scenarios
 
- - manually in the [Partner Center](https://go.microsoft.com/fwlink/p/?LinkId=620294) dashboard.
- - programmatically by using the Partner managed API.
- - programmatically by using the Partner REST API.
+You can complete all of the supported Partner REST API scenarios in three different ways:
 
-<table>
-  <colgroup>
-    <col width="50%" />
-    <col width="50%" />
-  </colgroup>
-  <tbody>
-    <tr>
-      <td>
-        <a href="referrals.md">Referrals</a></td>
-      <td>
-        <ul>
-          <li><a href="create-a-referral.md">Create a referral</a></li> 
-          <li><a href="get-a-list-of-referrals.md">Get a list of referrals</a></li> 
-          <li><a href="get-a-referral-by-id.md">Get a referral by ID</a></li> 
-          <li><a href="update-a-referral.md">Update a referral</a></li> 
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+* Manually through the [Partner Center](https://go.microsoft.com/fwlink/p/?LinkId=620294) dashboard
+* Programmatically through the [Partner Managed API](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-managed-api)
+* Programmatically through the [Partner REST API](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-rest-api-reference)
