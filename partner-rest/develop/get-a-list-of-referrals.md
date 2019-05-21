@@ -1,13 +1,13 @@
 ---
 title: Get a list of referrals
 description: How to get a list of referrals using the Partner API.
-ms.date: 04/18/2019
+ms.date: 05/21/2019
 ms.localizationpriority: medium
 ---
 
 # Get a list of referrals
 
-**Applies To**
+Applies to:
 
 - Partner API
 
@@ -17,22 +17,22 @@ This topic explains how to get a list of referrals.
 
 - Credentials as described in [Partner API authentication](api-authentication.md). This scenario supports authentication with App+User credentials.
 
-## REST Request
+## REST request
 
-**Request syntax**
+### Request syntax
 
 | Method  | Request URI                                                  |
 |---------|--------------------------------------------------------------|
-| **GET** | https://api.partner.microsoft.com/v1.0/engagements/referrals |
+| **GET** | <https://api.partner.microsoft.com/v1.0/engagements/referrals> |
 
-**Supported OData operations**
- 
+#### Supported OData operations
+
 | Name     | Description            | Example                                                                    |
 |:---------|:-----------------------|:---------------------------------------------------------------------------|
 | $filter  | Filters results (rows) |`/referrals?$filter=engagementId eq '65edc0b5-3485-41b7-a17e-dfa9ef4706e2'` |
 | $orderby | Orders results         |`/referrals?$orderby=createdDateTime desc`                                  |
 
-**Supported Filter parameters**
+#### Supported filter parameters
 
 Use the following filter parameters to get a list of referrals
 
@@ -44,7 +44,7 @@ Use the following filter parameters to get a list of referrals
 | updatedDateTime     | string | No       | UpdatedDatetime of the referral |
 | email     | string | No       | Team contact email of the referal |
 
-**Supported orderby parameters**
+#### Supported orderby parameters
 
 Use the following orderby parameters to get a list of referrals
 
@@ -52,15 +52,15 @@ Use the following orderby parameters to get a list of referrals
 |----------------|----------|----------|------------------------------------|
 |createdDateTime | DateTime | Yes      | Created date and time of Referrals |
 
-**Request headers**
+### Request headers
 
 - See [Partner REST headers](headers.md) for more information.
 
-**Request body**
+### Request body
 
 None.
 
-**Request example**
+### Request example
 
 ```http
 GET https://api.partner.microsoft.com/v1.0/engagements/referrals HTTP/1.1
@@ -70,16 +70,15 @@ Content-Type: application/json
 
 ```
 
-
-## REST Response
+## REST response
 
 If the request is successful, the response body contains a collection of [referral resources](referral-resources.md) in the response body.
 
-**Response success and error codes**
+### Response success and error codes
 
 Each response comes with an [HTTP status code](error-codes.md) that indicates success or failure and additional debugging information. Use a network trace tool to read this code, the error type, and additional parameters.
 
-**Response example**
+### Response example
 
 ``` http
 {
@@ -154,7 +153,7 @@ Each response comes with an [HTTP status code](error-codes.md) that indicates su
                 }
             }
             "links": {
-                "relatedReferrals": 
+                "relatedReferrals":
                     {
                        "uri": "https://api.partner.microsoft.com/v1.0/engagements/referrals?$filter=engagementId eq '65edc0b5-3485-41b7-a17e-dfa9ef4706e2'",
                         "method": "GET"
@@ -272,7 +271,7 @@ Each response comes with an [HTTP status code](error-codes.md) that indicates su
                 }
             },
             "links": {
-                "relatedReferrals": 
+                "relatedReferrals":
                     {
                        "uri": "https://api.partner.microsoft.com/v1.0/engagements/referrals?$filter=engagementId eq 'b1c40bb4-6d36-4eca-baa3-e1460cf2a454'",
                         "method": "GET"
@@ -291,8 +290,6 @@ Each response comes with an [HTTP status code](error-codes.md) that indicates su
 ```
 
 If there are more than 100 items in a collection, use `@odata.nextLink` to get the next page of results.
-
-**Request example**
 
 ```http
 GET https://api.partner.microsoft.com/v1.0/engagements/referrals HTTP/1.1
