@@ -25,6 +25,8 @@
           href: develop/update-a-referral.md
         - name: Referral connectors
           href: develop/referral-connectors.md
+        - name: Referral resources
+          href: develop/referral-resources.md
   - name: REST API reference
     href: develop/rest-api-reference.md
     items:
@@ -36,6 +38,3 @@
       href: develop/error-codes.md  
     - name: REST Resources
       href: develop/rest-resources.md
-      items:
-      - name: Referral
-        href: develop/referral-resources.md
