@@ -1,31 +1,14 @@
 ---
 title: Partner API REST URLs
-description: REST endpoints for accessing the  Microsoft Partner API.
-ms.date: 02/22/2019
+description: REST endpoint URLs for accessing the  Microsoft Partner API.
+ms.date: 05/21/2019
 ms.localizationpriority: medium
 ---
 
 # Partner API REST URLs
 
-The following table describes the base URLs to use with the different versions of Partner API:
+You can use the following base URL with different versions of the Microsoft Partner API:
 
-<table>
-  <colgroup>
-    <col style="width: 50%" />
-    <col style="width: 50%" />
-  </colgroup>
-  <thead>
-    <tr>
-      <th>Partner API Version</th>
-      <th>Base URL</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <p>Partner API</p>
-      </td>
-      <td><em>https://api.partner.microsoft.com/</em></td>
-    </tr>
-  </tbody>
-</table>
+| Partner API Version | Base URL |
+| --- | --- |
+| Partner API | `https://api.partner.microsoft.com/` |

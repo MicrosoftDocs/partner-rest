@@ -1,19 +1,17 @@
 ---
 title: Partner REST API reference
 description: The Partner REST API helps Microsoft partners integrate with Microsoft systems that manage apps, customer accounts, and handle support requests.
-ms.date: 02/11/2019
+ms.date: 05/21/2019
 ms.localizationpriority: medium
 ---
 
 # Partner REST API reference
 
-This section provides information needed to call Partner REST APIs, including endpoint URLs, headers, error codes and REST resources.
+The Partner REST API helps Microsoft partners integrate with Microsoft systems that manage apps, customer accounts, and handle support requests.
 
-## <span id="In_this_section"/><span id="in_this_section"/><span id="IN_THIS_SECTION"/>In this section
+The following topics provide information on how to call Partner REST APIs, including endpoint URLs, headers, error codes and REST resources:
 
-|                                     |                                                                |
-|-------------------------------------|----------------------------------------------------------------|
-| [REST endpoint URLs](rest-urls.md)  | Defines the REST API endpoints                                 |
-| [REST headers](headers.md)          | Defines the request and response headers used by the REST API. |
-| [REST error codes](error-codes.md)  | Defines the error codes used by the Partner REST API.          |
-| [REST resources](rest-resources.md) | Defines the JSON objects needed to use the REST API.           |
+* [REST endpoint URLs](rest-urls.md)
+* [REST request and response headers](headers.md)
+* [REST error codes](error-codes.md)
+* [REST resources](rest-resources.md) (JSON elements for creating requests and parsing responses)
