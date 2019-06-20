@@ -37,7 +37,8 @@
     "globalMetadata": {
       "breadcrumb_path": "/partner/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None",
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/partner-rest",
       "titleSuffix": "Partner",
       "ms.author": "ladolan",
       "author": "lauradolan",
