@@ -1,7 +1,7 @@
 ---
 title: Referral connectors.
 description: Synchronize partner referrals with Dynamics 365 CRM leads using Microsoft Flow.
-ms.date: 05/20/2019
+ms.date: 07/15/2019
 ms.localizationpriority: medium
 ---
 
@@ -12,9 +12,9 @@ You can use referral connectors to synchronize partner referrals with customer r
 ## Prerequisites
 
 * Microsoft Flow subscription
-  * Account with administrator access to this subscription
-* [Azure Logic Apps](https://azure.microsoft.com/services/logic-apps) subscription. For setup instructions, see the [Azure Logic Apps quickstart guide](https://docs.microsoft.com/en-us/azure/logic-apps/quickstart-create-first-logic-app-workflow).
+  * Account with administrator access to this subscription 
 * Azure Active Directory (Azure AD) application ID, user id, password and tenant ID (used to access the Partner API). For setup instructions, see [Partner authentication](api-authentication.md).
+* [Azure function app](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-app-portal) subscription.
 * [Partner Center webhook event](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events) subscription to [Referral Created](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events#referral-created-event) and [Referral Updated](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events#referral-updated-event) events.
 * [Microsoft Dynamics 365](https://dynamics.microsoft.com) subscription
   * Sales module enabled
@@ -85,7 +85,6 @@ Download and import the *sample code package* into Microsoft Flow and connect to
     ![Import package status screen](../images/importStatus.png)
 
 12. Verify that your flow resource is now created or updated.
-13. Set up an Azure Logic App to [authenticate the callback event from the Partner Center](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhooks#how-to-authenticate-the-callback).
 
 ### Configure flow parameters
 
@@ -98,11 +97,31 @@ Configure the parameters of your flow resource:
 5. Choose the **UserId** variable and enter your user ID.
 6. Choose the **UserPassword** variable and enter your user password.
 7. Select the **AAD-Directory (tenant) ID** variable. Enter the tenant ID of your Azure AD application.
-8. Choose **Save**.
-9. Select **webhook certificate validation** and enter the URL of your Azure Logic App.
-10. Save your flow.
+8. Choose **Save** to save your flow.
 
     ![Flow variables settings screen](../images/SetFlowVariables.png)
+
+### Authenticate the callback
+
+Authenticate the callback event from the Partner Center:
+
+1. [Create an Azure function app](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-app-portal) that [authenticates the callback event from the Partner Center](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhooks#how-to-authenticate-the-callback).
+
+    1. Verify that the required headers are present (**Authorization**, **x-ms-certificate-url**, and **x-ms-signature-algorithm**).
+    2. Download the certificate used to sign the content (**x-ms-certificate-url**).
+    3. Verify the certificate chain.
+    4. Verify the **Organization** of the certificate.
+    5. Read the content with UTF-8 encoding into a buffer.
+    6. Create an RSA Crypto Provider.
+    7. [Verify that the signature matches](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhooks#example-for-signature-validation) what was signed with the specified hash algorithm (for example, SHA256).
+    8. If the verification succeeds, an **OK** message is returned.
+
+2. Note the generated callback URI for your function app's HTTP endpoint. This URI is displayed when you create your function app. You can also find this URI on your function app's Azure resource page.
+3. In [Microsoft Flow](https://flow.microsoft.com), edit the flow "Partner Referral to Microsoft Dynamics CRM Lead" that you imported in the section *[Import flow synchronization package](#import-flow-synchronization-package)*.
+
+    1. Add the value of the function app's URI to the "web hook certificate validation" step.
+    2. Copy and paste your function app's callback URI into the flow document.
+    3. Save your flow document.
 
 ### Register flow with Partner Center
 
