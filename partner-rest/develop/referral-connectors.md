@@ -1,7 +1,7 @@
 ---
 title: Referral connectors.
 description: Synchronize partner referrals with Dynamics 365 CRM leads using Microsoft Flow.
-ms.date: 07/15/2019
+ms.date: 07/22/2019
 ms.localizationpriority: medium
 ---
 
@@ -12,7 +12,7 @@ You can use referral connectors to synchronize partner referrals with customer r
 ## Prerequisites
 
 * Microsoft Flow subscription
-  * Account with administrator access to this subscription 
+  * Account with administrator access to this subscription
 * Azure Active Directory (Azure AD) application ID, user id, password and tenant ID (used to access the Partner API). For setup instructions, see [Partner authentication](api-authentication.md).
 * [Azure function app](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-app-portal) subscription.
 * [Partner Center webhook event](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events) subscription to [Referral Created](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events#referral-created-event) and [Referral Updated](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events#referral-updated-event) events.
@@ -105,6 +105,9 @@ Configure the parameters of your flow resource:
 
 Authenticate the callback event from the Partner Center:
 
+> [!TIP]
+> For an example, see the [sample function app code](#sample-function-app-code) in the following section.
+
 1. [Create an Azure function app](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-app-portal) that [authenticates the callback event from the Partner Center](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhooks#how-to-authenticate-the-callback).
 
     1. Verify that the required headers are present (**Authorization**, **x-ms-certificate-url**, and **x-ms-signature-algorithm**).
@@ -122,6 +125,76 @@ Authenticate the callback event from the Partner Center:
     1. Add the value of the function app's URI to the "web hook certificate validation" step.
     2. Copy and paste your function app's callback URI into the flow document.
     3. Save your flow document.
+
+#### Sample function app code
+
+```csharp
+using System.Net;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
+using Newtonsoft.Json;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Extensions.Logging;
+using System;
+using System.IO;
+using System.Linq;
+using System.Net.Http;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
+{
+    string requestBody = null;
+    if (!string.IsNullOrWhiteSpace(GetFirstValueFromHeader(req, "x-ms-certificate-url")) && !string.IsNullOrWhiteSpace(GetFirstValueFromHeader(req, "x-ms-signature-algorithm")))
+    {
+        var certificateUrl = req?.Headers["x-ms-certificate-url"].First();
+        try
+        {
+            string resultContent = null;
+            using (var client = new HttpClient())
+            {
+                var result = await client.GetAsync(req.Headers["x-ms-certificate-url"].First());
+                resultContent = await result.Content.ReadAsStringAsync();
+                log.LogInformation(resultContent);
+            }
+            if (!string.IsNullOrEmpty(resultContent))
+            {
+                var certificate = new X509Certificate2(Encoding.UTF8.GetBytes(resultContent));
+                var validationResult = certificate.Verify() && certificate.Issuer.Contains("O=Microsoft Corporation");
+                if (validationResult)
+                {
+                    return new OkResult();
+                }
+                else
+                {
+                    return new BadRequestResult();
+                }
+            }
+        }
+        catch (Exception)
+        {
+            new BadRequestObjectResult("Certificate could not be retrieved, invalid caller to flow");
+        }
+
+        requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+        dynamic data = JsonConvert.DeserializeObject(requestBody);
+    }
+    else
+    {
+        new BadRequestObjectResult("Missing headers");
+    }
+
+    return new BadRequestObjectResult("Certificate validation failed");
+}
+
+private static string GetFirstValueFromHeader(HttpRequest request, string headerName)
+{
+    StringValues matchingHeaderValues;
+    request.Headers.TryGetValue(headerName, out matchingHeaderValues);
+    return matchingHeaderValues.Count != 0 ? matchingHeaderValues.First() : string.Empty;
+}
+```
 
 ### Register flow with Partner Center
 
