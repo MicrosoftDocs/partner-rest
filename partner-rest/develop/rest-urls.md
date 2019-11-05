@@ -2,6 +2,8 @@
 title: Partner API REST URLs
 description: REST endpoint URLs for accessing the  Microsoft Partner API.
 ms.date: 05/21/2019
+ms.service: partner-dashboard
+ms.subservice: partnercenter-csp
 ms.localizationpriority: medium
 ---
 

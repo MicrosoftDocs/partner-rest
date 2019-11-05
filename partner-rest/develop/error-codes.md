@@ -2,6 +2,8 @@
 title: Partner API REST error codes
 description: Partner REST APIs return a JSON object with a status code about your request's success or failure.
 ms.date: 05/21/2019
+ms.service: partner-dashboard
+ms.subservice: partnercenter-csp
 ms.localizationpriority: medium
 ---
 
@@ -22,9 +24,9 @@ The following table lists and describes the HTTP status codes that can be return
 | 400         | Bad Request                     | Cannot process the request because it is malformed or incorrect.                                                                       |
 | 401         | Unauthorized                    | Required authentication information is either missing or not valid for the resource.                                                   |
 | 403         | Forbidden                       | Access is denied to the requested resource. The user might not have enough permission. **Important: if conditional access policies are applied to a resource, `HTTP 403; Forbidden error=insufficent_claims` may be returned.** For more details on Microsoft Graph and conditional access, see [Developer Guidance for Azure Active Directory Conditional Access](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-conditional-access-developer)  |
-| 404         | Not Found                       | The requested resource doesn’t exist.                                                                                                  |
+| 404         | Not Found                       | The requested resource doesn't exist.                                                                                                  |
 | 405         | Method Not Allowed              | The HTTP method in the request is not allowed on the resource.                                                                         |
-| 406         | Not Acceptable                  | This service doesn’t support the format requested in the Accept header.                                                                |
+| 406         | Not Acceptable                  | This service doesn't support the format requested in the Accept header.                                                                |
 | 409         | Conflict                        | The current state conflicts with what the request expects. For example, the specified parent folder might not exist.                   |
 | 410         | Gone                            | The requested resource is no longer available at the server.                                               |
 | 411         | Length Required                 | A Content-Length header is required on the request.                                                                                    |
@@ -36,7 +38,7 @@ The following table lists and describes the HTTP status codes that can be return
 | 423         | Locked                          | The resource that is being accessed is locked.                                                                                          |
 | 429         | Too Many Requests               | Client application has been throttled and should not attempt to repeat the request until an amount of time has elapsed.                |
 | 500         | Internal Server Error           | There was an internal server error while processing the request.                                                                       |
-| 501         | Not Implemented                 | The requested feature isn’t implemented.                                                                                               |
+| 501         | Not Implemented                 | The requested feature isn't implemented.                                                                                               |
 | 503         | Service Unavailable             | The service is temporarily unavailable for maintenance or is overloaded. You may repeat the request after a delay, the length of which may be specified in a Retry-After header.|
 | 504         | Gateway Timeout                 | The server, while acting as a proxy, did not receive a timely response from the upstream server it needed to access in attempting to complete the request. May occur together with 503. |
 | 507         | Insufficient Storage            | The maximum storage quota has been reached.                                                                                            |

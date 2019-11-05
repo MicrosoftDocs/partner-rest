@@ -2,6 +2,8 @@
 title: Referral resources
 description: Referral resources represent a sales lead direct from a customer, Microsoft, or another partner.
 ms.date: 05/17/2019
+ms.service: partner-dashboard
+ms.subservice: partnercenter-csp
 ms.localizationpriority: medium
 ---
 

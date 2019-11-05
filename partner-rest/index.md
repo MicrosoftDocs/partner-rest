@@ -3,6 +3,8 @@ layout: LandingPage
 title: Microsoft Partner API
 description: Resources and documentation for Microsoft partners
 ms.date: 02/26/2019
+ms.service: partner-dashboard
+ms.subservice: partnercenter-csp
 ms.topic: landing-page
 searchScope: []
 ---

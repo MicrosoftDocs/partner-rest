@@ -2,6 +2,8 @@
 title: Get started with the Partner REST API
 description: Set up your account for use with the Partner REST API.
 ms.date: 05/21/2019
+ms.service: partner-dashboard
+ms.subservice: partnercenter-csp
 ms.localizationpriority: medium
 ---
 
