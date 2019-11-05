@@ -2,6 +2,8 @@
 title: Microsoft Partner API overviews and scenarios
 description: Overviews and scenarios for Microsoft partners developing apps
 ms.date: 05/21/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.topic: landing-page
 searchScope: []
 ---

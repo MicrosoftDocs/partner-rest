@@ -2,6 +2,8 @@
 title: Get a referral by ID
 description: Obtain a referral by its ID.
 ms.date: 05/21/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

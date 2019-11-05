@@ -2,6 +2,8 @@
 title: Create a referral
 description: Create independent or shared referrals in the Partner API.
 ms.date: 05/17/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 

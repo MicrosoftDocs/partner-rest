@@ -2,6 +2,8 @@
 title: Update a referral
 description: Update a referral using the Partner API.
 ms.date: 05/17/2019
+ms.service: partner-dashboard
+ms.subservice: PartnerCenterCSP
 ms.localizationpriority: medium
 ---
 
