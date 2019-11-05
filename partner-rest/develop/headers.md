@@ -3,7 +3,7 @@ title: Partner API REST headers
 description: The following HTTP request and response headers are supported by the Partner REST API.
 ms.date: 05/21/2019
 ms.service: partner-dashboard
-ms.subservice: PartnerCenterCSP
+ms.subservice: partnercenter-csp
 ms.localizationpriority: medium
 ---
 
