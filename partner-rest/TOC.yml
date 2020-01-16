@@ -27,6 +27,13 @@
           href: develop/referral-connectors.md
         - name: Referral resources
           href: develop/referral-resources.md
+      - name: Pricing
+        href: develop/get-a-price-sheet.md
+        items:
+        - name: Get a price sheet
+          href: develop/get-a-price-sheet.md
+        - name: Get foreign exchange rates
+          href: develop/get-foreign-exchange-rates.md
   - name: REST API reference
     href: develop/rest-api-reference.md
     items:
