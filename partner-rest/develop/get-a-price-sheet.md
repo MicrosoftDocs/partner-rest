@@ -19,6 +19,15 @@ This topic explains how to get a price sheet for a given market and view. Suppor
 
 - Credentials as described in [Partner API authentication](api-authentication.md). This scenario supports authentication with App+User credentials.
 
+## Details
+
+- App+User authentication is supported, not App only.
+- Current returns data only for Azure plan consumption and reservation products.
+- Current pricing includes all meters and products available during the current month to the date the API is called. Previous months include all meters and products avaialble for the given month.
+- Consumption meter prices are only in USD, partners are to use the foreign exchange rates API to calculate local currency costs.
+- Consumption meter prices are estimated retail prices, partner discounts are available via [partner earned credit](https://docs.microsoft.com/en-us/partner-center/partner-earned-credit-explanation).
+- Reservations meter prices include the CSP partner discounts. Estimated retails prices for reservations can be found in the reservations shared services downloadable from the partner center pricing and offers page.
+
 ## REST request
 
 ### Request syntax
