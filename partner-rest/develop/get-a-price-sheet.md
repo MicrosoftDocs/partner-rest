@@ -58,10 +58,6 @@ Use the following filter parameters.
 
 - See [Partner REST headers](headers.md) for more information.
 
-### Request body
-
-This table describes the [Referral](referral-resources.md) properties in the request body.
-
 ### Request example
 
 ```http
