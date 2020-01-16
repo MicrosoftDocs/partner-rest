@@ -23,5 +23,5 @@ The Microsoft Partner REST API supports the following programmatic scenarios:
 You can complete all of the supported Partner REST API scenarios in three different ways:
 
 * Manually through the [Partner Center](https://go.microsoft.com/fwlink/p/?LinkId=620294) dashboard
-* Programmatically through the [Partner Managed API](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-managed-api)
-* Programmatically through the [Partner REST API](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-rest-api-reference)
+* Programmatically through the [Partner Managed API](https://docs.microsoft.com/partner-center/develop/partner-center-managed-api)
+* Programmatically through the [Partner REST API](https://docs.microsoft.com/partner-center/develop/partner-center-rest-api-reference)
