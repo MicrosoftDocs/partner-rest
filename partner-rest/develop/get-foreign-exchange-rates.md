@@ -43,10 +43,6 @@ Use the following path parameters to request the month of foreign exchange rates
 
 - See [Partner REST headers](headers.md) for more information.
 
-### Request body
-
-This table describes the [Referral](referral-resources.md) properties in the request body.
-
 ### Request example
 
 ```http
