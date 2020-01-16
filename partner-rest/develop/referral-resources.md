@@ -105,7 +105,7 @@ Contains the customer contact information.
 | Address  | [Address](referral-resources.md#address)                         | The address of the customer.                           |
 | Size     | string                                                 | The number of employees at the customers organization. |
 | Team     | [Member](referral-resources.md#member)                           | The contacts for the customer organization.            |
-| Ids      | [CustomerProfileType](referral-resources.md#customerprofiletype) | An [Array](https://docs.microsoft.com/en-us/dotnet/api/system.array) of values that indicate External IDs for the customer.                        |
+| Ids      | [CustomerProfileType](referral-resources.md#customerprofiletype) | An [Array](https://docs.microsoft.com/dotnet/api/system.array) of values that indicate External IDs for the customer.                        |
 
 ## CustomerProfileType
 
@@ -127,7 +127,7 @@ An address to use for the customer.
 | City         | string | The city.                                                  |
 | State        | string | The state.                                                 |
 | PostalCode   | string | The zip code or postal code                                |
-| Country      | string | The country/region in [ISO country code format](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.regioninfo.threeletterisoregionname?view=netframework-4.7.2).             |
+| Country      | string | The country/region in [ISO country code format](https://docs.microsoft.com/dotnet/api/system.globalization.regioninfo.threeletterisoregionname?view=netframework-4.7.2).             |
 | Region       | string | The region.                                                |
 
 ## Member
@@ -148,7 +148,7 @@ Describes contact preferences for receiving email notifications.
 
 | Property    | Type   | Description                  |
 |-------------|--------|------------------------------|
-| Locale   | string | The locale of the email notification. [AllCultures](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.culturetypes?view=netframework-4.7.2#System_Globalization_CultureTypes_AllCultures), [NeutralCultures](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.culturetypes?view=netframework-4.7.2#System_Globalization_CultureTypes_NeutralCultures), and [SpecificCultures](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.culturetypes?view=netframework-4.7.2#System_Globalization_CultureTypes_SpecificCultures) are supported  |
+| Locale   | string | The locale of the email notification. [AllCultures](https://docs.microsoft.com/dotnet/api/system.globalization.culturetypes?view=netframework-4.7.2#System_Globalization_CultureTypes_AllCultures), [NeutralCultures](https://docs.microsoft.com/dotnet/api/system.globalization.culturetypes?view=netframework-4.7.2#System_Globalization_CultureTypes_NeutralCultures), and [SpecificCultures](https://docs.microsoft.com/dotnet/api/system.globalization.culturetypes?view=netframework-4.7.2#System_Globalization_CultureTypes_SpecificCultures) are supported  |
 | DisableNotifications    | bool | Will disable email notifications for the user.     |
 
 ## Consent
@@ -186,7 +186,7 @@ Represents the referral details.
 |-----------------------|------------------------------------------------------------|-------------------------------------------------------------------------------|
 | Notes                 | string                                                     | Additional notes for the receiving organization.                |
 | DealValue             | decimal                                                    | Value of the referral.                                    |
-| Currency              | string                                                    | The [ISO 4217 currency symbol](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.regioninfo.isocurrencysymbol?view=netframework-4.7.2)                                   |
+| Currency              | string                                                    | The [ISO 4217 currency symbol](https://docs.microsoft.com/dotnet/api/system.globalization.regioninfo.isocurrencysymbol?view=netframework-4.7.2)                                   |
 | ClosingDateTime       | string in UTC date time format                         | Date the customer is looking to close by.                           |
 | Requirements          | [ReferralRequirements](referral-resources.md#referralrequirements)   | Industry, products, service type, and solutions the customer is interested in.|
 
