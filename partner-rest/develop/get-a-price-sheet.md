@@ -82,7 +82,6 @@ Each response comes with an HTTP status code that indicates success or failure a
 ### Response example
 
 ``` http
-{
 HTTP/1.1 200 OK
 Cache-Control: private
 Content-Length: 42180180
@@ -95,5 +94,4 @@ Date: Wed, 02 Oct 2019 03:41:20 GMT
 "Advanced Data Security - SQL Database","DZH318Z0C16V","001J","Advanced Data Security - SQL Database - Standard - US East 2","Microsoft","Advanced Data Security - SQL Database - Standard - US East 2","1 Node/Month","payG-1","US","USD","15","","","3/1/2018 12:00:00 AM","11/30/9999 11:59:59 PM","cb0969aa-aaaa-4d6c-ab4b-7e182fa06aff","1 Node/Month","Azure“
 ======= Truncated ==============
 
-}
 ```
