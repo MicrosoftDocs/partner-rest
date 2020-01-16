@@ -1,7 +1,7 @@
 ---
 title: Get foriegn exchange reates
 description: Obtain foreign exchange rates for a given month.
-ms.date: 01/21/2029
+ms.date: 01/21/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-csp
 ms.localizationpriority: medium
@@ -54,7 +54,7 @@ Host: api.partner.microsoft.com
 
 ## REST response
 
-If successful, this method returns the price list as a file stream.
+If successful, this method returns foreign exchange rates as a file stream.
 
 ### Response success and error codes
 
