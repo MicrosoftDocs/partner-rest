@@ -28,7 +28,7 @@
         - name: Referral resources
           href: develop/referral-resources.md
       - name: Pricing
-        href: develop/get-a-price-sheet.md
+        href: develop/pricing.md
         items:
         - name: Get a price sheet
           href: develop/get-a-price-sheet.md
