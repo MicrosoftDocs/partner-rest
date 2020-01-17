@@ -17,7 +17,7 @@ This topic explains how to get a price sheet for a given market and view. Suppor
 
 ## Prerequisites
 
-- Credentials as described in [Partner API authentication](api-authentication.md). This scenario supports authentication with App+User credentials.
+- Credentials as described in [Partner API authentication](api-authentication.md). This scenario supports authentication with both application user and application-only authentication.
 
 ## Details
 
