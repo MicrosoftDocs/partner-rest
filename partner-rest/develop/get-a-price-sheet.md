@@ -27,6 +27,8 @@ This topic explains how to get a price sheet for a given market and view. Suppor
 - Consumption meter prices are only in USD, partners are to use the foreign exchange rates API to calculate local currency costs.
 - Consumption meter prices are estimated retail prices, partner discounts are available via [partner earned credit](https://docs.microsoft.com/partner-center/partner-earned-credit-explanation).
 - Reservations meter prices include the CSP partner discounts. Estimated retails prices for reservations can be found in the reservations shared services downloadable from the partner center pricing and offers page.
+- More information about Azure plan pricing can be found in the [Azure plan pricing documenation](https://docs.microsoft.com/partner-center/azure-plan-price-list).
+- Partner pricing and foreign exchange rate apis are not part of the [Partner Center SDK](https://docs.microsoft.com/partner-center/develop/get-started).
 
 ## REST request
 
