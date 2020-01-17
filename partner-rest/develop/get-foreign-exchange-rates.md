@@ -24,6 +24,7 @@ This topic explains how to get foreign exchange rates for a given month.
 - Current used with [get price sheet api](get-a-price-sheet.md) to calculate expected charged for local currencies.
 - Foreign exchange rates hold true for the entire month they are posted.
 - More information about Azure plan pricing can be found in the [Azure plan pricing documenation](https://docs.microsoft.com/partner-center/azure-plan-price-list).
+- Partner pricing and foreign exchange rate apis are not part of the [Partner Center SDK](https://docs.microsoft.com/partner-center/develop/get-started).
 
 ## REST request
 
