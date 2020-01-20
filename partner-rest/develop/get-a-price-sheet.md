@@ -21,7 +21,6 @@ This topic explains how to get a price sheet for a given market and view. Suppor
 
 ## Details
 
-- App+User authentication is supported, not App only.
 - Current returns data only for Azure plan consumption and reservation products.
 - Current pricing includes all meters and products available during the current month to the date the API is called. Previous months include all meters and products available for the given month.
 - Consumption meter prices are only in USD, partners are to use the foreign exchange rates API to calculate local currency costs.
