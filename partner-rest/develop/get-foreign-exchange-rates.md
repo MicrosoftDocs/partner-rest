@@ -75,7 +75,7 @@ Request-ID: 65fb6e59-051b-42f7-8771-c8c139b3c901
 Date: Wed, 02 Oct 2019 03:42:54 GMT
 
 "CurrencyCode","USDPerUnit","Month"
-"AED","=""0.27224589249009701""","2019”
+"AED","0.27224589249009701","2019”
 ======= Truncated ==============
 
 ```
