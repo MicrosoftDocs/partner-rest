@@ -7,9 +7,9 @@ ms.subservice: partnercenter-csp
 ms.localizationpriority: medium
 ---
 
-# Programmatically retrieve pricing
+# Programmatically retrieve CSP pricing
 
-This section describes the ways that partners can use the Partner APIs to programmatically retrieve pricing and foreign exchange rates for Azure plan products.
+This section describes the ways that partners can use the Partner APIs to programmatically retrieve CSP pricing and foreign exchange rates for Azure plan products.
 
 ## Pricing topics
 
