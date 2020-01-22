@@ -15,11 +15,13 @@ The Microsoft Partner REST API supports the following programmatic scenarios:
 * [Update a referral](update-a-referral.md)
 * [Get a list of referrals](get-a-list-of-referrals.md)
 * [Get a referral by ID](get-a-referral-by-id.md)
+* [Get a price sheet](get-a-price-sheet.md)
+* [Get foreign exchange rates](get-foreign-exchange-rates.md)
 
 ## Completing the scenarios
 
 You can complete all of the supported Partner REST API scenarios in three different ways:
 
 * Manually through the [Partner Center](https://go.microsoft.com/fwlink/p/?LinkId=620294) dashboard
-* Programmatically through the [Partner Managed API](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-managed-api)
-* Programmatically through the [Partner REST API](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-rest-api-reference)
+* Programmatically through the [Partner Managed API](https://docs.microsoft.com/partner-center/develop/partner-center-managed-api)
+* Programmatically through the [Partner REST API](https://docs.microsoft.com/partner-center/develop/partner-center-rest-api-reference)
