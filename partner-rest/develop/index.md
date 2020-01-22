@@ -14,3 +14,4 @@ searchScope: []
 * [Partner API authentication](api-authentication.md)
 * [Scenarios supported by the Partner REST API](scenarios.md)
 * [Programmatically manage referrals](referrals.md)
+* [Programmatically retrieve CSP pricing](pricing.md)

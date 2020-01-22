@@ -2,7 +2,7 @@
 layout: LandingPage
 title: Microsoft Partner API
 description: Resources and documentation for Microsoft partners
-ms.date: 02/26/2019
+ms.date: 02/26/2010
 ms.service: partner-dashboard
 ms.subservice: partnercenter-csp
 ms.topic: landing-page
@@ -11,7 +11,7 @@ searchScope: []
 
 # Microsoft Partner API documentation and resources
 
-The Microsoft Partner API is the successor to the [Microsoft Partner Center API](https://docs.microsoft.com/en-us/partner-center/develop/). This API allows you to programmatically access the capabilities of Partner Center.
+The Microsoft Partner API is the successor to the [Microsoft Partner Center API](https://docs.microsoft.com/partner-center/develop/). This API allows you to programmatically access the capabilities of Partner Center.
 
 <ul id="products1" class="cardsC cols cols3 panelContent">
     <li>
