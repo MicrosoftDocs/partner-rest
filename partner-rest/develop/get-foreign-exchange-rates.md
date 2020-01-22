@@ -17,7 +17,8 @@ This topic explains how to get foreign exchange rates for a given month.
 
 ## Prerequisites
 
-- Credentials as described in [Partner API authentication](api-authentication.md). This scenario only supports application user authentication. Application-ony is not yet supported.
+- Credentials as described in [Partner API authentication](api-authentication.md). This scenario only supports application user authentication. Application-only is not yet supported.
+
 
 ## Details
 
