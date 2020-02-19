@@ -82,7 +82,7 @@ prepared to handle any one of these errors.
 
 The `message` property at the root contains an error message intended for the
 developer to read. Error messages are not localized and shouldn't be displayed
-directly to the user. When handling errors, your code should not key off of
+directly to the user. When handling errors, your code should not check against
 `message` values because they can change at any time, and they often contain
 dynamic information specific to the failed request. You should only code
 against error codes returned in `code` properties.
