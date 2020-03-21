@@ -40,11 +40,13 @@
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/partner-rest",
       "titleSuffix": "Partner",
-      "ms.author": "ladolan",
-      "author": "lauradolan",
+      "ms.author": "jasonh",
+      "author": "JasonWHowell",
+      "manager": "jasonh",
       "ms.topic": "article",
       "ms.prod": "partner-center",
-      "ms.technology": "partner-center-sdk"
+      "ms.technology": "partner-center-sdk",
+      "searchScope": [ "Partner Center", "Partner Center developer resources" ] 
     },
     "fileMetadata": {},
     "template": [],
