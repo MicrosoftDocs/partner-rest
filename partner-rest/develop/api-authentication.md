@@ -3,7 +3,7 @@ title: Partner API authentication
 description: Configure your authentication settings to use the Partner API with Azure AD for authentication.
 ms.date: 05/17/2019
 ms.service: partner-dashboard
-ms.subservice: partner-center-sdk
+ms.subservice: partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

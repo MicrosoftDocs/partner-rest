@@ -4,7 +4,7 @@ title: Microsoft Partner API
 description: Resources and documentation for Microsoft partners
 ms.date: 03/26/2020
 ms.service: partner-dashboard
-ms.subservice: partner-center-sdk
+ms.subservice: partnercenter-sdk
 ms.topic: landing-page
 ---
 
@@ -44,7 +44,7 @@ The Microsoft Partner API is the successor to the [Microsoft Partner Center API]
                         </div>
                         <div class="cardText">
                             <h3>Scenarios</h3>
-                            <p>Programmatic scenarios available through the Microsoft Partner REST API.</p>
+                               <p>Programmatic scenarios available through the Microsoft Partner REST API.</p>
                         </div>
                     </div>
                 </div>
@@ -71,3 +71,4 @@ The Microsoft Partner API is the successor to the [Microsoft Partner Center API]
         </a>
     </li>
 </ul>
+""

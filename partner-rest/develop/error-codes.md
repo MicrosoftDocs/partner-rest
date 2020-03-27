@@ -3,7 +3,7 @@ title: Partner API REST error codes
 description: Partner REST APIs return a JSON object with a status code about your request's success or failure.
 ms.date: 05/21/2019
 ms.service: partner-dashboard
-ms.subservice: partner-center-sdk
+ms.subservice: partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

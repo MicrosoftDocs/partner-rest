@@ -3,7 +3,7 @@ title: Get a price sheet
 description: Obtain a price sheet for a given market and view. Supports filters to get history by month.
 ms.date: 01/24/2020
 ms.service: partner-dashboard
-ms.subservice: partner-center-sdk
+ms.subservice: partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

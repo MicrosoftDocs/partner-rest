@@ -3,7 +3,7 @@ title: Scenarios supported by the Partner REST API
 description: Programmatic scenarios available through the Microsoft Partner REST API.
 ms.date: 05/21/2019
 ms.service: partner-dashboard
-ms.subservice: partner-center-sdk
+ms.subservice: partnercenter-sdk
 ms.localizationpriority: medium
 ---
 
