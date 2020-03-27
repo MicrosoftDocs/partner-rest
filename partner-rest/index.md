@@ -2,11 +2,10 @@
 layout: LandingPage
 title: Microsoft Partner API
 description: Resources and documentation for Microsoft partners
-ms.date: 02/26/2010
+ms.date: 03/26/2020
 ms.service: partner-dashboard
 ms.subservice: partner-center-sdk
 ms.topic: landing-page
-searchScope: []
 ---
 
 # Microsoft Partner API documentation and resources
