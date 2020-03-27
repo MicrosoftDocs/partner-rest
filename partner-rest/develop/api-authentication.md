@@ -44,7 +44,7 @@ This method is recommended to set up **application and user access** to the API.
 
 ## Application-only access
 
-This method is        ecommended for **application-only access** setup to the APIs.
+This method is recommended for **application-only access** setup to the APIs.
 
 > [!IMPORTANT]
 > You must provide the application ID, application key, and directory ID from your Azure AD application.
