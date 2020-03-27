@@ -72,4 +72,3 @@ This method is recommended for **application-only access** setup to the APIs.
 ## Partner consent
 
 In the Azure management portal, select **Enterprise applications**. Search for the application you created in the previous section, and select that application. Select **Permissions** , then select **Grant Admin Consent for Partner Account**.
-""""
