@@ -3,7 +3,7 @@ title: Get a list of referrals
 description: How to get a list of referrals using the Partner API.
 ms.date: 05/21/2019
 ms.service: partner-dashboard
-ms.subservice: partnercenter-csp
+ms.subservice: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

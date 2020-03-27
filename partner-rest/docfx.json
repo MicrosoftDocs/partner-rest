@@ -43,9 +43,9 @@
       "ms.author": "jasonh",
       "author": "JasonWHowell",
       "manager": "jasonh",
-      "ms.topic": "article",
-      "ms.prod": "partner-center",
-      "ms.technology": "partner-center-sdk",
+      "ms.topic": "reference",
+      "ms.service": "partner-dashboard",
+      "ms.subservice": "partner-center-sdk",
       "searchScope": [ "Partner Center", "Partner Center developer resources" ] 
     },
     "fileMetadata": {},

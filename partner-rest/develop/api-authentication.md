@@ -3,7 +3,7 @@ title: Partner API authentication
 description: Configure your authentication settings to use the Partner API with Azure AD for authentication.
 ms.date: 05/17/2019
 ms.service: partner-dashboard
-ms.subservice: partnercenter-csp
+ms.subservice: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
@@ -44,7 +44,7 @@ This method is recommended to set up **application and user access** to the API.
 
 ## Application-only access
 
-This method is recommended for **application-only access** setup to the APIs.
+This method is        ecommended for **application-only access** setup to the APIs.
 
 > [!IMPORTANT]
 > You must provide the application ID, application key, and directory ID from your Azure AD application.
@@ -72,3 +72,4 @@ This method is recommended for **application-only access** setup to the APIs.
 ## Partner consent
 
 In the Azure management portal, select **Enterprise applications**. Search for the application you created in the previous section, and select that application. Select **Permissions** , then select **Grant Admin Consent for Partner Account**.
+""""

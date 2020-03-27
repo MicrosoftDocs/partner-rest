@@ -3,7 +3,7 @@ title: Referral connectors.
 description: Synchronize partner referrals with Dynamics 365 CRM leads using Microsoft Flow.
 ms.date: 07/22/2019
 ms.service: partner-dashboard
-ms.subservice: partnercenter-csp
+ms.subservice: partner-center-sdk
 ms.localizationpriority: medium
 ---
 

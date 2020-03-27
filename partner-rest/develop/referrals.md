@@ -3,7 +3,7 @@ title: Programmatically manage referrals
 description: This section describes the ways that partners can use the Partner APIs to programmatically manage referrals.
 ms.date: 05/21/2019
 ms.service: partner-dashboard
-ms.subservice: partnercenter-csp
+ms.subservice: partner-center-sdk
 ms.localizationpriority: medium
 ---
 
