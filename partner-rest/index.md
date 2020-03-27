@@ -71,4 +71,3 @@ The Microsoft Partner API is the successor to the [Microsoft Partner Center API]
         </a>
     </li>
 </ul>
-""
