@@ -3,7 +3,7 @@ title: Get foreign exchange rates
 description: Obtain foreign exchange rates for a given month.
 ms.date: 01/24/2020
 ms.service: partner-dashboard
-ms.subservice: partnercenter-csp
+ms.subservice: partnercenter-sdk
 ms.localizationpriority: medium
 ---
 

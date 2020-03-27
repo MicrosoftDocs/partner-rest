@@ -3,7 +3,7 @@ title: Partner REST API reference
 description: The Partner REST API helps Microsoft partners integrate with Microsoft systems that manage apps, customer accounts, and handle support requests.
 ms.date: 05/21/2019
 ms.service: partner-dashboard
-ms.subservice: partnercenter-csp
+ms.subservice: partnercenter-sdk
 ms.localizationpriority: medium
 ---
 
