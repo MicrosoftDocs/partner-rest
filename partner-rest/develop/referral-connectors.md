@@ -3,7 +3,7 @@ title: Referral connectors.
 description: Synchronize partner referrals with Dynamics 365 CRM leads using Microsoft Flow.
 ms.date: 07/22/2019
 ms.service: partner-dashboard
-ms.subservice: partnercenter-csp
+ms.subservice: partnercenter-sdk
 ms.localizationpriority: medium
 ---
 
@@ -16,8 +16,8 @@ You can use referral connectors to synchronize partner referrals with customer r
 * Microsoft Flow subscription
   * Account with administrator access to this subscription
 * Azure Active Directory (Azure AD) application ID, user id, password and tenant ID (used to access the Partner API). For setup instructions, see [Partner authentication](api-authentication.md).
-* [Azure function app](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-app-portal) subscription.
-* [Partner Center webhook event](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events) subscription to [Referral Created](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events#referral-created-event) and [Referral Updated](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhook-events#referral-updated-event) events.
+* [Azure function app](https://docs.microsoft.com/azure/azure-functions/functions-create-function-app-portal) subscription.
+* [Partner Center webhook event](https://docs.microsoft.com/partner-center/develop/partner-center-webhook-events) subscription to [Referral Created](https://docs.microsoft.com/partner-center/develop/partner-center-webhook-events#referral-created-event) and [Referral Updated](https://docs.microsoft.com/partner-center/develop/partner-center-webhook-events#referral-updated-event) events.
 * [Microsoft Dynamics 365](https://dynamics.microsoft.com) subscription
   * Sales module enabled
   * Account with administrator access to this subscription
@@ -110,7 +110,7 @@ Authenticate the callback event from the Partner Center:
 > [!TIP]
 > For an example, see the [sample function app code](#sample-function-app-code) in the following section.
 
-1. [Create an Azure function app](https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-app-portal) that [authenticates the callback event from the Partner Center](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhooks#how-to-authenticate-the-callback).
+1. [Create an Azure function app](https://docs.microsoft.com/azure/azure-functions/functions-create-function-app-portal) that [authenticates the callback event from the Partner Center](https://docs.microsoft.com/partner-center/develop/partner-center-webhooks#how-to-authenticate-the-callback).
 
     1. Verify that the required headers are present (**Authorization**, **x-ms-certificate-url**, and **x-ms-signature-algorithm**).
     2. Download the certificate used to sign the content (**x-ms-certificate-url**).
@@ -118,7 +118,7 @@ Authenticate the callback event from the Partner Center:
     4. Verify the **Organization** of the certificate.
     5. Read the content with UTF-8 encoding into a buffer.
     6. Create an RSA Crypto Provider.
-    7. [Verify that the signature matches](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhooks#example-for-signature-validation) what was signed with the specified hash algorithm (for example, SHA256).
+    7. [Verify that the signature matches](https://docs.microsoft.com/partner-center/develop/partner-center-webhooks#example-for-signature-validation) what was signed with the specified hash algorithm (for example, SHA256).
     8. If the verification succeeds, an **OK** message is returned.
 
 2. Note the generated callback URI for your function app's HTTP endpoint. This URI is displayed when you create your function app. You can also find this URI on your function app's Azure resource page.
@@ -206,7 +206,7 @@ Register your flow resource with the Partner Center to trigger the flow and rece
 2. Choose the flow you created or updated.
 3. On the flow page, choose **Edit flow**.
 4. Copy and save the flow's **HTTP POST URL**. You will need to use this URL to trigger the flow.
-5. [Register to receive webhook events](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-webhooks#register-to-receive-events) when referrals are created or updated. Use the following body format:
+5. [Register to receive webhook events](https://docs.microsoft.com/partner-center/develop/partner-center-webhooks#register-to-receive-events) when referrals are created or updated. Use the following body format:
 
 ```json
 {

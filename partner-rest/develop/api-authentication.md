@@ -3,7 +3,7 @@ title: Partner API authentication
 description: Configure your authentication settings to use the Partner API with Azure AD for authentication.
 ms.date: 05/17/2019
 ms.service: partner-dashboard
-ms.subservice: partnercenter-csp
+ms.subservice: partnercenter-sdk
 ms.localizationpriority: medium
 ---
 
@@ -31,6 +31,16 @@ This method is recommended to set up **application and user access** to the API.
 7. Set the **Delegated Permissions** to **Partner Center**.
 
     ![Screenshot of delegated permissions configuration screen for the Microsoft Partner API](../images/SelectUserPermission.png)
+    
+8. Search for the *Microsoft Partner* (*Microsoft Partner Center*) API (`fa3d9a0c-3fb0-42cc-9193-47c7ecd2edbd`).
+
+    ![Screenshot of Request API permissions screen with a search for the Microsoft Partner Center API](../images/SearchPCApi.png)
+    
+9. Select **Microsoft Partner Center** and check **user_impersonation**.
+
+10. Set the **Delegated Permissions** to **Partner Center**.
+
+    ![Screenshot of delegated permissions configuration screen for the Microsoft Partner Center API](../images/SelectPCUserPermission.png)
 
 ## Application-only access
 

@@ -3,7 +3,7 @@ title: Partner API REST error codes
 description: Partner REST APIs return a JSON object with a status code about your request's success or failure.
 ms.date: 05/21/2019
 ms.service: partner-dashboard
-ms.subservice: partnercenter-csp
+ms.subservice: partnercenter-sdk
 ms.localizationpriority: medium
 ---
 
@@ -23,7 +23,7 @@ The following table lists and describes the HTTP status codes that can be return
 |:------------|:--------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------|
 | 400         | Bad Request                     | Cannot process the request because it is malformed or incorrect.                                                                       |
 | 401         | Unauthorized                    | Required authentication information is either missing or not valid for the resource.                                                   |
-| 403         | Forbidden                       | Access is denied to the requested resource. The user might not have enough permission. **Important: if conditional access policies are applied to a resource, `HTTP 403; Forbidden error=insufficent_claims` may be returned.** For more details on Microsoft Graph and conditional access, see [Developer Guidance for Azure Active Directory Conditional Access](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-conditional-access-developer)  |
+| 403         | Forbidden                       | Access is denied to the requested resource. The user might not have enough permission. **Important: if conditional access policies are applied to a resource, `HTTP 403; Forbidden error=insufficent_claims` may be returned.** For more details on Microsoft Graph and conditional access, see [Developer Guidance for Azure Active Directory Conditional Access](https://docs.microsoft.com/azure/active-directory/develop/active-directory-conditional-access-developer)  |
 | 404         | Not Found                       | The requested resource doesn't exist.                                                                                                  |
 | 405         | Method Not Allowed              | The HTTP method in the request is not allowed on the resource.                                                                         |
 | 406         | Not Acceptable                  | This service doesn't support the format requested in the Accept header.                                                                |
@@ -82,7 +82,7 @@ prepared to handle any one of these errors.
 
 The `message` property at the root contains an error message intended for the
 developer to read. Error messages are not localized and shouldn't be displayed
-directly to the user. When handling errors, your code should not key off of
+directly to the user. When handling errors, your code should not check against
 `message` values because they can change at any time, and they often contain
 dynamic information specific to the failed request. You should only code
 against error codes returned in `code` properties.
