@@ -1,5 +1,5 @@
 - name: Partner developer documentation
-  href: index.md
+  href: index.yml
   items:
   - name: Overviews and scenarios
     href: develop/index.md
