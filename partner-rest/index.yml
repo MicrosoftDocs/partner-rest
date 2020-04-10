@@ -1,0 +1,33 @@
+### YamlMime:Landing
+title: Microsoft Partner REST API
+summary: The Microsoft Partner REST API is the successor to the Microsoft Partner Center API. This API allows you to programmatically access the capabilities of Partner Center.
+metadata:
+  title: Partner Center developer documentation
+  description: The Microsoft Partner REST API is the successor to the Microsoft Partner Center API. This API allows you to programmatically access the capabilities of Partner Center.
+  ms.service: partner-dashboard
+  ms.subservice: partnercenter-sdk
+  ms.topic: landing-page
+  author: jasonwhowell
+  ms.author: jasonh
+  ms.date: 04/09/2020
+
+landingContent:
+  - title: Microsoft Partner API documentation and resources
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: Get started with the Partner REST API
+            url: develop/get-started.md
+          - text: Scenarios supported by the Partner REST API
+            url: develop/scenarios.md
+      - linkListType: reference
+        links:
+          - text: Partner REST API
+            url: develop/rest-api-reference.md
+      - linkListType: how-to-guide
+        links:
+          - text: Programmatically manage referrals
+            url: develop/referrals.md
+          - text: Programmatically retrieve CSP pricing
+            url: develop/pricing.md
+                
