@@ -28,6 +28,7 @@ This topic explains how to get a price sheet for a given market and view. This m
 - Reservations meter prices include the CSP partner discounts. Estimated retail prices for reservations can be found in the reservations shared services downloadable from the Partner Center "Pricing and offers" page.
 - More information about Azure plan pricing can be found in the [Azure plan pricing documentation](https://docs.microsoft.com/partner-center/azure-plan-price-list).
 - Partner pricing and foreign exchange rate APIs are not part of the [Partner Center SDK](https://docs.microsoft.com/partner-center/develop/get-started).
+- This method returns the price list as a file stream. File stream is either a .csv file or a zip compressed version of the .csv. Details about how to request compressed files are included below.
 
 ## REST request
 
@@ -59,18 +60,25 @@ Use the following filter parameters.
 
 - See [Partner REST headers](headers.md) for more information.
 
+In addition to the above headers, pricing files can be retrieved as compressed reducing bandwidth and download times. By default the files are not compressed. To get compressed versions of the files you can include the below header value. Realize that compressed sheets are only available from April 2020 onward, all sheets prior to April 2020 are only available as not compressed.
+
+| Header                   | Value Type     | Value | Description                                                     |
+|------------------------|----------|----------|-----------------------------------------------------------------|
+|Accept-Encoding| string   | deflate| Optional. If omitted file stream is not compressed.       |
+
 ### Request example
 
 ```http
 GET https://api.partner.microsoft.com/v1.0/sales/pricesheets(Market='ad',PricesheetView='azure_consumption')/$value?timeline=history&month=201909 HTTP/1.1
-Authorization: Bearer 
+Authorization: Bearer
+Accept-Encoding: deflate
 Host: api.partner.microsoft.com
 
 ```
 
 ## REST response
 
-If successful, this method returns the price list as a file stream.
+If successful, this method returns the price list as a file stream. File stream is either a .csv file or a zip compressed version of the .csv.
 
 ### Response success and error codes
 
