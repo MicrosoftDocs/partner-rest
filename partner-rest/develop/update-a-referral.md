@@ -1,23 +1,24 @@
 ---
-title: Update a referral
-description: Update a referral using the Partner API.
-ms.date: 05/17/2019
+title: Update a lead or opportunity
+description: Allows you to update the lead or opportunity details.
+ms.date: 09/30/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 ms.localizationpriority: medium
 ---
 
-# Update a referral
+# Update a lead or opportunity
 
 Applies to:
 
 - Partner API
 
-This topic explains how to update a referral.
+This topic explains how to update the lead or opportunity details like the deal value, estimated close date or manage the sales stages amongst other details.
 
 ## Prerequisites
 
 - Credentials as described in [Partner API authentication](api-authentication.md). This scenario supports authentication with App+User credentials.
+- This API currently supports only user access where partners must be in one of the following roles: Global Admin, Referral Admin or Referral User.
 
 ## REST Request
 

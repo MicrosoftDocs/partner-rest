@@ -1,23 +1,27 @@
 ---
-title: Get a referral by ID
-description: Obtain a referral by its ID.
-ms.date: 05/21/2019
+title: Get a lead or opportunity by Id
+description: Get a lead or opportunity by Id.
+ms.date: 09/30/2020
 ms.service: partner-dashboard
 ms.subservice: partnercenter-sdk
 ms.localizationpriority: medium
 ---
 
-# Get a referral by ID
+# Get a lead or opportunity by Id
 
 Applies to:
 
 - Partner API
 
-This topic explains how to get a referral by ID.
+This topic explains how to get a lead or co-sell opportunity by Id.
+
+> [!Note]
+> Leads received from the Microsoft commercial marketplace (Azure Marketplace and AppSource) are not supported. 
 
 ## Prerequisites
 
 - Credentials as described in [Partner API authentication](api-authentication.md). This scenario supports authentication with App+User credentials.
+- This API currently supports only user access where partners must be in one of the following roles: Global Admin, Referral Admin or Referral User.
 
 ## REST request
 
@@ -29,163 +33,92 @@ This topic explains how to get a referral by ID.
 
 ### URI parameter
 
-Use the following ID in the URL
 
 | Name                   | Type     | Required | Description                                                     |
 |------------------------|----------|----------|-----------------------------------------------------------------|
-|Id                      | string   | Yes       | A referral ID       |
+|Id                      | string   | Yes       | The unique identifier for a lead or co-sell opportunity       |
 
 ### Request headers
 
-- See [Partner REST headers](headers.md) for more information.
+See [Partner REST headers](headers.md) for more information.
 
 ### Request body
 
-This table describes the [Referral](referral-resources.md) properties in the request body.
+None.
 
 ### Request example
 
 ```http
-GET https://api.partner.microsoft.com/v1.0/engagements/referrals/0d43414c-fb9f-4ca0-9b8d-29deb70364cf HTTP/1.1
+GET https://api.partner.microsoft.com/v1.0/engagements/referrals/{Id} HTTP/1.1
 Authorization: Bearer <token>
-Host: api.partner.microsoft.com
 Content-Type: application/json
-
 ```
 
 ## REST response
 
-If successful, this method returns the populated [Referral](referral-resources.md) resource in the response body.
+If successful, the response body contains the [lead or opportunity](referral-resources.md) matching the Id.
 
 ### Response success and error codes
 
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
+Each response comes with an [HTTP status code](error-codes.md) that indicates success or failure and additional debugging information. Use a network trace tool to read this code, the error type, and additional parameters.
 
 ### Response example
 
 ``` http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Request-ID: 9f8bed52-e4df-4d0c-9ca6-929a187b0731
+
 {
     "@odata.context": "https://api.partner.microsoft.com/v1.0/engagments/referrals/$metadata#Referrals/$entity",
-    "id": "61c65491-2f2c-461a-84b4-3654499bc1d9",
-    "engagementId": "b1c40bb4-6d36-4eca-baa3-e1460cf2a454",
+    "id": "c5fbb3b6-be74-4795-9fb5-4324c73fed37",
+    "engagementId": "65edc0b5-3485-41b7-a17e-dfa9ef4706e2",
     "organizationId": "7d23e5ca-19dc-4eaa-aac8-5e6b559f0d1d",
     "organizationName": "Contoso Company",
-    "createdDateTime": "2018-10-29T21:24:52.040469Z",
-    "updatedDateTime": "2018-10-29T21:24:52.040469Z",
-    "expirationDateTime": "2018-11-06T00:00:00Z",
+    "createdDateTime": "2020-10-30T21:03:00.0000000Z",
+    "updatedDateTime": "2020-10-30T21:03:00.0000000Z",
     "status": "New",
     "substatus": "Pending",
-    "statusReason": null,
-    "qualification": "SalesQualified",
+    "qualification": "Direct",
     "type": "Independent",
-    "target": [
-        {
-            "type": "BusinessProfileLocation",
-            "id": "01e2abcd-52b0-4af3-a3ae-1fd1530b3563"
-        }
-    ],
+    "direction": "Incoming",
     "customerProfile": {
-        "name": "Contoso Customer Inc",
-        "address": {
-            "addressLine1": "One Microsoft Way",
-            "addressLine2": "34",
-            "city": "Redmond",
-            "state": "WA",
-            "postalCode": "98052",
-            "country": "US"
-            "region": "Washington"
-        },
-        "size": "10to50employees",
-        "team": [
-            {
-                "contactPreference": {
-                    "locale": "en-us",
-                    "disableNotifications": false
-                },
-                "firstName": "Sue",
-                "lastName": "Smith",
-                "phoneNumber": "1234567890",
-                "email": "sue.smith@contoso.com"
-            },
-            {
-                "contactPreference": {
-                    "locale": "en-us",
-                    "disableNotifications": false
-                },
-                "firstName": "Joe",
-                "lastName": "Hansen",
-                "phoneNumber": "4035698759",
-                "email": "joe.hansen@contoso.com"
-            }
-        ],
-        "ids": [
-                {
-                "profileType": "Duns",
-                "id": "795986822"
-                }
-            ]
-    },
-    "consent": {
-        "consentToToShareInfoWithOthers": true,
-        "consentToContact": true
+      "name": "Fabrikam Customer Inc",
+      "address": {
+        "addressLine1": "One Microsoft Way",
+        "addressLine2": "",
+        "city": "Redmond",
+        "state": "WA",
+        "postalCode": "98052",
+        "country": "US"
+      }
     },
     "details": {
-        "notes": "Customer is looking to leverage Dynamics 365 to manage their supply chain. There is also a need to leverage a set of custom apps to enable their business processes.",
-        "dealValue": 50000,
-        "currency": "USD",
-        "requirements": {
-            "industries": [
-                {
-                    "id": "Manufacturing"
-                }
-            ],
-            "products": [
-                {
-                    "id": "Dynamics365Enterprise"
-                }
-            ],
-            "services": [
-                {
-                    "id": "DeploymentOrMigration"
-                }
-            ],
-            "solutions": [
-                {
-                    "name": "Dynamics 365 for Field Service",
-                    "type": "Category",
-                    "id": "Dynamics365forFieldService"
-                }
-            ]
-        }
-    },
-    "team": [
-        {
-            "contactPreference": {
-                "locale": "en-us",
-                "disableNotifications": false
-            },
-            "firstName": "John",
-            "lastName": "Doe",
-            "phoneNumber": "1231231234",
-            "email": "john.doe@microsoft.com"
-        }
-    ],
-    "inviteContext": {
-        "notes": "Hi ABC Partner, Can you help this customer? Thanks, John @ Microsoft",
-        "invitedBy": {
-            "organizationId": "msft"
-        }
+      "notes": "We are interested in deploying Microsoft 365 and are looking forsupport in training our employees. Can you help?",
+      "dealValue": 10000,
+      "currency": "USD",
+      "closingDateTime": "2020-12-01T00:00:00Z",
+      "requirements": {
+          "industries": [ { "id": "Education" } ],
+          "products": [ { "id": "Microsoft365" } ],
+          "services": [ { "id": "LearningAndCertification" } ],
+          "solutions": [ { "id": "SOL-Microsoft365", "name": "Microsoft365" }
+        ]
+      }
     },
     "links": {
-        "relatedReferrals": {
-            "uri": "https://api.partner.microsoft.com/v1.0/engagments/referrals?$filter=engagementId eq 'b1c40bb4-6d36-4eca-baa3-e1460cf2a454'",
-            "method": "GET"
-        },
-        "self": {
-            "uri": "https://api.partner.microsoft.com/v1.0/engagments/referrals/61c65491-2f2c-461a-84b4-3654499bc1d9",
-            "method": "GET"
-        }
+      "relatedReferrals": {
+        "uri": "https://api.partner.microsoft.com/v1.0/engagements/referrals$filter=engagementId eq '65edc0b5-3485-41b7-a17e-dfa9ef4706e2'",
+        "method": "GET"
+      },
+      "self": {
+        "uri": "https://api.partner.microsoft.com/v1.0/engagements/referralsc5fbb3b6-be74-4795-9fb5-4324c73fed37",
+        "method": "GET"
+      }
     },
     "eTag": "\"2500ec5a-0000-0000-0000-5bf4967d0000\""
 }
 ```
+
+> [!Note]
+> The fields in the example illustratration above are not exhaustive. The actual API response contains more fields like the customer and partner teams. For the full list of supported fields, see [referral resources](referral-resources.md).

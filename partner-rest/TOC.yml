@@ -14,17 +14,15 @@
       items:
       - name: Referrals
         href: develop/referrals.md
-        items:
-        - name: Create a referral
-          href: develop/create-a-referral.md
-        - name: Get a list of referrals
+        items:       
+        - name: Get the list of leads and opportunities
           href: develop/get-a-list-of-referrals.md
-        - name: Get a referral by ID
+        - name: Get a lead or opportunity by Id
           href: develop/get-a-referral-by-id.md
-        - name: Update a referral
-          href: develop/update-a-referral.md
-        - name: Referral connectors
-          href: develop/referral-connectors.md
+        - name: Update a lead or opportunity
+          href: develop/patch-a-referral.md
+        - name: Create a new opportunity
+          href: develop/create-a-referral.md
         - name: Referral resources
           href: develop/referral-resources.md
       - name: Pricing
