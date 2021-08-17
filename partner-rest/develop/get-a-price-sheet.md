@@ -71,7 +71,6 @@ In addition to the above headers, pricing files can be retrieved as compressed r
 ```http
 GET https://api.partner.microsoft.com/v1.0/sales/pricesheets(Market='ad',PricesheetView='azure_consumption')/$value?timeline=history&month=201909 HTTP/1.1
 Authorization: Bearer
-Accept-Encoding: deflate
 Host: api.partner.microsoft.com
 
 ```
@@ -79,10 +78,6 @@ Host: api.partner.microsoft.com
 ## REST response
 
 If successful, this method returns the price list as a file stream. File stream is either a .csv file or a zip compressed version of the .csv.
-
-### Response success and error codes
-
-Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
 
 ### Response example
 
@@ -100,3 +95,7 @@ Date: Wed, 02 Oct 2019 03:41:20 GMT
 ======= Truncated ==============
 
 ```
+
+### Response success and error codes
+
+Each response comes with an HTTP status code that indicates success or failure and additional debugging information. Use a network trace tool to read this code, error type, and additional parameters. For the full list, see [Error Codes](error-codes.md).
