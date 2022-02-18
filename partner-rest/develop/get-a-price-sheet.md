@@ -17,11 +17,12 @@ This topic explains how to get a price sheet for a given market and view. This m
 
 ## Prerequisites
 
-- Credentials as described in [Partner API authentication](api-authentication.md). This scenario only supports application user authentication. Application-ony is not yet supported.
+- Credentials as described in [Partner API authentication](api-authentication.md). This scenario only supports application user authentication. Application-ony is not yet supported. Application-only is not yet supported. Partners that experience **http error:400** should consult the [Partner API authentication](/partner/develop/api-authentication) documentation.
+- This API currently supports only user access where partners must be in one of the following roles: Global Admin, Admin Agent or Sales Agent.
 
 ## Details
 
-- Current returns data only for Azure plan consumption and reservation products.
+- Current returns data only for Azure plan consumption and reservations, Licensed based (new commerce experience), and Marketplace products.
 - Current [pricing](pricing.md) includes all meters and products available during the current month to the date the API is called. Previous months include all meters and products available for the given month.
 - Consumption meter prices are only in USD, partners are to use the foreign exchange rates API to calculate local currency costs.
 - Consumption meter prices are estimated retail prices. Partner discounts are available via [partner earned credit](https://docs.microsoft.com/partner-center/partner-earned-credit-explanation).
@@ -36,7 +37,7 @@ This topic explains how to get a price sheet for a given market and view. This m
 
 | Method   | Request URI                                                                                                 |
 |----------|-------------------------------------------------------------------------------------------------------------|
-| **GET** | https://api.partner.microsoft.com/v1.0/sales/pricesheets(Market='{market}',PricesheetView='{view}')/$value                                     |
+| **GET** | <https://api.partner.microsoft.com/v1.0/sales/pricesheets(Market='{market}',PricesheetView='{view}')/$value>                                     |
 
 ### URI required parameters
 
@@ -45,7 +46,10 @@ Use the following path parameters to request which market and type of price shee
 | Name                   | Type     | Required | Description                                                     |
 |------------------------|----------|----------|-----------------------------------------------------------------|
 |Market                      | string   | Yes       | Two letter country code for the market being requested       |
-|PricesheetView	| string   | Yes       | The type of price sheet being requested, this can be azure_consumption or azure_reservations       |
+|PricesheetView| string   | Yes       | The type of price sheet being requested, this can be azure_consumption, azure_reservations, updatedlicensebased, marketplace, or software.|
+
+> [!Note]
+> updatedlicensebased PriceSheetView is currently available only to partners who are part of the M365/D365 new commerce experience technical preview.
 
 ### URI filter parameters
 
@@ -55,6 +59,9 @@ Use the following filter parameters.
 |------------------------|----------|----------|-----------------------------------------------------------------|
 |Timeline| string   | No| Defaults to current if not passed. Possible values are history, current and future.       |
 |Month| string   | No| Only required if history is requested, must adhere to YYYYMM for the price sheet being requested.       |
+
+> [!Note]
+> Future pricing is not supported for Marketplace or Software. From April 1, 2022, partners will be able to start viewing software price list history via API, starting with March 2022 history. .
 
 ### Request headers
 
@@ -79,7 +86,10 @@ Host: api.partner.microsoft.com
 
 If successful, this method returns the price list as a file stream. File stream is either a .csv file or a zip compressed version of the .csv.
 
-### Response example
+### Response example for new commerce
+
+> [!NOTE]
+> updatedlicensebased PriceSheetView is currently available only to partners who are part of the M365/D365 new commerce experience technical preview.
 
 ``` http
 HTTP/1.1 200 OK
