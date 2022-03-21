@@ -42,7 +42,7 @@ Use the following path parameters to request the month of foreign exchange rates
 
 | Name                   | Type     | Required | Description                                                     |
 |------------------------|----------|----------|-----------------------------------------------------------------|
-|Month                      | string   | Yes       | Must be in YYYMM format. If omitted defaults to current month.       |
+|Month                      | string   | Yes       | Must be in YYYYMM format. If omitted defaults to current month.       |
 
 ### Request headers
 
