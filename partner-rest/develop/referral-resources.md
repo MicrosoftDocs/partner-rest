@@ -127,7 +127,7 @@ An address to use for the customer.
 | City         | string | The city.                                                  |
 | State        | string | The state.                                                 |
 | PostalCode   | string | The zip code or postal code                                |
-| Country      | string | The country/region in [ISO country code format](https://docs.microsoft.com/dotnet/api/system.globalization.regioninfo.threeletterisoregionname?view=netframework-4.7.2).             |
+| Country      | string | The country/region in [ISO 3166 2-letter country code format](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).             |
 | Region       | string | The region.                                                |
 
 ## Member
