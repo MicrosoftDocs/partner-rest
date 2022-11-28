@@ -5,12 +5,8 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 
 ## Partner Center REST API Reference Documentation
 
+**NOTE**: This content has been archived and merged with the broader set of partner developer content at [https://learn.microsoft.com/partner-center/develop/](https://learn.microsoft.com/partner-center/develop/).
+
 Welcome to the Partner Center REST API Reference docs repository, housing the source for the Partner Center REST API Reference documentation available on [https://docs.microsoft.com/en-us/partner-center/develop/](https://docs.microsoft.com/en-us/partner-center/develop/partner-center-rest-api-reference).
 
 If you're looking for the **Partner Center *Managed* API Reference**, see <https://docs.microsoft.com/en-us/dotnet/api/?view=partnercenter-dotnet-latest>.
-
-## Contributing
-
-We actively merge contributions into this repository via [pull request](https://help.github.com/articles/using-pull-requests/).
-
-For more information on contributing, read our [contributions guide](CONTRIBUTING.md).
